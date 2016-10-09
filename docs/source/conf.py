@@ -33,7 +33,15 @@ import sphinx_rtd_theme
 # ones.
 extensions = [
     'sphinx.ext.autodoc',
+    'javasphinx',
 ]
+
+# Javadoc
+javadoc_url_map = {
+    'com.netflix.curator' : ('http://netflix.github.com/curator/doc', 'javadoc'),
+    'org.springframework' : ('http://static.springsource.org/spring/docs/3.1.x/javadoc-api/', 'javadoc'),
+    'org.springframework.data.redis' : ('http://static.springsource.org/spring-data/data-redis/docs/current/api/', 'javadoc')
+}
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['ntemplates']
