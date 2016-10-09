@@ -1,0 +1,1 @@
+Search.setIndex({envversion:49,filenames:["index"],objects:{},objnames:{},objtypes:{},terms:{content:0,modulindex:0,stichwortverzeichnis:0,such:0},titles:["Polynomials Calculator Doc"],titleterms:{and:0,calculator:0,doc:0,documentation:[],indic:0,polynomial:0,tabl:0,welcom:[]}})
