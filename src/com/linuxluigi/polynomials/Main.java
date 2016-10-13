@@ -43,22 +43,14 @@
  * area bounded by both the current clip of the graphics context
  * and the extents of the Component used to create the Graphics object.
  *
- * @author      Sami Shaio
- * @author      Arthur van Hoff
+ * @author      Steffen Exler
  * @version     %I%, %G%
- * @since       1.0
+ * @since       0.0.1
  */
 
 package com.linuxluigi.polynomials;
 
 public class Main {
-
-    private int year;
-
-    /**
-     * * This is a test comment
-     * @param year The Year 0
-     */
 
     public static void main(String[] args) {
         System.out.println("lol");
