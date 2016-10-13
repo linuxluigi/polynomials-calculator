@@ -1,6 +1,10 @@
 # polynomials-calculator
 Ein simples Programm zur Berechnung von Polynomen maximal 6. Grades
 
+# Dokumentation
+
+http://polynomials-calculator.readthedocs.io/de/latest/
+
 # Build & Develop
 IntelliJ IDEA 2016.1.3 Build #IU-145.1617
 JRE: 1.8.0_76-release-b198 amd64
