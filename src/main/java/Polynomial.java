@@ -1,5 +1,3 @@
-package com.linuxluigi.polynomials;
-
 public class Polynomial {
     /**
      * Eine Klasse welche einzelne Polynome enthält die ausgegeben werden können,
@@ -53,17 +51,6 @@ public class Polynomial {
 
 
     /*
-     * Start Default Strings
-     * Für DRY Code, Strings die mehr als einmal vorkommen, Konstanten setzen
-     */
-    private final String Success_set = "Erfolg: Polynom wurde erfolgreich geändert!";
-    private final String Errormessage_get_OutOfArray = "Fehler: Out of Array!";
-    /*
-     * End Default Strings
-     */
-
-
-    /*
      * Start get
      */
     public int[] get() {
@@ -79,7 +66,7 @@ public class Polynomial {
          * @param number Stelle des Polynomes this.polylist[number]
          */
         if (this.polylist.length < number || number < 0) {
-            System.out.println(this.Errormessage_get_OutOfArray);
+            System.out.println("Fehler: Out of Array!");
             return 0;
         } else {
             //Return a single polynom
@@ -100,7 +87,7 @@ public class Polynomial {
          * @param new_polylist Vollständiger Polynom als INT Array
          */
         this.polylist = new_polylist;
-        System.out.println(this.Success_set);
+        System.out.println("Erfolg: Polynom wurde erfolgreich geändert!");
     }
 
     public void set(int poly_number, int poly_value) {
@@ -110,10 +97,10 @@ public class Polynomial {
          * @param poly_value Wert der neuen Zahl im Polynom
          */
         if(this.polylist.length < poly_number || poly_number < 0) {
-            System.out.println(this.Errormessage_get_OutOfArray);
+            System.out.println("Fehler: Out of Array!");
         } else {
             this.polylist[poly_number] = poly_value;
-            System.out.println(this.Success_set);
+            System.out.println("Erfolg: Polynom wurde erfolgreich geändert!");
         }
     }
     /*

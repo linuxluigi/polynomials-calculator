@@ -1,6 +1,10 @@
 # polynomials-calculator
 Ein simples Programm zur Berechnung von Polynomen maximal 6. Grades
 
+# Mavin Abhänigkeiten
+
+https://github.com/google/gson
+
 # Dokumentation
 
 http://polynomials-calculator.readthedocs.io/de/latest/

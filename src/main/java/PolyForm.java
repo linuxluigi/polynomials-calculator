@@ -1,5 +1,3 @@
-package com.linuxluigi.polynomials;
-
 import javax.swing.*;
 
 import java.util.Date;
