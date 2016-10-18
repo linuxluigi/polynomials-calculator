@@ -11,17 +11,28 @@ public class Main {
 
     public static void main(String[] args) {
         /**
-         * @param PolynomialList Liste mit allen Polynomial Objekten
+         *
          */
 
-
         PolynomialList PolynomialList = new PolynomialList();
-        PolynomialList.load();
-        PolynomialList.save();
+        TerminalInterface Interface = new TerminalInterface();
+        Interface.BoarderText("Polynom Rechner 0.1");
+        System.out.println("Operationen mit Polynomen &  Speichern der Polynome in einer JSON Datei");
 
-        PolynomialForm PolynomialForm = new PolynomialForm();
-        PolynomialForm.main();
+        // Json angeben
+        System.out.println("Json Datei [save.json]");
+        String FileName = Interface.InputString("Bitte Datei Pfad angeben");
+        if (FileName != "") {
+            PolynomialList.set_file(FileName);
+        }
 
+        // Json laden
+        System.out.println("Json laden [Y/n]");
+        if ("n" != Interface.InputString("Json laden [Y/n]")) {
+            PolynomialList.load();
+        }
+
+        // Todo: Show Menu
 
     }
 }

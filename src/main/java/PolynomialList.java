@@ -12,14 +12,21 @@ import com.google.gson.GsonBuilder;
 
 
 public class PolynomialList {
-    public PolynomialList() {
-        /**
-         * load save.json
-         */
-        load();
-    }
+    /**
+     * Laden und Speichern eines Polynomial Array
+     * @param PolylList Polynomial Array
+     * @param file JSON Datei für laden und sichern des Polynomial Array
+     */
+
     private Polynomial[] PolylList;
-    private final File file = new File("save.json");
+    private File file = new File("save.json");
+
+    public void set_file(String FileName) {
+        /**
+         * @param FileName Datei Namen und Pfad der neuen Json Datei
+         */
+        this.file = new File(FileName);
+    }
 
     public void load() {
         /**
