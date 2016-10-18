@@ -14,9 +14,13 @@ public class Main {
          * @param PolynomialList Liste mit allen Polynomial Objekten
          */
 
+
         PolynomialList PolynomialList = new PolynomialList();
         PolynomialList.load();
         PolynomialList.save();
+
+        PolynomialForm PolynomialForm = new PolynomialForm();
+        PolynomialForm.main();
 
 
     }
