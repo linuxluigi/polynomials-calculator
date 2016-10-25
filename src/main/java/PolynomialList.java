@@ -28,6 +28,62 @@ public class PolynomialList {
         this.file = new File(FileName);
     }
 
+    public String get_FileName() {
+        /**
+         * Gibt den Json Datei Namen zurück
+         */
+        return this.file.getName();
+    }
+
+    public Polynomial[] get_PolylList() {
+        /**
+         * return PolylList
+         */
+        return this.PolylList;
+    }
+
+    public Polynomial get_Polynomial(int PolynomialNumber) {
+        /**
+         * @param PolynomialNumber Zahl im PolylList array
+         * return ein einzelnes Polynom
+         */
+        return this.PolylList[PolynomialNumber];
+    }
+
+    public int length() {
+        /**
+         * return PolylList length
+         */
+        return this.PolylList.length;
+    }
+
+    public void add(Polynomial newPolynomial) {
+        /**
+         * Hängt ein neues Polynom PolylList an
+         * @param newPolynomial Polynom aus der Klasse Polynomial, wird PolylList angehängt
+         */
+        Polynomial[] newPolylList = new Polynomial[this.PolylList.length+1];
+        for(int i = 0; i < this.PolylList.length; i++) {
+            newPolylList[i] = this.PolylList[i];
+        }
+        newPolylList[this.PolylList.length] = newPolynomial;
+        this.PolylList = newPolylList;
+    }
+
+    public void delte(int PolynomialNumber) {
+        /**
+         * Löscht ein Polynom aus PolylList
+         * @param PolynomialNumber Zahl im PolylList array
+         */
+        Polynomial[] newPolylList = new Polynomial[this.PolylList.length-1];
+        for(int i = 0; i < this.PolylList.length; i++) {
+            if(i != PolynomialNumber) {
+                newPolylList[i] = this.PolylList[i];
+            }
+        }
+        this.PolylList = newPolylList;
+    }
+
     public void load() {
         /**
          * load save.json >> into >> this.PolylList
@@ -65,13 +121,6 @@ public class PolynomialList {
         /**
          * save save.json >> into >> this.PolylList
          */
-
-        Polynomial[] myPolynomial = new Polynomial[2];
-
-        myPolynomial[0] = new Polynomial(5);
-        myPolynomial[1] = new Polynomial(5);
-
-
         Gson gson = new GsonBuilder().create();
         String content = gson.toJson(this.PolylList);
 

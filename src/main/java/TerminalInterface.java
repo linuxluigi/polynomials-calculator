@@ -1,3 +1,6 @@
+import sun.org.mozilla.javascript.internal.ast.WhileLoop;
+
+import java.security.PublicKey;
 import java.util.Scanner;
 
 /**
@@ -22,26 +25,32 @@ public class TerminalInterface {
         System.out.printf("+---%s---+\n", FillerLine);
     }
 
-    public String InputString (String TextError) {
+    public String InputString (String TextError, String Default) {
         /**
          * Überprüft Scanner Consolen eingabe auf String
          * eine Richtige eingabe zu tätigen
          * @param TextError Text der bei Falscher eingabe wiederholt wird
+         * @param Default Return Wert wenn User keine eingabe tätigt
          */
         Scanner ScannerInput = new Scanner(System.in);
 
-        boolean Error = true;
-        String UserInput = "";
+        String UserInput = ScannerInput.nextLine();
+        while(UserInput!=null) {
+            System.out.println(UserInput);
 
-        while (Error) {
-            if (ScannerInput.hasNext())
-                UserInput = ScannerInput.next();
-            else {
-                System.out.println(TextError);
-                ScannerInput.next();
-                continue;
+            if (UserInput.isEmpty()) {
+                // Enter drücken ohne weitere eingabe
+                UserInput = Default;
+                break;
             }
-            Error = false;
+
+            if (ScannerInput.hasNextLine()) {
+                UserInput = ScannerInput.nextLine();
+                break;
+            } else {
+                System.out.println(TextError);
+                UserInput = null;
+            }
         }
         return UserInput;
     }
@@ -67,6 +76,37 @@ public class TerminalInterface {
             }
             Error = false;
         }
+        return UserInput;
+    }
+
+    public int ShowMenu (String[] MenuList, boolean Back) {
+        /**
+         * @param MenuList Eine Liste mit allen Antwortmöglichkeiten
+         * @param Back True == fügt ein Menupunkt ein, um ins Vorherige Menu zurück zu kommen
+         *
+         * return   Menuauswahl Nummer von MenuList Array
+         */
+
+        for(int i = 0; i < MenuList.length; i++){
+            System.out.printf("[%d] %s\n\r", i+1, MenuList[i]);
+        }
+
+        int MenuMaxNumber;
+        if(Back == true){
+            System.out.printf("[%d] %s\n\r", MenuList.length+1, "Zurück");
+            MenuMaxNumber = MenuList.length+1;
+        } else {
+            MenuMaxNumber = MenuList.length;
+        }
+
+        int UserInput;
+        do {
+            System.out.printf("Aktion auswählen mit eingabe des Menupunktes als Zahl zwischen %d und %d\n" +
+                    "\n", 1, MenuMaxNumber);
+            String ErrorMessage = String.format("Bitte nur Zahlen zwischen %d und %d eingeben!\n\r",
+                    1, MenuMaxNumber);
+            UserInput = InputInt(ErrorMessage);
+        }while(UserInput > MenuMaxNumber || UserInput < 1);
         return UserInput;
     }
 

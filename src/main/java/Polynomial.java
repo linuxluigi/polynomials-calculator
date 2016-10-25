@@ -43,12 +43,14 @@ public class Polynomial {
          * Leeren Polynom mit der länge 'length' erstellen.
          * @param length Länge des Polynoms
          */
+        if(length < 2) {
+            length = 2;
+        }
         this.polylist = new int[length];
     }
     /*
      * End Konstruktor
      */
-
 
     /*
      * Start get
@@ -73,21 +75,88 @@ public class Polynomial {
             return this.polylist[number];
         }
     }
+
+    public String get_as_human_readable() {
+        /**
+         * Gibt den Polynom Menschlich lesbar zurück
+         */
+        String Polynomial_readable = String.format("%d=", this.polylist[0]);
+        if(this.polylist.length == 2) {
+            Polynomial_readable = Polynomial_readable + String.format("%d", this.polylist[1]);
+        } else {
+            for (int i = 1; i < this.polylist.length; i++) {
+                Polynomial_readable = Polynomial_readable + String.format("%d", this.polylist[i]);
+                Polynomial_readable = Polynomial_readable + "x";
+
+                int IntExponent = i-1;
+                String StrExponent = "";
+                // Konvertiere Int zu String Exponent
+                while (IntExponent > 0) {
+                    int IntSingleExponent = IntExponent % 10;
+                    switch (IntSingleExponent) {
+                        case 0:
+                            // 0
+                            StrExponent = "\u2070" + StrExponent;
+                            break;
+                        case 1:
+                            // 1
+                            StrExponent = "\u00B9" + StrExponent;
+                            break;
+                        case 2:
+                            // 2
+                            StrExponent = "\u00B2" + StrExponent;
+                            break;
+                        case 3:
+                            // 3
+                            StrExponent = "\u00B3" + StrExponent;
+                            break;
+                        case 4:
+                            // 4
+                            StrExponent = "\u2074" + StrExponent;
+                            break;
+                        case 5:
+                            // 5
+                            StrExponent = "\u2075" + StrExponent;
+                            break;
+                        case 6:
+                            // 6
+                            StrExponent = "\u2076" + StrExponent;
+                            break;
+                        case 7:
+                            // 7
+                            StrExponent = "\u2077" + StrExponent;
+                            break;
+                        case 8:
+                            // 8
+                            StrExponent = "\u2078" + StrExponent;
+                            break;
+                        case 9:
+                            // 9
+                            StrExponent = "\u2079" + StrExponent;
+                            break;
+                    }
+                    IntExponent = IntExponent / 10;
+                }
+                Polynomial_readable = Polynomial_readable + StrExponent;
+
+                if(i < this.polylist.length-1){
+                    Polynomial_readable = Polynomial_readable + "+";
+                }
+            }
+        }
+        return Polynomial_readable;
+    }
     /*
      * End get
      */
 
 
-    /*
-     * Start set
-     */
     public void set(int[] new_polylist) {
         /**
          * Überschreibt den Polynom mit einem neuen 'new_polylist'
          * @param new_polylist Vollständiger Polynom als INT Array
          */
         this.polylist = new_polylist;
-        System.out.println("Erfolg: Polynom wurde erfolgreich geändert!");
     }
 
     public void set(int poly_number, int poly_value) {
@@ -100,11 +169,6 @@ public class Polynomial {
             System.out.println("Fehler: Out of Array!");
         } else {
             this.polylist[poly_number] = poly_value;
-            System.out.println("Erfolg: Polynom wurde erfolgreich geändert!");
         }
     }
-    /*
-     * End set
-     */
-
 }
