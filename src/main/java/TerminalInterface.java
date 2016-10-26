@@ -1,6 +1,3 @@
-import sun.org.mozilla.javascript.internal.ast.WhileLoop;
-
-import java.security.PublicKey;
 import java.util.Scanner;
 
 /**
@@ -34,24 +31,21 @@ public class TerminalInterface {
          */
         Scanner ScannerInput = new Scanner(System.in);
 
-        String UserInput = ScannerInput.nextLine();
-        while(UserInput!=null) {
-            System.out.println(UserInput);
-
-            if (UserInput.isEmpty()) {
-                // Enter drücken ohne weitere eingabe
-                UserInput = Default;
-                break;
-            }
-
+        String UserInput;
+        do {
             if (ScannerInput.hasNextLine()) {
                 UserInput = ScannerInput.nextLine();
-                break;
+                if (UserInput.isEmpty()) {
+                    // Enter drücken ohne weitere eingabe
+                    UserInput = Default;
+                    break;
+                }
+                System.out.println(UserInput);
             } else {
                 System.out.println(TextError);
                 UserInput = null;
             }
-        }
+        } while(UserInput==null);
         return UserInput;
     }
 

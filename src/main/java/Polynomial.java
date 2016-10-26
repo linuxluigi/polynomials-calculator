@@ -16,22 +16,22 @@ public class Polynomial {
      * <li>6 == x^5</li>
      * </ul>
      *
-     * @param  polylist  Liste mit Polynomen + Ergebnis.
-     *                   0 == Ergebnis, 1 == x^0, 7 == x^5
-     *
-     * @author      Steffen Exler
-     * @version     %I%, %G%
-     * @since       0.0.1
+     * @param polylist  Liste mit Polynomen + Ergebnis.
+     * 0 == Ergebnis, 1 == x^0, 7 == x^5
+     * @author Steffen Exler
+     * @version %I%, %G%
+     * @since 0.1.0
      */
 
-    private int polylist [];
+    private int polylist[];
 
     /*
      * Start Konstruktor
      */
-    public Polynomial(int new_polylist []) {
+    public Polynomial(int new_polylist[]) {
         /**
          * Neuen Polynom aus ein vollständigen INT Array erzeugen
+         *
          * @param new_polylist Kompletter Polynom
          */
         // Todo: test for non conform list
@@ -41,9 +41,10 @@ public class Polynomial {
     public Polynomial(int length) {
         /**
          * Leeren Polynom mit der länge 'length' erstellen.
+         *
          * @param length Länge des Polynoms
          */
-        if(length < 2) {
+        if (length < 2) {
             length = 2;
         }
         this.polylist = new int[length];
@@ -65,6 +66,7 @@ public class Polynomial {
     public int get(int number) {
         /**
          * Gib eine Stelle 'number' des Polynoms zurück
+         *
          * @param number Stelle des Polynomes this.polylist[number]
          */
         if (this.polylist.length < number || number < 0) {
@@ -76,19 +78,26 @@ public class Polynomial {
         }
     }
 
+    public int length() {
+        /**
+         *  Gibt die Länge des Polynomes zurück
+         */
+        return this.polylist.length;
+    }
+
     public String get_as_human_readable() {
         /**
          * Gibt den Polynom Menschlich lesbar zurück
          */
         String Polynomial_readable = String.format("%d=", this.polylist[0]);
-        if(this.polylist.length == 2) {
+        if (this.polylist.length == 2) {
             Polynomial_readable = Polynomial_readable + String.format("%d", this.polylist[1]);
         } else {
             for (int i = 1; i < this.polylist.length; i++) {
                 Polynomial_readable = Polynomial_readable + String.format("%d", this.polylist[i]);
                 Polynomial_readable = Polynomial_readable + "x";
 
-                int IntExponent = i-1;
+                int IntExponent = i - 1;
                 String StrExponent = "";
                 // Konvertiere Int zu String Exponent
                 while (IntExponent > 0) {
@@ -139,7 +148,7 @@ public class Polynomial {
                 }
                 Polynomial_readable = Polynomial_readable + StrExponent;
 
-                if(i < this.polylist.length-1){
+                if (i < this.polylist.length - 1) {
                     Polynomial_readable = Polynomial_readable + "+";
                 }
             }
@@ -154,6 +163,7 @@ public class Polynomial {
     public void set(int[] new_polylist) {
         /**
          * Überschreibt den Polynom mit einem neuen 'new_polylist'
+         *
          * @param new_polylist Vollständiger Polynom als INT Array
          */
         this.polylist = new_polylist;
@@ -162,10 +172,11 @@ public class Polynomial {
     public void set(int poly_number, int poly_value) {
         /**
          * Überschreibt ein einzelnen Wert des Polynomes
+         *
          * @param poly_number Stelle des INT Arrays
          * @param poly_value Wert der neuen Zahl im Polynom
          */
-        if(this.polylist.length < poly_number || poly_number < 0) {
+        if (this.polylist.length < poly_number || poly_number < 0) {
             System.out.println("Fehler: Out of Array!");
         } else {
             this.polylist[poly_number] = poly_value;

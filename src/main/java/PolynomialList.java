@@ -1,6 +1,6 @@
 /**
  * Save & Load Json File
- *
+ * <p>
  * Created by Steffen Exler on 17.10.16.
  */
 
@@ -18,7 +18,7 @@ public class PolynomialList {
      * @param file JSON Datei für laden und sichern des Polynomial Array
      */
 
-    private Polynomial[] PolylList;
+    private Polynomial[] PolylList = new Polynomial[0];
     private File file = new File("save.json");
 
     public void set_file(String FileName) {
@@ -62,22 +62,35 @@ public class PolynomialList {
          * Hängt ein neues Polynom PolylList an
          * @param newPolynomial Polynom aus der Klasse Polynomial, wird PolylList angehängt
          */
-        Polynomial[] newPolylList = new Polynomial[this.PolylList.length+1];
-        for(int i = 0; i < this.PolylList.length; i++) {
+        Polynomial[] newPolylList = new Polynomial[this.PolylList.length + 1];
+        for (int i = 0; i < this.PolylList.length; i++) {
             newPolylList[i] = this.PolylList[i];
         }
         newPolylList[this.PolylList.length] = newPolynomial;
         this.PolylList = newPolylList;
     }
 
+    public void set(int ArrayNumber, Polynomial newPolynomial) {
+        /**
+         * Überschreib das Polynom PolylList[ArrayNumber] mit newPolynomial
+         *
+         * @param ArrayNumber Array nummer von PolylList
+         * @param newPolynomial neues Polynom was eingesetzt werden soll
+         */
+
+        this.PolylList[ArrayNumber-1] = newPolynomial;
+    }
+
     public void delte(int PolynomialNumber) {
         /**
          * Löscht ein Polynom aus PolylList
+         *
          * @param PolynomialNumber Zahl im PolylList array
          */
-        Polynomial[] newPolylList = new Polynomial[this.PolylList.length-1];
-        for(int i = 0; i < this.PolylList.length; i++) {
-            if(i != PolynomialNumber) {
+
+        Polynomial[] newPolylList = new Polynomial[this.PolylList.length - 1];
+        for (int i = 0; i < this.PolylList.length - 1; i++) {
+            if (i != PolynomialNumber) {
                 newPolylList[i] = this.PolylList[i];
             }
         }
@@ -100,8 +113,7 @@ public class PolynomialList {
             String row;
             String content = "";
 
-            while( (row = br.readLine()) != null )
-            {
+            while ((row = br.readLine()) != null) {
                 content = content + row;
             }
             br.close();
