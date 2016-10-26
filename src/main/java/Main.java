@@ -50,6 +50,8 @@ public class Main {
                 "Polynom hinzufügen",
                 "Polynom bearbeiten",
                 "Polynom löschen",
+                "Polynom addieren",
+                "Polynom subtraieren",
                 "Json laden",
                 "Json speichern",
                 "Programm beenden",
@@ -82,14 +84,30 @@ public class Main {
                 }
                 break;
             case 5:
+                // Polynom addieren
+                if (PolynomialList.length() < 2) {
+                    System.out.println("Es müssen mindestens 2 Polynome vorhanden sein, bitte erstelle weitere Polynome");
+                } else {
+                    MainMenu_mathAddSub(true);
+                }
+                break;
+            case 6:
+                // Polynom subtraieren
+                if (PolynomialList.length() < 2) {
+                    System.out.println("Es müssen mindestens 2 Polynome vorhanden sein, bitte erstelle weitere Polynome");
+                } else {
+                    MainMenu_mathAddSub(false);
+                }
+                break;
+            case 7:
                 // Json laden
                 MainMenu_Load();
                 break;
-            case 6:
+            case 8:
                 // Json speichern
                 MainMenu_Save();
                 break;
-            case 7:
+            case 9:
                 // Programm beenden
                 Interface.BoarderText("Goodby my friend =)");
                 System.exit(0);
@@ -203,6 +221,59 @@ public class Main {
         PolynomialList.set(UserInput, Polynomial);
 
         Interface.BoarderText("Polynom geändert");
+    }
+
+    private static void MainMenu_mathAddSub(boolean operator) {
+        /**
+         * Menu zum addieren und subtraieren von 2 Polynomen
+         *
+         * @param operator gibt an ob eine Addition oder Subtraion vorgenommen werden soll
+         *                 true == +; false == -
+         */
+
+        TerminalInterface Interface = new TerminalInterface();
+        String StrOperator;
+
+        if(operator == true) {
+            StrOperator = "addieren";
+        } else {
+            StrOperator = "subtraieren";
+        }
+
+        Interface.BoarderText("Polynome " + StrOperator);
+
+        System.out.printf("Welches der folgenden Polynome soll %s werden\n\r", StrOperator);
+
+        MainMenu_ShowPolynomialList();
+        int UserInput_1;
+        String StrErrorNumber = "Bitte eine Zahl aus der Polynomliste angeben.";
+
+        do {
+            UserInput_1 = Interface.InputInt(StrErrorNumber);
+            if (UserInput_1 < 1) {
+                System.out.println(StrErrorNumber);
+            }
+        } while (UserInput_1 > PolynomialList.length() || UserInput_1 < 1);
+
+        System.out.printf("Welches der folgenden Polynome soll %s werden\n\r", StrOperator);
+
+        MainMenu_ShowPolynomialList();
+        int UserInput_2;
+
+        do {
+            UserInput_2 = Interface.InputInt(StrErrorNumber);
+            if (UserInput_2 < 1) {
+                System.out.println(StrErrorNumber);
+            }
+        } while (UserInput_2 > PolynomialList.length() || UserInput_2 < 1);
+
+        Polynomial newPolynomial = PolynomialList.mathAddSub(
+                PolynomialList.get_Polynomial(UserInput_1),
+                PolynomialList.get_Polynomial(UserInput_2),
+                operator
+        );
+
+        Interface.BoarderText("Neues Polynom: " + newPolynomial.get_as_human_readable());
     }
 
     private static void MainMenu_Load() {

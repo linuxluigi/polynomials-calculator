@@ -14,6 +14,7 @@ import com.google.gson.GsonBuilder;
 public class PolynomialList {
     /**
      * Laden und Speichern eines Polynomial Array
+     *
      * @param PolylList Polynomial Array
      * @param file JSON Datei für laden und sichern des Polynomial Array
      */
@@ -78,7 +79,7 @@ public class PolynomialList {
          * @param newPolynomial neues Polynom was eingesetzt werden soll
          */
 
-        this.PolylList[ArrayNumber-1] = newPolynomial;
+        this.PolylList[ArrayNumber - 1] = newPolynomial;
     }
 
     public void delte(int PolynomialNumber) {
@@ -95,6 +96,50 @@ public class PolynomialList {
             }
         }
         this.PolylList = newPolylList;
+    }
+
+    public Polynomial mathAddSub(Polynomial Polynomial_1, Polynomial Polynomial_2, boolean operator) {
+        /**
+         * Addiert oder Subtraiert 2 Polynome miteinander, gibt dieses als Polynomial Klasse zurück
+         * und fügt es in PolylList hinzu
+         *
+         * @param Polynomial_1 Polynom 1 welche zu Polynom 2 addiert wird
+         * @param Polynomial_2 Polynom 2 welche zu Polynom 1 addiert wird
+         * @param operator 1 == +, 0 == -
+         */
+
+        int PolyMaxLength;
+        int PolyMinLength;
+        if (Polynomial_1.length() >= Polynomial_2.length()) {
+            PolyMaxLength = Polynomial_1.length();
+            PolyMinLength = Polynomial_2.length();
+        } else {
+            PolyMaxLength = Polynomial_2.length();
+            PolyMinLength = Polynomial_1.length();
+        }
+
+        Polynomial newPolynomial = new Polynomial(PolyMaxLength);
+
+        for (int i = 0; i < PolyMinLength; i++) {
+            int newVaule;
+            if(operator == true) {
+                newVaule = Polynomial_1.get(i) + Polynomial_2.get(i);
+            } else {
+                newVaule = Polynomial_1.get(i) - Polynomial_2.get(i);
+            }
+            newPolynomial.set(i, newVaule);
+        }
+        for (int i = PolyMinLength-1; i < PolyMaxLength; i++) {
+            if(Polynomial_1.length() == PolyMaxLength) {
+                newPolynomial.set(i, Polynomial_1.get(i));
+            } else {
+                newPolynomial.set(i, Polynomial_2.get(i));
+            }
+        }
+
+        add(newPolynomial);
+
+        return newPolynomial;
     }
 
     public void load() {
