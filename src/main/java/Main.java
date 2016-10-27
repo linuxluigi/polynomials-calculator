@@ -52,6 +52,7 @@ public class Main {
                 "Polynom löschen",
                 "Polynom addieren",
                 "Polynom subtraieren",
+                "Polynom ableiten",
                 "Json laden",
                 "Json speichern",
                 "Programm beenden",
@@ -100,14 +101,22 @@ public class Main {
                 }
                 break;
             case 7:
+                // Polynom ableiten
+                if (PolynomialList.length() < 1) {
+                    System.out.println("Es muss mindestens 1 Polynom vorhanden sein, bitte erstell ein weiteres Polynom");
+                } else {
+                    MainMenu_Derivation();
+                }
+                break;
+            case 8:
                 // Json laden
                 MainMenu_Load();
                 break;
-            case 8:
+            case 9:
                 // Json speichern
                 MainMenu_Save();
                 break;
-            case 9:
+            case 10:
                 // Programm beenden
                 Interface.BoarderText("Goodby my friend =)");
                 System.exit(0);
@@ -213,7 +222,7 @@ public class Main {
         System.out.printf("neues Ergebnis [%d]\n\r", Polynomial.get(0));
         Polynomial.set(0, Interface.InputInt("Bitte nur eine Int Zahl angeben!"));
 
-        for(int i = 1; i < Polynomial.length(); i++){
+        for (int i = 1; i < Polynomial.length(); i++) {
             System.out.printf("neuen Wert für Element %d [%d]\n\r", i, Polynomial.get(i));
             Polynomial.set(i, Interface.InputInt("Bitte nur eine Int Zahl angeben!"));
         }
@@ -234,7 +243,7 @@ public class Main {
         TerminalInterface Interface = new TerminalInterface();
         String StrOperator;
 
-        if(operator == true) {
+        if (operator == true) {
             StrOperator = "addieren";
         } else {
             StrOperator = "subtraieren";
@@ -268,12 +277,31 @@ public class Main {
         } while (UserInput_2 > PolynomialList.length() || UserInput_2 < 1);
 
         Polynomial newPolynomial = PolynomialList.mathAddSub(
-                PolynomialList.get_Polynomial(UserInput_1),
-                PolynomialList.get_Polynomial(UserInput_2),
+                PolynomialList.get_Polynomial(UserInput_1 - 1),
+                PolynomialList.get_Polynomial(UserInput_2 - 1),
                 operator
         );
 
         Interface.BoarderText("Neues Polynom: " + newPolynomial.get_as_human_readable());
+    }
+
+    private static void MainMenu_Derivation() {
+        TerminalInterface Interface = new TerminalInterface();
+        Interface.BoarderText("Ableiten eines Polynomes");
+
+        int UserInput;
+        String StrErrorNumber = "Bitte eine Zahl aus der Polynomliste angeben.";
+
+        MainMenu_ShowPolynomialList();
+
+        do {
+            UserInput = Interface.InputInt(StrErrorNumber);
+            if (UserInput < 1) {
+                System.out.println(StrErrorNumber);
+            }
+        } while (UserInput > PolynomialList.length() || UserInput < 1);
+
+        Interface.BoarderText(PolynomialList.get_Polynomial(UserInput - 1).Derivation());
     }
 
     private static void MainMenu_Load() {

@@ -85,6 +85,27 @@ public class Polynomial {
         return this.polylist.length;
     }
 
+    public String Derivation() {
+        /**
+         * Gibt die 1. Ableitung des Polynomes zurück
+         */
+
+        String StrDerivation;
+        if (this.polylist.length <= 2) {
+            StrDerivation = String.format("%d=%d", this.polylist[0], this.polylist[1]);
+        } else {
+            int DerivationX = 0;
+
+            for (int i = 2; i < this.polylist.length; i++) {
+                DerivationX = this.polylist[i] * (i - 1);
+            }
+
+            StrDerivation = String.format("%d=%d+%dx", this.polylist[0], this.polylist[1], DerivationX);
+        }
+
+        return StrDerivation;
+    }
+
     public String get_as_human_readable() {
         /**
          * Gibt den Polynom Menschlich lesbar zurück
@@ -94,6 +115,9 @@ public class Polynomial {
             Polynomial_readable = Polynomial_readable + String.format("%d", this.polylist[1]);
         } else {
             for (int i = 1; i < this.polylist.length; i++) {
+                if (this.polylist[i] < 0) {
+                    Polynomial_readable = Polynomial_readable + "(";
+                }
                 Polynomial_readable = Polynomial_readable + String.format("%d", this.polylist[i]);
                 Polynomial_readable = Polynomial_readable + "x";
 
@@ -147,6 +171,10 @@ public class Polynomial {
                     IntExponent = IntExponent / 10;
                 }
                 Polynomial_readable = Polynomial_readable + StrExponent;
+
+                if (this.polylist[i] < 0) {
+                    Polynomial_readable = Polynomial_readable + ")";
+                }
 
                 if (i < this.polylist.length - 1) {
                     Polynomial_readable = Polynomial_readable + "+";

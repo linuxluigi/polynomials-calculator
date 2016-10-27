@@ -122,18 +122,27 @@ public class PolynomialList {
 
         for (int i = 0; i < PolyMinLength; i++) {
             int newVaule;
-            if(operator == true) {
+            if (operator == true) {
                 newVaule = Polynomial_1.get(i) + Polynomial_2.get(i);
             } else {
                 newVaule = Polynomial_1.get(i) - Polynomial_2.get(i);
             }
             newPolynomial.set(i, newVaule);
         }
-        for (int i = PolyMinLength-1; i < PolyMaxLength; i++) {
-            if(Polynomial_1.length() == PolyMaxLength) {
-                newPolynomial.set(i, Polynomial_1.get(i));
+
+        for (int i = PolyMinLength; i < PolyMaxLength; i++) {
+            if (Polynomial_1.length() == PolyMaxLength) {
+                if (operator == true) {
+                    newPolynomial.set(i, Polynomial_1.get(i));
+                } else {
+                    newPolynomial.set(i, Polynomial_1.get(i) * -1);
+                }
             } else {
-                newPolynomial.set(i, Polynomial_2.get(i));
+                if (operator == true) {
+                    newPolynomial.set(i, Polynomial_2.get(i));
+                } else {
+                    newPolynomial.set(i, Polynomial_2.get(i) * -1);
+                }
             }
         }
 

@@ -5,7 +5,7 @@ import java.util.Scanner;
  * Created by Steffen Exler on 18.10.16.
  */
 public class TerminalInterface {
-    public void BoarderText (String Text) {
+    public void BoarderText(String Text) {
         /**
          * Gibt den String Text in ein Rahm aus
          * @param Text String der im Rahmen angezeigt werden soll
@@ -22,7 +22,7 @@ public class TerminalInterface {
         System.out.printf("+---%s---+\n", FillerLine);
     }
 
-    public String InputString (String TextError, String Default) {
+    public String InputString(String TextError, String Default) {
         /**
          * Überprüft Scanner Consolen eingabe auf String
          * eine Richtige eingabe zu tätigen
@@ -45,11 +45,11 @@ public class TerminalInterface {
                 System.out.println(TextError);
                 UserInput = null;
             }
-        } while(UserInput==null);
+        } while (UserInput == null);
         return UserInput;
     }
 
-    public int InputInt (String TextError) {
+    public int InputInt(String TextError) {
         /**
          * Überprüft Scanner Consolen eingabe auf Int
          * eine Richtige eingabe zu tätigen
@@ -73,7 +73,7 @@ public class TerminalInterface {
         return UserInput;
     }
 
-    public int ShowMenu (String[] MenuList, boolean Back) {
+    public int ShowMenu(String[] MenuList, boolean Back) {
         /**
          * @param MenuList Eine Liste mit allen Antwortmöglichkeiten
          * @param Back True == fügt ein Menupunkt ein, um ins Vorherige Menu zurück zu kommen
@@ -81,14 +81,14 @@ public class TerminalInterface {
          * return   Menuauswahl Nummer von MenuList Array
          */
 
-        for(int i = 0; i < MenuList.length; i++){
-            System.out.printf("[%d] %s\n\r", i+1, MenuList[i]);
+        for (int i = 0; i < MenuList.length; i++) {
+            System.out.printf("[%d] %s\n\r", i + 1, MenuList[i]);
         }
 
         int MenuMaxNumber;
-        if(Back == true){
-            System.out.printf("[%d] %s\n\r", MenuList.length+1, "Zurück");
-            MenuMaxNumber = MenuList.length+1;
+        if (Back == true) {
+            System.out.printf("[%d] %s\n\r", MenuList.length + 1, "Zurück");
+            MenuMaxNumber = MenuList.length + 1;
         } else {
             MenuMaxNumber = MenuList.length;
         }
@@ -100,7 +100,7 @@ public class TerminalInterface {
             String ErrorMessage = String.format("Bitte nur Zahlen zwischen %d und %d eingeben!\n\r",
                     1, MenuMaxNumber);
             UserInput = InputInt(ErrorMessage);
-        }while(UserInput > MenuMaxNumber || UserInput < 1);
+        } while (UserInput > MenuMaxNumber || UserInput < 1);
         return UserInput;
     }
 
