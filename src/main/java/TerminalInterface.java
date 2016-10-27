@@ -34,8 +34,8 @@ class TerminalInterface {
      */
     String InputString(String TextError, String Default) {
         Scanner ScannerInput = new Scanner(System.in);
-
         String UserInput;
+
         do {
             if (ScannerInput.hasNextLine()) {
                 UserInput = ScannerInput.nextLine();
@@ -50,6 +50,7 @@ class TerminalInterface {
                 UserInput = null;
             }
         } while (UserInput == null);
+
         return UserInput;
     }
 

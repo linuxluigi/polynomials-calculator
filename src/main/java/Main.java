@@ -8,11 +8,13 @@
 
 
 public class Main {
+    /**
+     * Die Main Klasse zum starten des Userinterface, fragen nach der Json Datei Pfad
+     * und MainMenu in endlos Schleife starten
+     *
+     * @param args ...
+     */
     public static void main(String[] args) {
-        /**
-         * Fragt nach welche Daten geladen werden soll
-         * und initialesiert die Variablen
-         */
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Polynom Rechner 0.1.0");
         System.out.println("Operationen mit Polynomen &  Speichern der Polynome in einer JSON Datei");
@@ -20,29 +22,29 @@ public class Main {
         // Json angeben
         System.out.println("Json Datei [save.json]");
         String FileName = Interface.InputString("Bitte Datei Pfad angeben", PolynomialList.get_FileName());
-        if (FileName.equals(PolynomialList.get_FileName()) == false) {
+        if (!FileName.equals(PolynomialList.get_FileName())) {
             PolynomialList.set_file(FileName);
         }
 
         // Json laden
         System.out.println("Json laden [Y/n]");
         String Question_LoadJsonM = Interface.InputString("Json laden [Y/n]", "Y");
-        if (Question_LoadJsonM.equals("n") == false || Question_LoadJsonM.equals("N")) {
+        if (!Question_LoadJsonM.equals("n") || Question_LoadJsonM.equals("N")) {
             PolynomialList.load();
         }
 
         //Lade MainMenu
-        while (true == true) {
+        while (true) {
             MainMenu();
         }
     }
 
     private static PolynomialList PolynomialList = new PolynomialList();
 
+    /**
+     * Erstellt das Hauptmenu
+     */
     private static void MainMenu() {
-        /**
-         * Erstellt das Hauptmenu
-         */
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Haupt Menu");
         String[] MainMenuArray = {
@@ -133,34 +135,38 @@ public class Main {
         }
     }
 
+    /**
+     * zeige alle Polynome von PolynomialList als Menlisch lesbare liste
+     */
     private static void MainMenu_ShowPolynomialList() {
-        /**
-         * zeige alle Polynome von PolynomialList als Menlisch lesbare liste
-         */
-
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Polynom Liste");
+
         if (PolynomialList.length() == 0) {
             System.out.println("Kein Polynom vorhanden");
         } else {
             Polynomial[] PolylList = PolynomialList.get_PolylList();
+
             for (int i = 0; i < PolylList.length; i++) {
                 System.out.printf("[%d] %s\n\r", i + 1, PolylList[i].get_as_human_readable());
             }
+
         }
     }
 
+    /**
+     * Erstellt ein neues Polynom durch den User im Terminal
+     */
     private static void MainMenu_AddPolynomial() {
-        /**
-         * Erstellt ein neues Polynom durch den User im Terminal
-         */
-
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Erstelle neues Polynom");
+
         System.out.println("Wie viel Elemente besitzt dein Polynom");
         System.out.println("Beispiel für 5 Elemente: p(x)=2+6x+2x\u00B2+6x\u00B3+4x\u2074");
+
         int IntArrayLength = 0;
         String StrErrorLength = "Bitte ein Zahl die größer als 1 ist eingeben.";
+
         while (IntArrayLength < 1) {
             IntArrayLength = Interface.InputInt(StrErrorLength);
             if (IntArrayLength < 1) {
@@ -179,43 +185,48 @@ public class Main {
         Interface.BoarderText("Neues Polynom: " + Polynomial.get_as_human_readable());
     }
 
+    /**
+     * Löscht ein Polynom aus PolynomialList
+     */
     private static void MainMenu_DeletePolynomial() {
-        /**
-         * Löscht ein Polynom aus PolynomialList
-         */
-
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Polynom Löschen");
+
         System.out.println("Gib an welches der folgenden Polynome gelöscht werden soll");
         MainMenu_ShowPolynomialList();
+
         int UserInput;
         String StrErrorNumber = "Bitte eine Zahl aus der Polynomliste angeben.";
+
         do {
             UserInput = Interface.InputInt(StrErrorNumber);
             if (UserInput < 1) {
                 System.out.println(StrErrorNumber);
             }
         } while (UserInput > PolynomialList.length() || UserInput < 1);
+
         Polynomial Polynomial = PolynomialList.get_Polynomial(UserInput - 1);
         System.out.println("Polynom wirklich löschen? " + Polynomial.get_as_human_readable() + " [y/N]");
         String Question_Delete = Interface.InputString("error", "N");
+
         if (Question_Delete.equals("y") || Question_Delete.equals("Y")) {
-            PolynomialList.delte(UserInput);
+            PolynomialList.delte(UserInput - 1);
             Interface.BoarderText("Polynom gelöscht");
         } else {
             Interface.BoarderText("Polynom nicht gelöscht");
         }
     }
 
+    /**
+     * Ändert ein Polynom aus PolynomialList
+     */
     private static void MainMenu_ChangePolynomial() {
-        /**
-         * Ändert ein Polynom aus PolynomialList
-         */
-
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Polynom bearbeiten");
+
         System.out.println("Gib an welches der folgenden Polynome geändert werden soll");
         MainMenu_ShowPolynomialList();
+
         int UserInput;
         String StrErrorNumber = "Bitte eine Zahl aus der Polynomliste angeben.";
 
@@ -229,7 +240,7 @@ public class Main {
         Polynomial Polynomial = PolynomialList.get_Polynomial(UserInput - 1);
 
         for (int i = 0; i < Polynomial.length(); i++) {
-            System.out.printf("neuen Wert für Element %d [%d]\n\r", i+1, Polynomial.get(i));
+            System.out.printf("neuen Wert für Element %d [%d]\n\r", i + 1, Polynomial.get(i));
             Polynomial.set(i, Interface.InputInt("Bitte nur eine Int Zahl angeben!"));
         }
 
@@ -239,18 +250,17 @@ public class Main {
         Interface.BoarderText("Polynom geändert");
     }
 
+    /**
+     * Menu zum addieren und subtraieren von 2 Polynomen
+     *
+     * @param operator gibt an ob eine Addition oder Subtraion vorgenommen werden soll
+     *                 true == +; false == -
+     */
     private static void MainMenu_mathAddSub(boolean operator) {
-        /**
-         * Menu zum addieren und subtraieren von 2 Polynomen
-         *
-         * @param operator gibt an ob eine Addition oder Subtraion vorgenommen werden soll
-         *                 true == +; false == -
-         */
-
         TerminalInterface Interface = new TerminalInterface();
         String StrOperator;
 
-        if (operator == true) {
+        if (operator) {
             StrOperator = "addieren";
         } else {
             StrOperator = "subtraieren";
@@ -292,11 +302,10 @@ public class Main {
         Interface.BoarderText("Neues Polynom: " + newPolynomial.get_as_human_readable());
     }
 
+    /**
+     * 1. Ableitung eines Polynoms
+     */
     private static void MainMenu_Derivation() {
-        /**
-         * 1. Ableitung eines Polynoms
-         */
-
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Ableiten eines Polynomes");
 
@@ -315,11 +324,10 @@ public class Main {
         Interface.BoarderText(PolynomialList.get_Polynomial(UserInput - 1).Derivation());
     }
 
+    /**
+     * 2 Polynome miteinander Multiplizieren
+     */
     private static void MainMenu_Multiply() {
-        /**
-         * 2 Polynome miteinander Multiplizieren
-         */
-
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Polynome Multiplizieren");
 
@@ -349,8 +357,8 @@ public class Main {
         } while (UserInput_2 > PolynomialList.length() || UserInput_2 < 1);
 
         Polynomial newPolynomial = PolynomialList.mathMultiply(
-                PolynomialList.get_Polynomial(UserInput_1-1),
-                PolynomialList.get_Polynomial(UserInput_2-1)
+                PolynomialList.get_Polynomial(UserInput_1 - 1),
+                PolynomialList.get_Polynomial(UserInput_2 - 1)
         );
 
         Interface.BoarderText(
@@ -358,21 +366,19 @@ public class Main {
         );
     }
 
+    /**
+     * Lädt PolynomialList neu aus der Json Datei
+     */
     private static void MainMenu_Load() {
-        /**
-         * Lädt PolynomialList neu aus der Json Datei
-         */
-
         PolynomialList.load();
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Json geladen");
     }
 
+    /**
+     * Sichert PolynomialList in der Json Datei
+     */
     private static void MainMenu_Save() {
-        /**
-         * Sichert PolynomialList in der Json Datei
-         */
-
         PolynomialList.save();
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Gespeichert");

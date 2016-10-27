@@ -1,116 +1,138 @@
-/**
- * Save & Load Json File
- * <p>
- * Created by Steffen Exler on 17.10.16.
- */
-
 import java.io.*;
-
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 
+/**
+ * Ein Polynom Klasse Array welche mitunter folgende funktionen mitbringt:
+ * <ul>
+ * <li>Einzelne Polynome aus den Polynom[] ausgeben</li>
+ * <li>Polynome miteinander multiplizieren, addieren und subtraieren</li>
+ * <li>Einzelne Polynome löschen, bearbeiten oder neu hinzufügen</li>
+ * <li>Polynom[] bilden durch laden einer Json Datei</li>
+ * <li>Die eigene Klasse als Json Datei speichern</li>
+ * </ul>
+ */
+class PolynomialList {
 
-public class PolynomialList {
-    /**
-     * Laden und Speichern eines Polynomial Array
-     *
-     * @param PolylList Polynomial Array
-     * @param file JSON Datei für laden und sichern des Polynomial Array
-     */
-
-    private Polynomial[] PolylList = new Polynomial[0];
+    private Polynomial[] PolylList;
     private File file = new File("save.json");
 
-    public void set_file(String FileName) {
-        /**
-         * @param FileName Datei Namen und Pfad der neuen Json Datei
-         */
+    /**
+     * Konstruktor
+     * Erstellt ein neues leeres Polynomial[]
+     */
+    public PolynomialList() {
+        this.PolylList = new Polynomial[0];
+    }
+
+    /**
+     * Setzt den Namen und Pfad der Json Datei
+     *
+     * @param FileName Datei Namen und Pfad der neuen Json Datei
+     */
+    void set_file(String FileName) {
         this.file = new File(FileName);
     }
 
-    public String get_FileName() {
-        /**
-         * Gibt den Json Datei Namen zurück
-         */
+    /**
+     * Gibt den Json Datei String zurück
+     *
+     * @return Json Datei namen als String
+     */
+    String get_FileName() {
         return this.file.getName();
     }
 
-    public Polynomial[] get_PolylList() {
-        /**
-         * return PolylList
-         */
+    /**
+     * Gibt das Polynomial[] zurück
+     *
+     * @return Polynomial[]
+     */
+    Polynomial[] get_PolylList() {
         return this.PolylList;
     }
 
-    public Polynomial get_Polynomial(int PolynomialNumber) {
-        /**
-         * @param PolynomialNumber Zahl im PolylList array
-         * return ein einzelnes Polynom
-         */
+    /**
+     * Gibt ein einzelnes Polynomial aus dem Polynomial[] zurück
+     *
+     * @param PolynomialNumber Element des Polynomial[] welches zurück gegeben werden soll
+     * @return Polynomial Objekt
+     */
+    Polynomial get_Polynomial(int PolynomialNumber) {
         return this.PolylList[PolynomialNumber];
     }
 
+    /**
+     * Gibt die länge des Polynomial[] zurück
+     *
+     * @return Int länge des Polynomial[]
+     */
     public int length() {
-        /**
-         * return PolylList length
-         */
-        return this.PolylList.length;
+        if (this.PolylList == null) {
+            return 0;
+        } else {
+            return this.PolylList.length;
+        }
     }
 
+    /**
+     * Hängt ein neues Polynomial an Polynomial[] an
+     *
+     * @param newPolynomial neues Polynomial welches angehängt werden soll
+     */
     public void add(Polynomial newPolynomial) {
-        /**
-         * Hängt ein neues Polynom PolylList an
-         * @param newPolynomial Polynom aus der Klasse Polynomial, wird PolylList angehängt
-         */
         Polynomial[] newPolylList = new Polynomial[this.PolylList.length + 1];
-        for (int i = 0; i < this.PolylList.length; i++) {
-            newPolylList[i] = this.PolylList[i];
-        }
+
+        System.arraycopy(this.PolylList, 0, newPolylList, 0, this.PolylList.length);
+
         newPolylList[this.PolylList.length] = newPolynomial;
         this.PolylList = newPolylList;
     }
 
+    /**
+     * Überschreibt ein Polynomial aus Polynomial[] mit einen neuem Polynomial
+     *
+     * @param ArrayNumber   Element nummer des zu überschreibenen Polynomial
+     * @param newPolynomial Neues Polynomial welches das alte überschreiben soll
+     */
     public void set(int ArrayNumber, Polynomial newPolynomial) {
-        /**
-         * Überschreib das Polynom PolylList[ArrayNumber] mit newPolynomial
-         *
-         * @param ArrayNumber Array nummer von PolylList
-         * @param newPolynomial neues Polynom was eingesetzt werden soll
-         */
-
         this.PolylList[ArrayNumber - 1] = newPolynomial;
     }
 
-    public void delte(int PolynomialNumber) {
-        /**
-         * Löscht ein Polynom aus PolylList
-         *
-         * @param PolynomialNumber Zahl im PolylList array
-         */
-
+    /**
+     * Löscht ein Element aus den Polynomial[]
+     *
+     * @param PolynomialNumber Element des Polynomial[] welches gelöscht werden soll
+     */
+    void delte(int PolynomialNumber) {
         Polynomial[] newPolylList = new Polynomial[this.PolylList.length - 1];
+
         for (int i = 0; i < this.PolylList.length - 1; i++) {
             if (i != PolynomialNumber) {
                 newPolylList[i] = this.PolylList[i];
             }
         }
+
         this.PolylList = newPolylList;
     }
 
 
-    public Polynomial mathAddSub(Polynomial Polynomial_1, Polynomial Polynomial_2, boolean operator) {
-        /**
-         * Addiert oder Subtraiert 2 Polynome miteinander, gibt dieses als Polynomial Klasse zurück
-         * und fügt es in PolylList hinzu
-         *
-         * @param Polynomial_1 Polynom 1 welche zu Polynom 2 addiert wird
-         * @param Polynomial_2 Polynom 2 welche zu Polynom 1 addiert wird
-         * @param operator 1 == +, 0 == -
-         */
+    /**
+     * Addiert oder Subtraiert 2 Polynome miteinander, gibt dieses als Polynomial Klasse zurück
+     * und fügt es in Polynomial[] hinzu
+     *
+     * @param Polynomial_1 Polynom 1 welche zu Polynom 2 addiert wird
+     * @param Polynomial_2 Polynom 2 welche zu Polynom 1 addiert wird
+     * @param operator     1 == +, 0 == -
+     * @return Neues Polynomial welches durch die Berechnung entstand
+     */
+    Polynomial mathAddSub(Polynomial Polynomial_1, Polynomial Polynomial_2, boolean operator) {
 
+        // Überprüft welches Polynom mehr Elemente besitzt und speichert beide Polynom länge als Int
         int PolyMaxLength;
         int PolyMinLength;
+
         if (Polynomial_1.length() >= Polynomial_2.length()) {
             PolyMaxLength = Polynomial_1.length();
             PolyMinLength = Polynomial_2.length();
@@ -121,9 +143,10 @@ public class PolynomialList {
 
         Polynomial newPolynomial = new Polynomial(PolyMaxLength);
 
+        // Addiere / Subtraiere Polynome bis in der Element höhe des kleineren Polynomes
         for (int i = 0; i < PolyMinLength; i++) {
             int newVaule;
-            if (operator == true) {
+            if (operator) {
                 newVaule = Polynomial_1.get(i) + Polynomial_2.get(i);
             } else {
                 newVaule = Polynomial_1.get(i) - Polynomial_2.get(i);
@@ -131,15 +154,17 @@ public class PolynomialList {
             newPolynomial.set(i, newVaule);
         }
 
+        // den Bereich wo ein Polynom größer war als der andere
+        // schreibe die weiteren Werte im neuen Polynomial
         for (int i = PolyMinLength; i < PolyMaxLength; i++) {
             if (Polynomial_1.length() == PolyMaxLength) {
-                if (operator == true) {
+                if (operator) {
                     newPolynomial.set(i, Polynomial_1.get(i));
                 } else {
                     newPolynomial.set(i, Polynomial_1.get(i) * -1);
                 }
             } else {
-                if (operator == true) {
+                if (operator) {
                     newPolynomial.set(i, Polynomial_2.get(i));
                 } else {
                     newPolynomial.set(i, Polynomial_2.get(i) * -1);
@@ -147,6 +172,7 @@ public class PolynomialList {
             }
         }
 
+        // fügt das neue Polynomial Polynomial[] hinzu
         add(newPolynomial);
 
         return newPolynomial;
@@ -159,28 +185,29 @@ public class PolynomialList {
      * @param Polynomial_2 Polynom 2 welches zu Polynom 1 multipliziert werden soll
      * @return neues multipliziertes Polynom
      */
-    public Polynomial mathMultiply(Polynomial Polynomial_1, Polynomial Polynomial_2) {
-        Polynomial newPolynomial = new Polynomial(Polynomial_1.length() + Polynomial_2.length() -1);
+    Polynomial mathMultiply(Polynomial Polynomial_1, Polynomial Polynomial_2) {
+        Polynomial newPolynomial = new Polynomial(Polynomial_1.length() + Polynomial_2.length() - 1);
 
         for (int i = 0; i < Polynomial_1.length(); i++) {
             for (int j = 0; j < Polynomial_2.length(); j++) {
                 newPolynomial.set(
-                        i+j,
-                        (Polynomial_1.get(i) * Polynomial_2.get(j)) + newPolynomial.get(i+j)
+                        i + j,
+                        (Polynomial_1.get(i) * Polynomial_2.get(j)) + newPolynomial.get(i + j)
                 );
             }
         }
 
+        // fügt das neue Polynomial Polynomial[] hinzu
         add(newPolynomial);
 
         return newPolynomial;
     }
 
-    public void load() {
-        /**
-         * load save.json >> into >> this.PolylList
-         */
-
+    /**
+     * Ersetzt das vorhandene Polynomial[] mit der aus der this.file Json Datei
+     * angeben Werten Polynomial[]
+     */
+    void load() {
         try {
             if (!this.file.exists()) {
                 this.file.createNewFile();
@@ -204,23 +231,17 @@ public class PolynomialList {
         } catch (IOException e) {
             e.printStackTrace();
         }
-
     }
 
 
-    public void save() {
-        /**
-         * save save.json >> into >> this.PolylList
-         */
+    /**
+     * Speichert Polynomial[] in this.file angeben Datei als Json format ab
+     */
+    void save() {
         Gson gson = new GsonBuilder().create();
         String content = gson.toJson(this.PolylList);
 
         try {
-            // if file doesnt exists, then create it
-            if (!file.exists()) {
-                file.createNewFile();
-            }
-
             FileWriter fw = new FileWriter(file.getAbsoluteFile());
             BufferedWriter bw = new BufferedWriter(fw);
             bw.write(content);
