@@ -98,6 +98,7 @@ public class PolynomialList {
         this.PolylList = newPolylList;
     }
 
+
     public Polynomial mathAddSub(Polynomial Polynomial_1, Polynomial Polynomial_2, boolean operator) {
         /**
          * Addiert oder Subtraiert 2 Polynome miteinander, gibt dieses als Polynomial Klasse zurück
@@ -143,6 +144,30 @@ public class PolynomialList {
                 } else {
                     newPolynomial.set(i, Polynomial_2.get(i) * -1);
                 }
+            }
+        }
+
+        add(newPolynomial);
+
+        return newPolynomial;
+    }
+
+    /**
+     * Multipliziert 2 Polynome miteinander und speichert das Polynom in PolylList
+     *
+     * @param Polynomial_1 Polynom 1 welches zu Polynom 2 multipliziert werden soll
+     * @param Polynomial_2 Polynom 2 welches zu Polynom 1 multipliziert werden soll
+     * @return neues multipliziertes Polynom
+     */
+    public Polynomial mathMultiply(Polynomial Polynomial_1, Polynomial Polynomial_2) {
+        Polynomial newPolynomial = new Polynomial(Polynomial_1.length() + Polynomial_2.length() -1);
+
+        for (int i = 0; i < Polynomial_1.length(); i++) {
+            for (int j = 0; j < Polynomial_2.length(); j++) {
+                newPolynomial.set(
+                        i+j,
+                        (Polynomial_1.get(i) * Polynomial_2.get(j)) + newPolynomial.get(i+j)
+                );
             }
         }
 

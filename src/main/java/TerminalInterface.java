@@ -1,16 +1,18 @@
 import java.util.Scanner;
 
 /**
- * User Interface Ausgabe
+ * User Terminal Interface Ausgabe
+ * Gibt ein Menu und sonstige nützliche
+ * Userinterface features aus
  * Created by Steffen Exler on 18.10.16.
  */
-public class TerminalInterface {
-    public void BoarderText(String Text) {
-        /**
-         * Gibt den String Text in ein Rahm aus
-         * @param Text String der im Rahmen angezeigt werden soll
-         * @param FillerLine Obere und untere Rahmen, automatische Längenanpassung von Text
-         */
+class TerminalInterface {
+    /**
+     * Gibt den String Text in ein Rahm aus
+     *
+     * @param Text String der im Rahmen angezeigt werden soll
+     */
+    void BoarderText(String Text) {
         String FillerLine = "";
 
         for (int i = 0; i < Text.length(); i++) {
@@ -22,20 +24,22 @@ public class TerminalInterface {
         System.out.printf("+---%s---+\n", FillerLine);
     }
 
-    public String InputString(String TextError, String Default) {
-        /**
-         * Überprüft Scanner Consolen eingabe auf String
-         * eine Richtige eingabe zu tätigen
-         * @param TextError Text der bei Falscher eingabe wiederholt wird
-         * @param Default Return Wert wenn User keine eingabe tätigt
-         */
+    /**
+     * Ließt eine User Terminal eingabe und überprüft
+     * ob es sich um ein String handelt und gibt diesen zurück
+     *
+     * @param TextError Text der bei Falscher eingabe wiederholt wird
+     * @param Default   Return Wert wenn User keine eingabe tätigt
+     * @return User eingabe als String
+     */
+    String InputString(String TextError, String Default) {
         Scanner ScannerInput = new Scanner(System.in);
 
         String UserInput;
         do {
             if (ScannerInput.hasNextLine()) {
                 UserInput = ScannerInput.nextLine();
-                if (UserInput.isEmpty()) {
+                if (UserInput.equals("")) {
                     // Enter drücken ohne weitere eingabe
                     UserInput = Default;
                     break;
@@ -49,12 +53,14 @@ public class TerminalInterface {
         return UserInput;
     }
 
-    public int InputInt(String TextError) {
-        /**
-         * Überprüft Scanner Consolen eingabe auf Int
-         * eine Richtige eingabe zu tätigen
-         * @param TextError Text der bei Falscher eingabe wiederholt wird
-         */
+    /**
+     * Ließt eine User Terminal eingabe und überprüft
+     * ob es sich um ein Int handelt und gibt diesen zurück
+     *
+     * @param TextError Text der bei Falscher eingabe wiederholt wird
+     * @return User eingabe als Int
+     */
+    int InputInt(String TextError) {
         Scanner ScannerInput = new Scanner(System.in);
 
         boolean Error = true;
@@ -73,20 +79,26 @@ public class TerminalInterface {
         return UserInput;
     }
 
-    public int ShowMenu(String[] MenuList, boolean Back) {
-        /**
-         * @param MenuList Eine Liste mit allen Antwortmöglichkeiten
-         * @param Back True == fügt ein Menupunkt ein, um ins Vorherige Menu zurück zu kommen
-         *
-         * return   Menuauswahl Nummer von MenuList Array
-         */
-
+    /**
+     * Erstellt ein User Terminal Menu, dieser kann mit der
+     * Int eingabe auswählen welchen Menupunkt er auswählen
+     * möchte. Das Menu wird mithilfe eines String[] gebildet
+     * und gibt die Usereingabe zurück.
+     *
+     * @param MenuList Eine Liste mit allen Antwortmöglichkeiten
+     * @param Back     True == fügt ein Menupunkt ein, um ins Vorherige Menu zurück zu kommen
+     * @return User Antwort als Int Wert. Der Wert ist die Nummer im MenuList[].
+     * Beispiel: Bei MenuList["Ich", "Du", "Er"] gibt der User
+     * 2 an und meint damit "Du" und 1 wird auch als
+     * Int zurück gegeben.
+     */
+    int ShowMenu(String[] MenuList, boolean Back) {
         for (int i = 0; i < MenuList.length; i++) {
             System.out.printf("[%d] %s\n\r", i + 1, MenuList[i]);
         }
 
         int MenuMaxNumber;
-        if (Back == true) {
+        if (Back) {
             System.out.printf("[%d] %s\n\r", MenuList.length + 1, "Zurück");
             MenuMaxNumber = MenuList.length + 1;
         } else {
@@ -101,7 +113,7 @@ public class TerminalInterface {
                     1, MenuMaxNumber);
             UserInput = InputInt(ErrorMessage);
         } while (UserInput > MenuMaxNumber || UserInput < 1);
-        return UserInput;
+        return UserInput - 1;
     }
 
 }

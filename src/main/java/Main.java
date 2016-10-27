@@ -53,6 +53,7 @@ public class Main {
                 "Polynom addieren",
                 "Polynom subtraieren",
                 "Polynom ableiten",
+                "Polynom multiplizieren",
                 "Json laden",
                 "Json speichern",
                 "Programm beenden",
@@ -60,15 +61,15 @@ public class Main {
         int choice = Interface.ShowMenu(MainMenuArray, false);
 
         switch (choice) {
-            case 1:
+            case 0:
                 // Polynome Anzeigen
                 MainMenu_ShowPolynomialList();
                 break;
-            case 2:
+            case 1:
                 // Polynom hinzufügen
                 MainMenu_AddPolynomial();
                 break;
-            case 3:
+            case 2:
                 // Polynom bearbeiten
                 if (PolynomialList.length() == 0) {
                     MainMenu_ShowPolynomialList();
@@ -76,7 +77,7 @@ public class Main {
                     MainMenu_ChangePolynomial();
                 }
                 break;
-            case 4:
+            case 3:
                 // Polynom löschen
                 if (PolynomialList.length() == 0) {
                     MainMenu_ShowPolynomialList();
@@ -84,28 +85,36 @@ public class Main {
                     MainMenu_DeletePolynomial();
                 }
                 break;
-            case 5:
+            case 4:
                 // Polynom addieren
-                if (PolynomialList.length() < 2) {
-                    System.out.println("Es müssen mindestens 2 Polynome vorhanden sein, bitte erstelle weitere Polynome");
+                if (PolynomialList.length() < 1) {
+                    System.out.println("Es muss mindestens 1 Polynom vorhanden sein, bitte erstell ein weiteres Polynom");
                 } else {
                     MainMenu_mathAddSub(true);
                 }
                 break;
-            case 6:
+            case 5:
                 // Polynom subtraieren
-                if (PolynomialList.length() < 2) {
-                    System.out.println("Es müssen mindestens 2 Polynome vorhanden sein, bitte erstelle weitere Polynome");
+                if (PolynomialList.length() < 1) {
+                    System.out.println("Es muss mindestens 1 Polynom vorhanden sein, bitte erstell ein weiteres Polynom");
                 } else {
                     MainMenu_mathAddSub(false);
                 }
                 break;
-            case 7:
+            case 6:
                 // Polynom ableiten
                 if (PolynomialList.length() < 1) {
                     System.out.println("Es muss mindestens 1 Polynom vorhanden sein, bitte erstell ein weiteres Polynom");
                 } else {
                     MainMenu_Derivation();
+                }
+                break;
+            case 7:
+                // Polynom multiplizieren
+                if (PolynomialList.length() < 1) {
+                    System.out.println("Es muss mindestens 1 Polynom vorhanden sein, bitte erstell ein weiteres Polynom");
+                } else {
+                    MainMenu_Multiply();
                 }
                 break;
             case 8:
@@ -149,7 +158,7 @@ public class Main {
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Erstelle neues Polynom");
         System.out.println("Wie viel Elemente besitzt dein Polynom");
-        System.out.println("Beispiel für 5 Elemente: 55=2+6x+2x\u00B2+6x\u00B3+4x\u2074");
+        System.out.println("Beispiel für 5 Elemente: p(x)=2+6x+2x\u00B2+6x\u00B3+4x\u2074");
         int IntArrayLength = 0;
         String StrErrorLength = "Bitte ein Zahl die größer als 1 ist eingeben.";
         while (IntArrayLength < 1) {
@@ -158,15 +167,14 @@ public class Main {
                 System.out.println(StrErrorLength);
             }
         }
-        Polynomial Polynomial = new Polynomial(IntArrayLength + 1);
-        String StrErrorInt = "Bitte nur Zahlen in Positiven und Negativen bereich eingeben";
-        System.out.println("Ergebnis des Polynoms eingeben:");
-        Polynomial.set(0, Interface.InputInt(StrErrorInt));
+
+        Polynomial Polynomial = new Polynomial(IntArrayLength);
 
         for (int i = 0; i < IntArrayLength; i++) {
             System.out.printf("Element %d eingeben\n\r", i + 1);
-            Polynomial.set(i + 1, Interface.InputInt(StrErrorInt));
+            Polynomial.set(i, Interface.InputInt("Bitte nur Zahlen in Positiven und Negativen bereich eingeben"));
         }
+
         PolynomialList.add(Polynomial);
         Interface.BoarderText("Neues Polynom: " + Polynomial.get_as_human_readable());
     }
@@ -219,13 +227,12 @@ public class Main {
         } while (UserInput > PolynomialList.length() || UserInput < 1);
 
         Polynomial Polynomial = PolynomialList.get_Polynomial(UserInput - 1);
-        System.out.printf("neues Ergebnis [%d]\n\r", Polynomial.get(0));
-        Polynomial.set(0, Interface.InputInt("Bitte nur eine Int Zahl angeben!"));
 
-        for (int i = 1; i < Polynomial.length(); i++) {
-            System.out.printf("neuen Wert für Element %d [%d]\n\r", i, Polynomial.get(i));
+        for (int i = 0; i < Polynomial.length(); i++) {
+            System.out.printf("neuen Wert für Element %d [%d]\n\r", i+1, Polynomial.get(i));
             Polynomial.set(i, Interface.InputInt("Bitte nur eine Int Zahl angeben!"));
         }
+
         System.out.printf("Polynom zu %s geändert\n\r", Polynomial.get_as_human_readable());
         PolynomialList.set(UserInput, Polynomial);
 
@@ -286,6 +293,10 @@ public class Main {
     }
 
     private static void MainMenu_Derivation() {
+        /**
+         * 1. Ableitung eines Polynoms
+         */
+
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Ableiten eines Polynomes");
 
@@ -304,13 +315,64 @@ public class Main {
         Interface.BoarderText(PolynomialList.get_Polynomial(UserInput - 1).Derivation());
     }
 
+    private static void MainMenu_Multiply() {
+        /**
+         * 2 Polynome miteinander Multiplizieren
+         */
+
+        TerminalInterface Interface = new TerminalInterface();
+        Interface.BoarderText("Polynome Multiplizieren");
+
+        System.out.println("Welches der folgenden Polynome soll multipliziert werden");
+
+        MainMenu_ShowPolynomialList();
+        int UserInput_1;
+        String StrErrorNumber = "Bitte eine Zahl aus der Polynomliste angeben.";
+
+        do {
+            UserInput_1 = Interface.InputInt(StrErrorNumber);
+            if (UserInput_1 < 1) {
+                System.out.println(StrErrorNumber);
+            }
+        } while (UserInput_1 > PolynomialList.length() || UserInput_1 < 1);
+
+        System.out.println("Welches der folgenden Polynome soll multipliziert werden");
+
+        MainMenu_ShowPolynomialList();
+        int UserInput_2;
+
+        do {
+            UserInput_2 = Interface.InputInt(StrErrorNumber);
+            if (UserInput_2 < 1) {
+                System.out.println(StrErrorNumber);
+            }
+        } while (UserInput_2 > PolynomialList.length() || UserInput_2 < 1);
+
+        Polynomial newPolynomial = PolynomialList.mathMultiply(
+                PolynomialList.get_Polynomial(UserInput_1-1),
+                PolynomialList.get_Polynomial(UserInput_2-1)
+        );
+
+        Interface.BoarderText(
+                "Neues Polynom: " + newPolynomial.get_as_human_readable()
+        );
+    }
+
     private static void MainMenu_Load() {
+        /**
+         * Lädt PolynomialList neu aus der Json Datei
+         */
+
         PolynomialList.load();
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Json geladen");
     }
 
     private static void MainMenu_Save() {
+        /**
+         * Sichert PolynomialList in der Json Datei
+         */
+
         PolynomialList.save();
         TerminalInterface Interface = new TerminalInterface();
         Interface.BoarderText("Gespeichert");
