@@ -7,6 +7,7 @@ com.linuxluigi.polynomials
    :maxdepth: 1
 
    Main
-   Polycalc
    Polynomial
+   PolynomialList
+   TerminalInterface
 
