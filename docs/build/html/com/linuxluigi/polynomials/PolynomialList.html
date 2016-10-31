@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Polynomials Calculator 0.1.0 Dokumentation</title>
+  <title>PolynomialList &mdash; Polynomials Calculator 0.1.0 Dokumentation</title>
   
 
   
@@ -36,7 +36,7 @@
     <link rel="top" title="Polynomials Calculator 0.1.0 Dokumentation" href="../../../index.html"/>
         <link rel="up" title="com.linuxluigi.polynomials" href="package-index.html"/>
         <link rel="next" title="TerminalInterface" href="TerminalInterface.html"/>
-        <link rel="prev" title="&lt;no title&gt;" href="Polynomial.html"/> 
+        <link rel="prev" title="Polynomial" href="Polynomial.html"/> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
@@ -85,8 +85,21 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../packages.html">Polynomials Calculator</a></li>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../packages.html">Polynomials Calculator</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="package-index.html">com.linuxluigi.polynomials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Main.html">Main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Polynomial.html">Polynomial</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PolynomialList</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="TerminalInterface.html">TerminalInterface</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../help.html">Hilfe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../license.html">Lizenz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../license.html#kontakt">Kontakt</a></li>
@@ -124,7 +137,7 @@
       
           <li><a href="package-index.html">com.linuxluigi.polynomials</a> &raquo;</li>
       
-    <li>&lt;no title&gt;</li>
+    <li>PolynomialList</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -138,7 +151,260 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="section" id="polynomiallist">
+<h1>PolynomialList<a class="headerlink" href="#polynomiallist" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="type">
+<dt id="com.linuxluigi.polynomials.PolynomialList">
+ class <code class="descname">PolynomialList</code><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ein Polynom Klasse Array welche mitunter folgende funktionen mitbringt:</p>
+<ul class="simple">
+<li>Einzelne Polynome aus den Polynom[] ausgeben</li>
+<li>Polynome miteinander multiplizieren, addieren und subtraieren</li>
+<li>Einzelne Polynome löschen, bearbeiten oder neu hinzufügen</li>
+<li>Polynom[] bilden durch laden einer Json Datei</li>
+<li>Die eigene Klasse als Json Datei speichern</li>
+</ul>
+</dd></dl>
+
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="id1">
+<h3>PolynomialList<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="constructor">
+<dt id="com.linuxluigi.polynomials.PolynomialList.PolynomialList()">
+public <code class="descname">PolynomialList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.PolynomialList()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Konstruktor Erstellt ein neues leeres Polynomial[]</p>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="add">
+<h3>add<a class="headerlink" href="#add" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.add(Polynomial)">
+public void <code class="descname">add</code><span class="sig-paren">(</span><a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a><em> newPolynomial</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.add(Polynomial)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Hängt ein neues Polynomial an Polynomial[] an</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first last simple">
+<li><strong>newPolynomial</strong> &#8211; neues Polynomial welches angehängt werden soll</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="delte">
+<h3>delte<a class="headerlink" href="#delte" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.delte(int)">
+ void <code class="descname">delte</code><span class="sig-paren">(</span>int<em> PolynomialNumber</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.delte(int)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Löscht ein Element aus den Polynomial[]</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first last simple">
+<li><strong>PolynomialNumber</strong> &#8211; Element des Polynomial[] welches gelöscht werden soll</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="get-filename">
+<h3>get_FileName<a class="headerlink" href="#get-filename" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.get_FileName()">
+ <a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">get_FileName</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.get_FileName()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gibt den Json Datei String zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">Json Datei namen als String</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="get-polyllist">
+<h3>get_PolylList<a class="headerlink" href="#get-polyllist" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.get_PolylList()">
+ <a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a>[] <code class="descname">get_PolylList</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.get_PolylList()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gibt das Polynomial[] zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">Polynomial[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="get-polynomial">
+<h3>get_Polynomial<a class="headerlink" href="#get-polynomial" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.get_Polynomial(int)">
+ <a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a> <code class="descname">get_Polynomial</code><span class="sig-paren">(</span>int<em> PolynomialNumber</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.get_Polynomial(int)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gibt ein einzelnes Polynomial aus dem Polynomial[] zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>PolynomialNumber</strong> &#8211; Element des Polynomial[] welches zurück gegeben werden soll</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">Polynomial Objekt</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="length">
+<h3>length<a class="headerlink" href="#length" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.length()">
+public int <code class="descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.length()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gibt die länge des Polynomial[] zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">Int länge des Polynomial[]</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="load">
+<h3>load<a class="headerlink" href="#load" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.load()">
+ void <code class="descname">load</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.load()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Ersetzt das vorhandene Polynomial[] mit der aus der this.file Json Datei angeben Werten Polynomial[]</p>
+</dd></dl>
+
+</div>
+<div class="section" id="mathaddsub">
+<h3>mathAddSub<a class="headerlink" href="#mathaddsub" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.mathAddSub(Polynomial, Polynomial, boolean)">
+ <a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a> <code class="descname">mathAddSub</code><span class="sig-paren">(</span><a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a><em> Polynomial_1</em>, <a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a><em> Polynomial_2</em>, boolean<em> operator</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.mathAddSub(Polynomial, Polynomial, boolean)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Addiert oder Subtraiert 2 Polynome miteinander, gibt dieses als Polynomial Klasse zurück und fügt es in Polynomial[] hinzu</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>Polynomial_1</strong> &#8211; Polynom 1 welche zu Polynom 2 addiert wird</li>
+<li><strong>Polynomial_2</strong> &#8211; Polynom 2 welche zu Polynom 1 addiert wird</li>
+<li><strong>operator</strong> &#8211; 1 == +, 0 == -</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">Neues Polynomial welches durch die Berechnung entstand</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="mathmultiply">
+<h3>mathMultiply<a class="headerlink" href="#mathmultiply" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.mathMultiply(Polynomial, Polynomial)">
+ <a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a> <code class="descname">mathMultiply</code><span class="sig-paren">(</span><a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a><em> Polynomial_1</em>, <a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a><em> Polynomial_2</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.mathMultiply(Polynomial, Polynomial)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Multipliziert 2 Polynome miteinander und speichert das Polynom in PolylList</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>Polynomial_1</strong> &#8211; Polynom 1 welches zu Polynom 2 multipliziert werden soll</li>
+<li><strong>Polynomial_2</strong> &#8211; Polynom 2 welches zu Polynom 1 multipliziert werden soll</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">neues multipliziertes Polynom</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="save">
+<h3>save<a class="headerlink" href="#save" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.save()">
+ void <code class="descname">save</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.save()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Speichert Polynomial[] in this.file angeben Datei als Json format ab</p>
+</dd></dl>
+
+</div>
+<div class="section" id="set">
+<h3>set<a class="headerlink" href="#set" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.set(int, Polynomial)">
+public void <code class="descname">set</code><span class="sig-paren">(</span>int<em> ArrayNumber</em>, <a class="reference internal" href="Polynomial.html#com.linuxluigi.polynomials.Polynomial" title="com.linuxluigi.polynomials.Polynomial">Polynomial</a><em> newPolynomial</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.set(int, Polynomial)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Überschreibt ein Polynomial aus Polynomial[] mit einen neuem Polynomial</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first last simple">
+<li><strong>ArrayNumber</strong> &#8211; Element nummer des zu überschreibenen Polynomial</li>
+<li><strong>newPolynomial</strong> &#8211; Neues Polynomial welches das alte überschreiben soll</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="set-file">
+<h3>set_file<a class="headerlink" href="#set-file" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.PolynomialList.set_file(String)">
+ void <code class="descname">set_file</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a><em> FileName</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.PolynomialList.set_file(String)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Setzt den Namen und Pfad der Json Datei</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first last simple">
+<li><strong>FileName</strong> &#8211; Datei Namen und Pfad der neuen Json Datei</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
 
            </div>
           </div>
@@ -149,7 +415,7 @@
         <a href="TerminalInterface.html" class="btn btn-neutral float-right" title="TerminalInterface" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="Polynomial.html" class="btn btn-neutral" title="&lt;no title&gt;" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="Polynomial.html" class="btn btn-neutral" title="Polynomial" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

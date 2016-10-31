@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>&lt;no title&gt; &mdash; Polynomials Calculator 0.1.0 Dokumentation</title>
+  <title>Polynomial &mdash; Polynomials Calculator 0.1.0 Dokumentation</title>
   
 
   
@@ -35,7 +35,7 @@
         <link rel="search" title="Suche" href="../../../search.html"/>
     <link rel="top" title="Polynomials Calculator 0.1.0 Dokumentation" href="../../../index.html"/>
         <link rel="up" title="com.linuxluigi.polynomials" href="package-index.html"/>
-        <link rel="next" title="&lt;no title&gt;" href="PolynomialList.html"/>
+        <link rel="next" title="PolynomialList" href="PolynomialList.html"/>
         <link rel="prev" title="Main" href="Main.html"/> 
 
   
@@ -85,8 +85,21 @@
           
             
             
-                <ul>
-<li class="toctree-l1"><a class="reference internal" href="../../../packages.html">Polynomials Calculator</a></li>
+                <ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../packages.html">Polynomials Calculator</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="package-index.html">com.linuxluigi.polynomials</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Main.html">Main</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Polynomial</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#constructors">Constructors</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="PolynomialList.html">PolynomialList</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TerminalInterface.html">TerminalInterface</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../../../help.html">Hilfe</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../license.html">Lizenz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../license.html#kontakt">Kontakt</a></li>
@@ -124,7 +137,7 @@
       
           <li><a href="package-index.html">com.linuxluigi.polynomials</a> &raquo;</li>
       
-    <li>&lt;no title&gt;</li>
+    <li>Polynomial</li>
       <li class="wy-breadcrumbs-aside">
         
           
@@ -138,7 +151,211 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  
+  <div class="section" id="polynomial">
+<h1>Polynomial<a class="headerlink" href="#polynomial" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="type">
+<dt id="com.linuxluigi.polynomials.Polynomial">
+public class <code class="descname">Polynomial</code><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Eine Klasse welche einzelne Polynome enthält die ausgegeben werden können, in einzelnen Elemente INT oder als Array. Gespeichert oder geändert werden kann das Objekt auch als Array oder über einzelne Elemente INT. Um auf einzelne Elemente INT zu zu greifen / ändern ist es möglich diese via die Funktionen get / set und ein Variable INT möglich.</p>
+<ul class="simple">
+<li>0 == x^0</li>
+<li>1 == x^1</li>
+<li>2 == x^2</li>
+<li>3 == x^3</li>
+<li>4 == x^4</li>
+<li>5 == x^5</li>
+</ul>
+<p>0 == Ergebnis, 1 == x^0, 7 == x^5</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Author:</th><td class="field-body">Steffen Exler</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<div class="section" id="constructors">
+<h2>Constructors<a class="headerlink" href="#constructors" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="id1">
+<h3>Polynomial<a class="headerlink" href="#id1" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="constructor">
+<dt id="com.linuxluigi.polynomials.Polynomial.Polynomial(int[])">
+public <code class="descname">Polynomial</code><span class="sig-paren">(</span>int[]<em> new_polylist</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial.Polynomial(int[])" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Neuen Polynom aus ein vollständigen INT Array erzeugen</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first last simple">
+<li><strong>new_polylist</strong> &#8211; Kompletter Polynom</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id2">
+<h3>Polynomial<a class="headerlink" href="#id2" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="constructor">
+<dt id="com.linuxluigi.polynomials.Polynomial.Polynomial(int)">
+public <code class="descname">Polynomial</code><span class="sig-paren">(</span>int<em> length</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial.Polynomial(int)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Leeren Polynom mit der länge &#8216;length&#8217; erstellen.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first last simple">
+<li><strong>length</strong> &#8211; Länge des Polynoms</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="derivation">
+<h3>Derivation<a class="headerlink" href="#derivation" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.Polynomial.Derivation()">
+ <a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">Derivation</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial.Derivation()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gibt die 1. Ableitung des Polynomes zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">Menschlich lesbare 1. Ableitung des Polynomes</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="get">
+<h3>get<a class="headerlink" href="#get" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.Polynomial.get()">
+public int[] <code class="descname">get</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial.get()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gibt den Polynom als INT Array zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">Gibt komplettes Polynom zurück</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id3">
+<h3>get<a class="headerlink" href="#id3" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.Polynomial.get(int)">
+public int <code class="descname">get</code><span class="sig-paren">(</span>int<em> number</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial.get(int)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gibt ein Element des Polynomes zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>number</strong> &#8211; Element nummer des Polynomes this.polylist[number]</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">Wert des Polynom Element</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="get-as-human-readable">
+<h3>get_as_human_readable<a class="headerlink" href="#get-as-human-readable" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.Polynomial.get_as_human_readable()">
+ <a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a> <code class="descname">get_as_human_readable</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial.get_as_human_readable()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Wandelt das Polynom Array als Menschlich lesbaren Polynom um</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">Polynom als lesbaren String</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="length">
+<h3>length<a class="headerlink" href="#length" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.Polynomial.length()">
+public int <code class="descname">length</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial.length()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Gibt die Länge des Polynomes zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Rückgabe:</th><td class="field-body">Int länge des Polynomes Array</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="set">
+<h3>set<a class="headerlink" href="#set" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.Polynomial.set(int[])">
+public void <code class="descname">set</code><span class="sig-paren">(</span>int[]<em> new_polylist</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial.set(int[])" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Überschreibt den Polynom mit einem neuen &#8216;new_polylist&#8217;</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first last simple">
+<li><strong>new_polylist</strong> &#8211; Vollständiger Polynom als INT Array</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="id4">
+<h3>set<a class="headerlink" href="#id4" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomials.Polynomial.set(int, int)">
+public void <code class="descname">set</code><span class="sig-paren">(</span>int<em> poly_number</em>, int<em> poly_value</em><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomials.Polynomial.set(int, int)" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Überschreibt ein Element des Polynomes</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first last simple">
+<li><strong>poly_number</strong> &#8211; Element des Polynomes</li>
+<li><strong>poly_value</strong> &#8211; Wert des neuen Element im Polynom</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
 
            </div>
           </div>
@@ -146,7 +363,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="PolynomialList.html" class="btn btn-neutral float-right" title="&lt;no title&gt;" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="PolynomialList.html" class="btn btn-neutral float-right" title="PolynomialList" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="Main.html" class="btn btn-neutral" title="Main" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
