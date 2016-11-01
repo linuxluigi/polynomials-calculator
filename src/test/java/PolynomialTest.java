@@ -1,7 +1,7 @@
 import static org.junit.Assert.*;
 
 /**
- * Created by fubu on 01.11.16.
+ * Created by Steffen Exler on 01.11.16.
  */
 public class PolynomialTest {
     @org.junit.Test
