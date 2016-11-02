@@ -133,6 +133,11 @@ public class Polynomial {
      * @return Menschlich lesbare 1. Ableitung des Polynomes
      */
     String Derivation() {
+
+        if (this.polylist.length <= 0) {
+            return get_as_human_readable();
+        }
+
         Polynomial newPolynomial;
         newPolynomial = new Polynomial(this.polylist.length - 1);
 
@@ -150,7 +155,7 @@ public class Polynomial {
      */
     String get_as_human_readable() {
         // Standart Polynom anfang schreiben
-        String Polynomial_readable = "p(x)=";
+        String Polynomial_readable = "f(x)=";
 
         for (int i = 0; i < this.polylist.length; i++) {
             // Wenn das Polynom Element den Wert 0 besitzt --> continue
@@ -239,8 +244,8 @@ public class Polynomial {
         }
 
         // Falls kein Element des Polynomes ein Wert besaß --> 0 Gleichung ausgeben
-        if (Polynomial_readable.equals("p(x)=")) {
-            Polynomial_readable = "p(x)=0";
+        if (Polynomial_readable.equals("f(x)=")) {
+            Polynomial_readable = "f(x)=0";
         }
 
         return Polynomial_readable;

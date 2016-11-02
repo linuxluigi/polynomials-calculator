@@ -42,3 +42,7 @@ fabric.properties
 
 # for development saves
 save.json
+
+# env
+/env
+/venv
