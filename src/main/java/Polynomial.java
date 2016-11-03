@@ -134,7 +134,7 @@ public class Polynomial {
      */
     String Derivation() {
 
-        if (this.polylist.length <= 0) {
+        if (this.polylist.length <= 1) {
             return get_as_human_readable();
         }
 
