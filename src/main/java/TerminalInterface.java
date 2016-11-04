@@ -96,12 +96,12 @@ class TerminalInterface {
      */
     int ShowMenu(String[] MenuList, boolean Back) {
         for (int i = 0; i < MenuList.length; i++) {
-            System.out.printf("[%d] %s\n\r", i + 1, MenuList[i]);
+            System.out.printf("[%d] %s%n", i + 1, MenuList[i]);
         }
 
         int MenuMaxNumber;
         if (Back) {
-            System.out.printf("[%d] %s\n\r", MenuList.length + 1, "Zurück");
+            System.out.printf("[%d] %s%n", MenuList.length + 1, "Zurück");
             MenuMaxNumber = MenuList.length + 1;
         } else {
             MenuMaxNumber = MenuList.length;
@@ -111,7 +111,7 @@ class TerminalInterface {
         do {
             System.out.printf("Aktion auswählen mit eingabe des Menupunktes als Zahl zwischen %d und %d\n" +
                     "\n", 1, MenuMaxNumber);
-            String ErrorMessage = String.format("Bitte nur Zahlen zwischen %d und %d eingeben!\n\r",
+            String ErrorMessage = String.format("Bitte nur Zahlen zwischen %d und %d eingeben!%n",
                     1, MenuMaxNumber);
             UserInput = InputInt(ErrorMessage);
         } while (UserInput > MenuMaxNumber || UserInput < 1);

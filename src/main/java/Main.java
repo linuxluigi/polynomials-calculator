@@ -157,7 +157,7 @@ public class Main {
             Polynomial[] PolylList = PolynomialList.get_PolylList();
 
             for (int i = 0; i < PolylList.length; i++) {
-                System.out.printf("[%d] %s\n\r", i + 1, PolylList[i].get_as_human_readable());
+                System.out.printf("[%d] %s%n", i + 1, PolylList[i].get_as_human_readable());
             }
 
         }
@@ -186,7 +186,7 @@ public class Main {
         Polynomial Polynomial = new Polynomial(IntArrayLength);
 
         for (int i = 0; i < IntArrayLength; i++) {
-            System.out.printf("Element %d eingeben\n\r", i + 1);
+            System.out.printf("Element %d eingeben%n", i + 1);
             Polynomial.set(i, Interface.InputInt("Bitte nur Zahlen in Positiven und Negativen bereich eingeben"));
         }
 
@@ -249,11 +249,11 @@ public class Main {
         Polynomial Polynomial = PolynomialList.get_Polynomial(UserInput - 1);
 
         for (int i = 0; i < Polynomial.length(); i++) {
-            System.out.printf("neuen Wert für Element %d [%d]\n\r", i + 1, Polynomial.get(i));
+            System.out.printf("neuen Wert für Element %d [%d]%n", i + 1, Polynomial.get(i));
             Polynomial.set(i, Interface.InputInt("Bitte nur eine Int Zahl angeben!"));
         }
 
-        System.out.printf("Polynom zu %s geändert\n\r", Polynomial.get_as_human_readable());
+        System.out.printf("Polynom zu %s geändert%n", Polynomial.get_as_human_readable());
         PolynomialList.set(UserInput, Polynomial);
 
         Interface.BoarderText("Polynom geändert");
@@ -277,7 +277,7 @@ public class Main {
 
         Interface.BoarderText("Polynome " + StrOperator);
 
-        System.out.printf("Welches der folgenden Polynome soll %s werden\n\r", StrOperator);
+        System.out.printf("Welches der folgenden Polynome soll %s werden%n", StrOperator);
 
         MainMenu_ShowPolynomialList();
         int UserInput_1;
@@ -290,7 +290,7 @@ public class Main {
             }
         } while (UserInput_1 > PolynomialList.length() || UserInput_1 < 1);
 
-        System.out.printf("Welches der folgenden Polynome soll %s werden\n\r", StrOperator);
+        System.out.printf("Welches der folgenden Polynome soll %s werden%n", StrOperator);
 
         MainMenu_ShowPolynomialList();
         int UserInput_2;

@@ -24,7 +24,7 @@
 
 public class Polynomial {
 
-    private int[] polylist;
+    private double[] polylist;
 
     /*
      *  Start Konstruktor
@@ -35,7 +35,7 @@ public class Polynomial {
      *
      * @param new_polylist Kompletter Polynom
      */
-    public Polynomial(int new_polylist[]) {
+    public Polynomial(double[] new_polylist) {
 
         this.polylist = new_polylist;
     }
@@ -49,7 +49,7 @@ public class Polynomial {
         if (length < 1) {
             length = 1;
         }
-        this.polylist = new int[length];
+        this.polylist = new double[length];
     }
     /*
      * End Konstruktor
@@ -64,7 +64,7 @@ public class Polynomial {
      *
      * @return Gibt komplettes Polynom zurück
      */
-    public int[] get() {
+    public double[] get() {
         return this.polylist;
     }
 
@@ -74,7 +74,7 @@ public class Polynomial {
      * @param number Element nummer des Polynomes this.polylist[number]
      * @return Wert des Polynom Element
      */
-    public int get(int number) {
+    public double get(int number) {
         if (this.polylist.length < number || number < 0) {
             System.out.println("Fehler: Out of Array!");
             return 0;
@@ -97,7 +97,7 @@ public class Polynomial {
      *
      * @param new_polylist Vollständiger Polynom als INT Array
      */
-    public void set(int[] new_polylist) {
+    public void set(double[] new_polylist) {
         this.polylist = new_polylist;
     }
 
@@ -107,7 +107,7 @@ public class Polynomial {
      * @param poly_number Element des Polynomes
      * @param poly_value  Wert des neuen Element im Polynom
      */
-    public void set(int poly_number, int poly_value) {
+    public void set(int poly_number, double poly_value) {
         if (this.polylist.length < poly_number || poly_number < 0) {
             System.out.println("Fehler: Out of Array!");
         } else {
@@ -142,7 +142,7 @@ public class Polynomial {
         newPolynomial = new Polynomial(this.polylist.length - 1);
 
         for (int i = 1; i < this.polylist.length; i++) {
-            newPolynomial.set(i - 1, this.polylist[i] * i);
+            newPolynomial.set(i - 1, this.polylist[i] * (double)i);
         }
 
         return newPolynomial.get_as_human_readable();
@@ -174,7 +174,13 @@ public class Polynomial {
             }
 
             // Element den String anfügen
-            Polynomial_readable = Polynomial_readable + String.format("%d", this.polylist[i]);
+            int doubleLength;
+            if (this.polylist[i] % 1 != 0) {
+                doubleLength = 3;
+            } else {
+                doubleLength = 0;
+            }
+            Polynomial_readable = Polynomial_readable + String.format("%."+doubleLength+"f", this.polylist[i]);
 
             // Den Exponenten und 'x' des Elementes den String anfügen solange Exponent > 0
             if (i > 0) {

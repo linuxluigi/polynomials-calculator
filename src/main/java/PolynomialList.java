@@ -146,7 +146,7 @@ class PolynomialList {
 
         // Addiere / Subtraiere Polynome bis in der Element höhe des kleineren Polynomes
         for (int i = 0; i < PolyMinLength; i++) {
-            int newVaule;
+            double newVaule;
             if (operator) {
                 newVaule = Polynomial_1.get(i) + Polynomial_2.get(i);
             } else {
