@@ -16,7 +16,7 @@ public class PolynomialTest {
      * @param length länge des Beispiel Polynomes
      * @param random Polynom bekommt feste Werte zugewiesen mit [i] = i
      *
-     * @return
+     * @return neues generiertes Polynom
      */
     private Polynomial randomPolynomial(int length, boolean random) {
         if (length < 0) {
@@ -45,7 +45,7 @@ public class PolynomialTest {
      * @param arrayLength Länge von Polynomial[]
      * @param PolynomialLength Länge des Polynomial
      * @param random Polynom bekommt feste Werte zugewiesen mit [i] = i
-     * @return
+     * @return neues generiertes Polynom[]
      */
     private Polynomial[] randomPolynomialArray(int arrayLength, int PolynomialLength, boolean random) {
 
