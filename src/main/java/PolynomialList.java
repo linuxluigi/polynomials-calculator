@@ -1,5 +1,5 @@
-//package com.linuxluigi.polynomials;
 import java.io.*;
+import java.util.Random;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
@@ -109,9 +109,12 @@ class PolynomialList {
     void delte(int PolynomialNumber) {
         Polynomial[] newPolylList = new Polynomial[this.PolylList.length - 1];
 
-        for (int i = 0; i < this.PolylList.length - 1; i++) {
+        int counter = 0;
+
+        for (int i = 0; i < this.PolylList.length; i++) {
             if (i != PolynomialNumber) {
-                newPolylList[i] = this.PolylList[i];
+                newPolylList[counter] = this.PolylList[i];
+                counter++;
             }
         }
 
@@ -209,30 +212,34 @@ class PolynomialList {
      * wird das neue Polynom Polynomial[] angehängt
      *
      * @param Polynomial Polynom welches dividiert werden soll
-     * @param divisor Die Zahl mit der das Polynom dividiert werden soll
-     * @return True > Erfolgreiche division, False > es trat ein Fehler auf
+     * @param divisor    Die Zahl mit der das Polynom dividiert werden soll
+     * @return Rest in Double
      */
-    boolean mathHorner(Polynomial Polynomial, int divisor) {
-        Polynomial newPolynomial = new Polynomial(Polynomial.length()-1);
+    double mathHorner(Polynomial Polynomial, double divisor) {
 
-        for (int i = Polynomial.length()-1; i > 0; i--) {
-            if (i == Polynomial.length()-1) {
-                newPolynomial.set(i-1, Polynomial.get(i));
-                System.out.println(newPolynomial.get(i-1));
+        if (Polynomial.length() == 0) {
+            Polynomial newPolynomial = new Polynomial(0);
+            add(Polynomial);
+            return 0;
+        }
+
+        Polynomial newPolynomial = new Polynomial(Polynomial.length() - 1);
+
+        for (int i = Polynomial.length() - 1; i > 0; i--) {
+            if (i == Polynomial.length() - 1) {
+                newPolynomial.set(i - 1, Polynomial.get(i));
+                System.out.println(newPolynomial.get(i - 1));
             } else {
                 newPolynomial.set(
-                        i-1,
-                        newPolynomial.get(i)*divisor + Polynomial.get(i)
+                        i - 1,
+                        newPolynomial.get(i) * divisor + Polynomial.get(i)
                 );
             }
         }
 
-        if (0 == newPolynomial.get(0)*divisor + Polynomial.get(0)) {
-            add(newPolynomial);
-            return true;
-        } else {
-            return false;
-        }
+        add(newPolynomial);
+        double remainder = newPolynomial.get(0) * divisor + Polynomial.get(0);
+        return remainder;
     }
 
     /**
@@ -282,6 +289,62 @@ class PolynomialList {
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    /**
+     * Erstellt ein Polynomial mit der Länge length und wenn random
+     * wahr ist, mit festen Werten
+     *
+     * @param length länge des Beispiel Polynomes
+     * @param random Polynom bekommt feste Werte zugewiesen mit [i] = i
+     * @return zufälliges neues Polynomial
+     */
+    Polynomial randomPolynomial(int length, boolean random) {
+        if (length < 0) {
+            length = 0;
+        }
+
+        Polynomial Polynomial = new Polynomial(length);
+
+        Random ran = new Random();
+
+        for (int i = 0; i < length; i++) {
+            if (random) {
+                Polynomial.set(i, ran.nextInt() + ran.nextDouble());
+            } else {
+                Polynomial.set(i, (double) i);
+            }
+        }
+
+        return Polynomial;
+    }
+
+    /**
+     * Erstellt ein Polynomial[] mit zufalls Zahlen und arrayLength länge,
+     * die länge der Polynome wird mit PolynomialLength bestimmt
+     *
+     * @param arrayLength      Länge von Polynomial[]
+     * @param PolynomialLength Länge des Polynomial
+     * @param random           Polynom bekommt feste Werte zugewiesen mit [i] = i
+     * @return zufälliges neues Polynomial[]
+     */
+    Polynomial[] randomPolynomialArray(int arrayLength, int PolynomialLength, boolean random) {
+
+        if (arrayLength < 0) {
+            arrayLength = 0;
+        }
+
+        if (PolynomialLength < 0) {
+            PolynomialLength = 0;
+        }
+
+        Polynomial[] PolynomialArray = new Polynomial[arrayLength];
+
+        for (int i = 0; i < arrayLength; i++) {
+            PolynomialArray[i] = randomPolynomial(PolynomialLength, random);
+        }
+
+        return PolynomialArray;
     }
 
 }

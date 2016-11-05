@@ -1,4 +1,5 @@
 //package com.linuxluigi.polynomials;
+
 /**
  * Some comment
  *
@@ -187,7 +188,7 @@ public class Main {
 
         for (int i = 0; i < IntArrayLength; i++) {
             System.out.printf("Element %d eingeben%n", i + 1);
-            Polynomial.set(i, Interface.InputInt("Bitte nur Zahlen in Positiven und Negativen bereich eingeben"));
+            Polynomial.set(i, Interface.InputDouble("Bitte nur Reele Zahlen in Positiven und Negativen bereich eingeben"));
         }
 
         PolynomialList.add(Polynomial);
@@ -219,7 +220,7 @@ public class Main {
         String Question_Delete = Interface.InputString("error", "N");
 
         if (Question_Delete.equals("y") || Question_Delete.equals("Y")) {
-            PolynomialList.delte(UserInput - 1);
+            PolynomialList.delte(UserInput);
             Interface.BoarderText("Polynom gelöscht");
         } else {
             Interface.BoarderText("Polynom nicht gelöscht");
@@ -249,8 +250,16 @@ public class Main {
         Polynomial Polynomial = PolynomialList.get_Polynomial(UserInput - 1);
 
         for (int i = 0; i < Polynomial.length(); i++) {
-            System.out.printf("neuen Wert für Element %d [%d]%n", i + 1, Polynomial.get(i));
-            Polynomial.set(i, Interface.InputInt("Bitte nur eine Int Zahl angeben!"));
+
+            int doubleLength;
+            if (Polynomial.get(i) % 1 != 0) {
+                doubleLength = 3;
+            } else {
+                doubleLength = 0;
+            }
+
+            System.out.printf("neuen Wert für Element %d [%." + doubleLength + "f]%n", i + 1, Polynomial.get(i));
+            Polynomial.set(i, Interface.InputDouble("Bitte nur eine Reele Zahl angeben!"));
         }
 
         System.out.printf("Polynom zu %s geändert%n", Polynomial.get_as_human_readable());
@@ -396,18 +405,16 @@ public class Main {
         } while (UserInput > PolynomialList.length() || UserInput < 1);
 
         System.out.println("Divisor eingeben.");
-        int divisor = Interface.InputInt("Bitte eine ganze Zahl eingeben.");
+        double divisor = Interface.InputDouble("Bitte eine Reele Zahl eingeben.");
 
-        boolean horner = PolynomialList.mathHorner(PolynomialList.get_Polynomial(UserInput-1), divisor);
+        double horner = PolynomialList.mathHorner(PolynomialList.get_Polynomial(UserInput - 1), divisor);
 
-        if (horner) {
+        if (horner == 0.0) {
             Interface.BoarderText(
-                    "Erfolg: " + PolynomialList.get_Polynomial(PolynomialList.length()-1).get_as_human_readable()
+                    "Erfolg: " + PolynomialList.get_Polynomial(PolynomialList.length() - 1).get_as_human_readable()
             );
         } else {
-            Interface.BoarderText(
-                    "Fehler"
-            );
+            System.out.printf("%s %nRest: %.3f%n", PolynomialList.get_Polynomial(PolynomialList.length() - 1).get_as_human_readable(), horner);
         }
     }
 

@@ -1,4 +1,3 @@
-//package com.linuxluigi.polynomials;
 /**
  * Eine Klasse welche einzelne Polynome enthält die ausgegeben werden können,
  * in einzelnen Elemente INT oder als Array.
@@ -142,7 +141,7 @@ public class Polynomial {
         newPolynomial = new Polynomial(this.polylist.length - 1);
 
         for (int i = 1; i < this.polylist.length; i++) {
-            newPolynomial.set(i - 1, this.polylist[i] * (double)i);
+            newPolynomial.set(i - 1, this.polylist[i] * (double) i);
         }
 
         return newPolynomial.get_as_human_readable();
@@ -180,7 +179,7 @@ public class Polynomial {
             } else {
                 doubleLength = 0;
             }
-            Polynomial_readable = Polynomial_readable + String.format("%."+doubleLength+"f", this.polylist[i]);
+            Polynomial_readable = Polynomial_readable + String.format("%." + doubleLength + "f", this.polylist[i]);
 
             // Den Exponenten und 'x' des Elementes den String anfügen solange Exponent > 0
             if (i > 0) {

@@ -1,4 +1,3 @@
-//package com.linuxluigi.polynomials;
 import java.util.Scanner;
 
 /**
@@ -71,6 +70,32 @@ class TerminalInterface {
         while (Error) {
             if (ScannerInput.hasNextInt())
                 UserInput = ScannerInput.nextInt();
+            else {
+                System.out.println(TextError);
+                ScannerInput.next();
+                continue;
+            }
+            Error = false;
+        }
+        return UserInput;
+    }
+
+    /**
+     * Ließt eine User Terminal eingabe und überprüft
+     * ob es sich um ein double handelt und gibt diesen zurück
+     *
+     * @param TextError Text der bei Falscher eingabe wiederholt wird
+     * @return User eingabe als Double
+     */
+    double InputDouble(String TextError) {
+        Scanner ScannerInput = new Scanner(System.in);
+
+        boolean Error = true;
+        double UserInput = 0;
+
+        while (Error) {
+            if (ScannerInput.hasNextDouble())
+                UserInput = ScannerInput.nextDouble();
             else {
                 System.out.println(TextError);
                 ScannerInput.next();

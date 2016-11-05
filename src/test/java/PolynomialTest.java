@@ -1,7 +1,5 @@
 import org.junit.Test;
 
-import java.util.Random;
-
 import static org.junit.Assert.*;
 
 /**
@@ -10,71 +8,15 @@ import static org.junit.Assert.*;
 public class PolynomialTest {
 
     /**
-     * Erstellt ein Polynomial mit der Länge length und wenn random
-     * wahr ist, mit festen Werten
-     *
-     * @param length länge des Beispiel Polynomes
-     * @param random Polynom bekommt feste Werte zugewiesen mit [i] = i
-     *
-     * @return
-     */
-    private Polynomial randomPolynomial(int length, boolean random) {
-        if (length < 0) {
-            length = 0;
-        }
-
-        Polynomial Polynomial = new Polynomial(length);
-
-        Random ran = new Random();
-
-        for (int i = 0; i < length; i++) {
-            if (random) {
-                Polynomial.set(i, ran.nextDouble());
-            } else {
-                Polynomial.set(i, (double) i);
-            }
-        }
-
-        return Polynomial;
-    }
-
-    /**
-     * Erstellt ein Polynomial[] mit zufalls Zahlen und arrayLength länge,
-     * die länge der Polynome wird mit PolynomialLength bestimmt
-     *
-     * @param arrayLength Länge von Polynomial[]
-     * @param PolynomialLength Länge des Polynomial
-     * @param random Polynom bekommt feste Werte zugewiesen mit [i] = i
-     * @return
-     */
-    private Polynomial[] randomPolynomialArray(int arrayLength, int PolynomialLength, boolean random) {
-
-        if (arrayLength < 0) {
-            arrayLength = 0;
-        }
-
-        if (PolynomialLength < 0) {
-            PolynomialLength = 0;
-        }
-
-        Polynomial[] PolynomialArray = new Polynomial[arrayLength];
-
-        for (int i = 0; i < arrayLength; i++) {
-            PolynomialArray[i] = randomPolynomial(PolynomialLength, random);
-        }
-
-        return PolynomialArray;
-    }
-
-    /**
      * Testet beide get Varianten mit zufalls und festen Werten
      *
      * @throws Exception
      */
     @org.junit.Test
     public void get() throws Exception {
+        PolynomialList PolynomialList = new PolynomialList();
 
-        Polynomial[] PolynomialArray = randomPolynomialArray(1000, 1000, true);
+        Polynomial[] PolynomialArray = PolynomialList.randomPolynomialArray(1000, 1000, true);
 
         for (int i = 0; i < PolynomialArray.length; i++) {
 
@@ -87,14 +29,14 @@ public class PolynomialTest {
             }
         }
 
-        PolynomialArray = randomPolynomialArray(10000, 10000, false);
+        PolynomialArray = PolynomialList.randomPolynomialArray(10000, 10000, false);
 
         for (int i = 0; i < PolynomialArray.length; i++) {
 
             for (int j = 0; j < PolynomialArray[i].length(); j++) {
 
                 // Jedes Int einzeln vom Polynom
-                assertEquals((double)j, PolynomialArray[i].get(j), 0.005d);
+                assertEquals((double) j, PolynomialArray[i].get(j), 0.005d);
 
             }
         }
@@ -102,11 +44,13 @@ public class PolynomialTest {
 
     /**
      * Fügt in mehren Polynomen
+     *
      * @throws Exception
      */
     @org.junit.Test
     public void set() throws Exception {
-        Polynomial[] PolynomialArray = randomPolynomialArray(1000, 1000, true);
+        PolynomialList PolynomialList = new PolynomialList();
+        Polynomial[] PolynomialArray = PolynomialList.randomPolynomialArray(1000, 1000, true);
 
         for (int i = 0; i < PolynomialArray.length; i++) {
 
@@ -136,8 +80,10 @@ public class PolynomialTest {
     @org.junit.Test
     public void length() throws Exception {
 
+        PolynomialList PolynomialList = new PolynomialList();
+
         for (int i = -1000; i < 1000; i++) {
-            Polynomial tmp = randomPolynomial(i, true);
+            Polynomial tmp = PolynomialList.randomPolynomial(i, true);
 
             if (i <= 0) {
                 assertEquals(1, tmp.length());
@@ -150,6 +96,7 @@ public class PolynomialTest {
 
     /**
      * Erste Ableitung Test
+     *
      * @throws Exception
      */
     @org.junit.Test
