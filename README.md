@@ -10,6 +10,10 @@ https://github.com/google/gson
 
 # Docs Python abhänigkeiten
 https://github.com/linuxluigi/javasphinx
+pip install -U Sphinx sphinx_rtd_theme
+sudo apt-get build-dep python-lxml
+sudo pip install lxml 
+
 
 # Dokumentation
 
