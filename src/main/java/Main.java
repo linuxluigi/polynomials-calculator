@@ -1,4 +1,3 @@
-//package com.linuxluigi.polynomials;
 
 /**
  * Some comment

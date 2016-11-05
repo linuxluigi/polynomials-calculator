@@ -1,3 +1,4 @@
+
 import java.io.*;
 import java.util.Random;
 
@@ -219,26 +220,29 @@ class PolynomialList {
 
         if (Polynomial.length() == 0) {
             Polynomial newPolynomial = new Polynomial(0);
-            add(Polynomial);
+            add(newPolynomial);
             return 0;
         }
 
         Polynomial newPolynomial = new Polynomial(Polynomial.length() - 1);
+        newPolynomial.set(
+                newPolynomial.length()-1,
+                Polynomial.get(Polynomial.length()-1)
+        );
 
-        for (int i = Polynomial.length() - 1; i > 0; i--) {
-            if (i == Polynomial.length() - 1) {
-                newPolynomial.set(i - 1, Polynomial.get(i));
-                System.out.println(newPolynomial.get(i - 1));
-            } else {
+        double remainder = 0;
+
+        for (int i = Polynomial.length() - 1; i >= 0; i--) {
+            remainder = Polynomial.get(i) + remainder * divisor;
+            if (i > 1) {
                 newPolynomial.set(
-                        i - 1,
-                        newPolynomial.get(i) * divisor + Polynomial.get(i)
+                        i - 2,
+                        newPolynomial.get(i-1) * divisor + Polynomial.get(i-1)
                 );
             }
         }
 
         add(newPolynomial);
-        double remainder = newPolynomial.get(0) * divisor + Polynomial.get(0);
         return remainder;
     }
 

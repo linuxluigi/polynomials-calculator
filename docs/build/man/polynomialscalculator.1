@@ -1,0 +1,858 @@
+.\" Man page generated from reStructuredText.
+.
+.TH "POLYNOMIALSCALCULATOR" "1" "Nov. 05, 2016" "0.1.0" "Polynomials Calculator"
+.SH NAME
+polynomialscalculator \- Polynomials Calculator Documentation
+.
+.nr rst2man-indent-level 0
+.
+.de1 rstReportMargin
+\\$1 \\n[an-margin]
+level \\n[rst2man-indent-level]
+level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
+-
+\\n[rst2man-indent0]
+\\n[rst2man-indent1]
+\\n[rst2man-indent2]
+..
+.de1 INDENT
+.\" .rstReportMargin pre:
+. RS \\$1
+. nr rst2man-indent\\n[rst2man-indent-level] \\n[an-margin]
+. nr rst2man-indent-level +1
+.\" .rstReportMargin post:
+..
+.de UNINDENT
+. RE
+.\" indent \\n[an-margin]
+.\" old: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.nr rst2man-indent-level -1
+.\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
+.in \\n[rst2man-indent\\n[rst2man-indent-level]]u
+..
+.sp
+Ein simples Programm zur Berechnung von Polynomen maximal 6. Grades.:
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+print \(aqhello\(aq
+>> hello
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SH INHALT:
+.SS Polynomials Calculator
+.SS com.linuxluigi.polynomial
+.SS Main
+.INDENT 0.0
+.TP
+.B public class Main
+Some comment
+.INDENT 7.0
+.TP
+.B Author
+Steffen Exler
+.UNINDENT
+.UNINDENT
+.SS Methods
+.SS main
+.INDENT 0.0
+.TP
+.B public static void main(\fI\%String\fP[]\fI args\fP)
+Die Main Klasse zum starten des Userinterface, fragen nach der Json Datei Pfad und MainMenu in endlos Schleife starten äääöö
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBargs\fP \-\- 
+.sp
+\&...
+
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS Polynomial
+.INDENT 0.0
+.TP
+.B public class Polynomial
+Eine Klasse welche einzelne Polynome enthält die ausgegeben werden können, in einzelnen Elemente INT oder als Array. Gespeichert oder geändert werden kann das Objekt auch als Array oder über einzelne Elemente INT. Um auf einzelne Elemente INT zu zu greifen / ändern ist es möglich diese via die Funktionen get / set und ein Variable INT möglich.
+.INDENT 7.0
+.IP \(bu 2
+0 == x^0
+.IP \(bu 2
+1 == x^1
+.IP \(bu 2
+2 == x^2
+.IP \(bu 2
+3 == x^3
+.IP \(bu 2
+4 == x^4
+.IP \(bu 2
+5 == x^5
+.UNINDENT
+.sp
+0 == Ergebnis, 1 == x^0, 7 == x^5
+.INDENT 7.0
+.TP
+.B Author
+Steffen Exler
+.UNINDENT
+.UNINDENT
+.SS Constructors
+.SS Polynomial
+.INDENT 0.0
+.TP
+.B public Polynomial(double[]\fI new_polylist\fP)
+Neuen Polynom aus ein vollständigen INT Array erzeugen
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBnew_polylist\fP \-\- Kompletter Polynom
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS Polynomial
+.INDENT 0.0
+.TP
+.B public Polynomial(int\fI length\fP)
+Leeren Polynom mit der länge \(aqlength\(aq erstellen.
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBlength\fP \-\- Länge des Polynoms
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS Methods
+.SS Derivation
+.INDENT 0.0
+.TP
+.B  \fI\%String\fP Derivation()
+Gibt die 1. Ableitung des Polynomes zurück
+.INDENT 7.0
+.TP
+.B Rückgabe
+Menschlich lesbare 1. Ableitung des Polynomes
+.UNINDENT
+.UNINDENT
+.SS get
+.INDENT 0.0
+.TP
+.B public double[] get()
+Gibt den Polynom als INT Array zurück
+.INDENT 7.0
+.TP
+.B Rückgabe
+Gibt komplettes Polynom zurück
+.UNINDENT
+.UNINDENT
+.SS get
+.INDENT 0.0
+.TP
+.B public double get(int\fI number\fP)
+Gibt ein Element des Polynomes zurück
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBnumber\fP \-\- Element nummer des Polynomes this.polylist[number]
+.UNINDENT
+.TP
+.B Rückgabe
+Wert des Polynom Element
+.UNINDENT
+.UNINDENT
+.SS get_as_human_readable
+.INDENT 0.0
+.TP
+.B  \fI\%String\fP get_as_human_readable()
+Wandelt das Polynom Array als Menschlich lesbaren Polynom um
+.INDENT 7.0
+.TP
+.B Rückgabe
+Polynom als lesbaren String
+.UNINDENT
+.UNINDENT
+.SS length
+.INDENT 0.0
+.TP
+.B public int length()
+Gibt die Länge des Polynomes zurück
+.INDENT 7.0
+.TP
+.B Rückgabe
+Int länge des Polynomes Array
+.UNINDENT
+.UNINDENT
+.SS set
+.INDENT 0.0
+.TP
+.B public void set(double[]\fI new_polylist\fP)
+Überschreibt den Polynom mit einem neuen \(aqnew_polylist\(aq
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBnew_polylist\fP \-\- Vollständiger Polynom als INT Array
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS set
+.INDENT 0.0
+.TP
+.B public void set(int\fI poly_number\fP, double\fI poly_value\fP)
+Überschreibt ein Element des Polynomes
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBpoly_number\fP \-\- Element des Polynomes
+.IP \(bu 2
+\fBpoly_value\fP \-\- Wert des neuen Element im Polynom
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS PolynomialList
+.INDENT 0.0
+.TP
+.B  class PolynomialList
+Ein Polynom Klasse Array welche mitunter folgende funktionen mitbringt:
+.INDENT 7.0
+.IP \(bu 2
+Einzelne Polynome aus den Polynom[] ausgeben
+.IP \(bu 2
+Polynome miteinander multiplizieren, addieren und subtraieren
+.IP \(bu 2
+Einzelne Polynome löschen, bearbeiten oder neu hinzufügen
+.IP \(bu 2
+Polynom[] bilden durch laden einer Json Datei
+.IP \(bu 2
+Die eigene Klasse als Json Datei speichern
+.UNINDENT
+.UNINDENT
+.SS Constructors
+.SS PolynomialList
+.INDENT 0.0
+.TP
+.B public PolynomialList()
+Konstruktor Erstellt ein neues leeres Polynomial[]
+.UNINDENT
+.SS Methods
+.SS add
+.INDENT 0.0
+.TP
+.B public void add(Polynomial\fI newPolynomial\fP)
+Hängt ein neues Polynomial an Polynomial[] an
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBnewPolynomial\fP \-\- neues Polynomial welches angehängt werden soll
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS delte
+.INDENT 0.0
+.TP
+.B  void delte(int\fI PolynomialNumber\fP)
+Löscht ein Element aus den Polynomial[]
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBPolynomialNumber\fP \-\- Element des Polynomial[] welches gelöscht werden soll
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS get_FileName
+.INDENT 0.0
+.TP
+.B  \fI\%String\fP get_FileName()
+Gibt den Json Datei String zurück
+.INDENT 7.0
+.TP
+.B Rückgabe
+Json Datei namen als String
+.UNINDENT
+.UNINDENT
+.SS get_PolylList
+.INDENT 0.0
+.TP
+.B  Polynomial[] get_PolylList()
+Gibt das Polynomial[] zurück
+.INDENT 7.0
+.TP
+.B Rückgabe
+Polynomial[]
+.UNINDENT
+.UNINDENT
+.SS get_Polynomial
+.INDENT 0.0
+.TP
+.B  Polynomial get_Polynomial(int\fI PolynomialNumber\fP)
+Gibt ein einzelnes Polynomial aus dem Polynomial[] zurück
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBPolynomialNumber\fP \-\- Element des Polynomial[] welches zurück gegeben werden soll
+.UNINDENT
+.TP
+.B Rückgabe
+Polynomial Objekt
+.UNINDENT
+.UNINDENT
+.SS length
+.INDENT 0.0
+.TP
+.B public int length()
+Gibt die länge des Polynomial[] zurück
+.INDENT 7.0
+.TP
+.B Rückgabe
+Int länge des Polynomial[]
+.UNINDENT
+.UNINDENT
+.SS load
+.INDENT 0.0
+.TP
+.B  void load()
+Ersetzt das vorhandene Polynomial[] mit der aus der this.file Json Datei angeben Werten Polynomial[]
+.UNINDENT
+.SS mathAddSub
+.INDENT 0.0
+.TP
+.B  Polynomial mathAddSub(Polynomial\fI Polynomial_1\fP, Polynomial\fI Polynomial_2\fP, boolean\fI operator\fP)
+Addiert oder Subtraiert 2 Polynome miteinander, gibt dieses als Polynomial Klasse zurück und fügt es in Polynomial[] hinzu
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBPolynomial_1\fP \-\- Polynom 1 welche zu Polynom 2 addiert wird
+.IP \(bu 2
+\fBPolynomial_2\fP \-\- Polynom 2 welche zu Polynom 1 addiert wird
+.IP \(bu 2
+\fBoperator\fP \-\- 1 == +, 0 == \-
+.UNINDENT
+.TP
+.B Rückgabe
+Neues Polynomial welches durch die Berechnung entstand
+.UNINDENT
+.UNINDENT
+.SS mathHorner
+.INDENT 0.0
+.TP
+.B  double mathHorner(Polynomial\fI Polynomial\fP, double\fI divisor\fP)
+Polynomdivision nach dem Horner Schema, bei erfogreicher Division wird das neue Polynom Polynomial[] angehängt
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBPolynomial\fP \-\- Polynom welches dividiert werden soll
+.IP \(bu 2
+\fBdivisor\fP \-\- Die Zahl mit der das Polynom dividiert werden soll
+.UNINDENT
+.TP
+.B Rückgabe
+Rest in Double
+.UNINDENT
+.UNINDENT
+.SS mathMultiply
+.INDENT 0.0
+.TP
+.B  Polynomial mathMultiply(Polynomial\fI Polynomial_1\fP, Polynomial\fI Polynomial_2\fP)
+Multipliziert 2 Polynome miteinander und speichert das Polynom in PolylList
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBPolynomial_1\fP \-\- Polynom 1 welches zu Polynom 2 multipliziert werden soll
+.IP \(bu 2
+\fBPolynomial_2\fP \-\- Polynom 2 welches zu Polynom 1 multipliziert werden soll
+.UNINDENT
+.TP
+.B Rückgabe
+neues multipliziertes Polynom
+.UNINDENT
+.UNINDENT
+.SS randomPolynomial
+.INDENT 0.0
+.TP
+.B  Polynomial randomPolynomial(int\fI length\fP, boolean\fI random\fP)
+Erstellt ein Polynomial mit der Länge length und wenn random wahr ist, mit festen Werten
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBlength\fP \-\- länge des Beispiel Polynomes
+.IP \(bu 2
+\fBrandom\fP \-\- Polynom bekommt feste Werte zugewiesen mit [i] = i
+.UNINDENT
+.TP
+.B Rückgabe
+zufälliges neues Polynomial
+.UNINDENT
+.UNINDENT
+.SS randomPolynomialArray
+.INDENT 0.0
+.TP
+.B  Polynomial[] randomPolynomialArray(int\fI arrayLength\fP, int\fI PolynomialLength\fP, boolean\fI random\fP)
+Erstellt ein Polynomial[] mit zufalls Zahlen und arrayLength länge, die länge der Polynome wird mit PolynomialLength bestimmt
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBarrayLength\fP \-\- Länge von Polynomial[]
+.IP \(bu 2
+\fBPolynomialLength\fP \-\- Länge des Polynomial
+.IP \(bu 2
+\fBrandom\fP \-\- Polynom bekommt feste Werte zugewiesen mit [i] = i
+.UNINDENT
+.TP
+.B Rückgabe
+zufälliges neues Polynomial[]
+.UNINDENT
+.UNINDENT
+.SS save
+.INDENT 0.0
+.TP
+.B  void save()
+Speichert Polynomial[] in this.file angeben Datei als Json format ab
+.UNINDENT
+.SS set
+.INDENT 0.0
+.TP
+.B public void set(int\fI ArrayNumber\fP, Polynomial\fI newPolynomial\fP)
+Überschreibt ein Polynomial aus Polynomial[] mit einen neuem Polynomial
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBArrayNumber\fP \-\- Element nummer des zu überschreibenen Polynomial
+.IP \(bu 2
+\fBnewPolynomial\fP \-\- Neues Polynomial welches das alte überschreiben soll
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS set_file
+.INDENT 0.0
+.TP
+.B  void set_file(\fI\%String\fP\fI FileName\fP)
+Setzt den Namen und Pfad der Json Datei
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBFileName\fP \-\- Datei Namen und Pfad der neuen Json Datei
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS TerminalInterface
+.INDENT 0.0
+.TP
+.B  class TerminalInterface
+User Terminal Interface Ausgabe Gibt ein Menu und sonstige nützliche Userinterface features aus Created by Steffen Exler on 18.10.16.
+.UNINDENT
+.SS Methods
+.SS BoarderText
+.INDENT 0.0
+.TP
+.B  void BoarderText(\fI\%String\fP\fI Text\fP)
+Gibt den String Text in ein Rahm aus
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBText\fP \-\- String der im Rahmen angezeigt werden soll
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS InputDouble
+.INDENT 0.0
+.TP
+.B  double InputDouble(\fI\%String\fP\fI TextError\fP)
+Ließt eine User Terminal eingabe und überprüft ob es sich um ein double handelt und gibt diesen zurück
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBTextError\fP \-\- Text der bei Falscher eingabe wiederholt wird
+.UNINDENT
+.TP
+.B Rückgabe
+User eingabe als Double
+.UNINDENT
+.UNINDENT
+.SS InputInt
+.INDENT 0.0
+.TP
+.B  int InputInt(\fI\%String\fP\fI TextError\fP)
+Ließt eine User Terminal eingabe und überprüft ob es sich um ein Int handelt und gibt diesen zurück
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBTextError\fP \-\- Text der bei Falscher eingabe wiederholt wird
+.UNINDENT
+.TP
+.B Rückgabe
+User eingabe als Int
+.UNINDENT
+.UNINDENT
+.SS InputString
+.INDENT 0.0
+.TP
+.B  \fI\%String\fP InputString(\fI\%String\fP\fI TextError\fP, \fI\%String\fP\fI Default\fP)
+Ließt eine User Terminal eingabe und ueberprueft ob es sich um ein String handelt und gibt diesen zurück
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBTextError\fP \-\- Text der bei Falscher eingabe wiederholt wird
+.IP \(bu 2
+\fBDefault\fP \-\- Return Wert wenn User keine eingabe tätigt
+.UNINDENT
+.TP
+.B Rückgabe
+User eingabe als String
+.UNINDENT
+.UNINDENT
+.SS ShowMenu
+.INDENT 0.0
+.TP
+.B  int ShowMenu(\fI\%String\fP[]\fI MenuList\fP, boolean\fI Back\fP)
+Erstellt ein User Terminal Menu, dieser kann mit der Int eingabe auswählen welchen Menupunkt er auswählen möchte. Das Menu wird mithilfe eines String[] gebildet und gibt die Usereingabe zurück.
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBMenuList\fP \-\- Eine Liste mit allen Antwortmöglichkeiten
+.IP \(bu 2
+\fBBack\fP \-\- True == fügt ein Menupunkt ein, um ins Vorherige Menu zurück zu kommen
+.UNINDENT
+.TP
+.B Rückgabe
+User Antwort als Int Wert. Der Wert ist die Nummer im MenuList[]. Beispiel: Bei MenuList["Ich", "Du", "Er"] gibt der User 2 an und meint damit "Du" und 1 wird auch als Int zurück gegeben.
+.UNINDENT
+.UNINDENT
+.SS com.linuxluigi.polynomial.test
+.SS PolynomialListTest
+.INDENT 0.0
+.TP
+.B public class PolynomialListTest
+Created by Steffen Exler on 03.11.16.
+.UNINDENT
+.SS Methods
+.SS add
+.INDENT 0.0
+.TP
+.B public void add()
+Erstellt ein PolynomialList Objekt und füllt es mit zufallswerten und überprüft ob die Ausgabe mit der Eingabe übereinstimmt, außerdem werden noch Vordefinierte double[] Werte als Polynom erstellt, PolynomialList angehängt und überprüft ob hier auch die Eingabe und Ausgabe übereinstimmt.
+.INDENT 7.0
+.TP
+.B Wirft
+.INDENT 7.0
+.IP \(bu 2
+\fI\%Exception\fP \-\- 
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS delte
+.INDENT 0.0
+.TP
+.B public void delte()
+Erzeugt ein zufälliges PolynomialList und löscht zufällig einzelne Werte heraus Test dann ob die länge von PolynomialList \-1 ist und überprüft ob das Polynom wirklich aus PolynomialList gelöscht wurde
+.INDENT 7.0
+.TP
+.B Wirft
+.INDENT 7.0
+.IP \(bu 2
+\fI\%Exception\fP \-\- 
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS mathAddSub
+.INDENT 0.0
+.TP
+.B public void mathAddSub()
+Test Addition und Subtraktion von Polynome mit zufallszahlen und fest Vordefinierten Zahlen
+.INDENT 7.0
+.TP
+.B Wirft
+.INDENT 7.0
+.IP \(bu 2
+\fI\%Exception\fP \-\- 
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS mathHorner
+.INDENT 0.0
+.TP
+.B public void mathHorner()
+Test Hornerschema nach festen Werten
+.INDENT 7.0
+.TP
+.B Wirft
+.INDENT 7.0
+.IP \(bu 2
+\fI\%Exception\fP \-\- 
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS mathMultiply
+.INDENT 0.0
+.TP
+.B public void mathMultiply()
+Test Multiplikation von Polynome mit zufallszahlen und fest Vordefinierten Zahlen
+.INDENT 7.0
+.TP
+.B Wirft
+.INDENT 7.0
+.IP \(bu 2
+\fI\%Exception\fP \-\- 
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS PolynomialTest
+.INDENT 0.0
+.TP
+.B public class PolynomialTest
+Created by Steffen Exler on 01.11.16.
+.UNINDENT
+.SS Methods
+.SS derivation
+.INDENT 0.0
+.TP
+.B public void derivation()
+Erste Ableitung Test
+.INDENT 7.0
+.TP
+.B Wirft
+.INDENT 7.0
+.IP \(bu 2
+\fI\%Exception\fP \-\- 
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS get
+.INDENT 0.0
+.TP
+.B public void get()
+Testet beide get Varianten mit zufalls und festen Werten
+.INDENT 7.0
+.TP
+.B Wirft
+.INDENT 7.0
+.IP \(bu 2
+\fI\%Exception\fP \-\- 
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS get_as_human_readable
+.INDENT 0.0
+.TP
+.B public void get_as_human_readable()
+.UNINDENT
+.SS length
+.INDENT 0.0
+.TP
+.B public void length()
+Probiert zwischen \-1000 bis 1000 alle Längen durch und überprüft ob die funktion length den erwarteten Wert zurück gibt.
+.INDENT 7.0
+.TP
+.B Wirft
+.INDENT 7.0
+.IP \(bu 2
+\fI\%Exception\fP \-\- 
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS set
+.INDENT 0.0
+.TP
+.B public void set()
+Fügt in mehren Polynomen
+.INDENT 7.0
+.TP
+.B Wirft
+.INDENT 7.0
+.IP \(bu 2
+\fI\%Exception\fP \-\- 
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS Dokumentation
+.INDENT 0.0
+.TP
+.B Die Dokumentation ist mit \fI\%sphinx\fP, \fI\%javasphinx\fP
+und \fI\%Javadoc\fP  erstellt wordenden.
+.UNINDENT
+.sp
+Gehostet wird die Dokumentation auf \fI\%readthedocs.org\fP welches durch ein Github hook mit jeden Push automatisch aktualisiert wird.
+.INDENT 0.0
+.IP \(bu 2
+\fI\%Online Dokumentation Link\fP
+.IP \(bu 2
+\fI\%Github Docs Quell Datein\fP
+.UNINDENT
+.SS Dokumentation bearbeiten
+.sp
+Die Dokumentation Quelldaten befinden sich in den Ordner \fI/docs/source\fP und sind in reStructuredText Format geschrieben.
+Nach dem bearbeiten der Quelldaten müssen diese noch in HTML konvertiert werden, dieses wird über das Shell Script
+\fI/docs/javasphinx.sh\fP erledigt.
+.INDENT 0.0
+.IP \(bu 2
+\fI\%reStructuredText Schnellhilfe\fP
+.UNINDENT
+.SS Dokumentation aktualisieren
+.sp
+Es wurde für Ubuntu 12.04, 14.04 und 16.04 mit Python 3 ein Shell Script zur automatischen konvertierung von Javadoc und reStructuredText Datein
+zur HTML integrierd, auf welches \fI\%readthedocs.org\fP zugreift sobald ein push auf Github gesendet wird.
+.SS Abhänigkeiten installieren
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ sudo apt\-get build\-dep python\-lxml
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Nur für Ubuntu 12.04 und 14.04
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ sudo apt\-get install python\-virtualenv
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Für Ubuntu 16.04
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ sudo apt\-get install python3\-venv
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Virtualenv anlegen und verwenden
+.sp
+\fBwichtig\fP >> folgene 2 Befehle im Wurzelverzeichnis des Projektes ausführen!
+.sp
+Virtualenv für Python 3 anlegen
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ virtualenv \-p python3 env
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+In virtuelle Umgebung einloggen
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ source env/bin/activate
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Python abhänigkeiten installieren
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ pip install \-r docs/requirements.txt
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.SS Dokumentation erzeugen
+.sp
+Im Unterverzeichnis /docs wechseln und das Script javaspinx.sh ausführen
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ ./javasphinx.sh
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Sobald das Script erfolgreich ausgeführt wurde sind in den Order \fI/docs/build/\fP die Aktuelle Dokumentation in verschiedenen Formaten zu finden.
+.SS Dokumentation alternative Formate
+.sp
+Es ist über die \fIMakefile\fP in \fI/docs\fP möglich die Dokumentation auch als PDF, epub, epub3, latex, man
+.SS Hilfe
+.sp
+Wenn Sie hilfe brauchen email \fI\%Steffen.Exler@gmail.com\fP
+.SS Lizenz
+.sp
+MIT License
+.sp
+Copyright (c) 2016 Steffen Exler
+.sp
+Hiermit wird unentgeltlich jeder Person, die eine Kopie der Software und der zugehörigen Dokumentationen (die "Software") erhält, die Erlaubnis erteilt, sie uneingeschränkt zu nutzen, inklusive und ohne Ausnahme mit dem Recht, sie zu verwenden, zu kopieren, zu verändern, zusammenzufügen, zu veröffentlichen, zu verbreiten, zu unterlizenzieren und/oder zu verkaufen, und Personen, denen diese Software überlassen wird, diese Rechte zu verschaffen, unter den folgenden Bedingungen:
+.sp
+Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind in allen Kopien oder Teilkopien der Software beizulegen.
+.sp
+DIE SOFTWARE WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTELLT, EINSCHLIEßLICH DER GARANTIE ZUR BENUTZUNG FÜR DEN VORGESEHENEN ODER EINEM BESTIMMTEN ZWECK SOWIE JEGLICHER RECHTSVERLETZUNG, JEDOCH NICHT DARAUF BESCHRÄNKT. IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHTINHABER FÜR JEGLICHEN SCHADEN ODER SONSTIGE ANSPRÜCHE HAFTBAR ZU MACHEN, OB INFOLGE DER ERFÜLLUNG EINES VERTRAGES, EINES DELIKTES ODER ANDERS IM ZUSAMMENHANG MIT DER SOFTWARE ODER SONSTIGER VERWENDUNG DER SOFTWARE ENTSTANDEN.
+.SS Kontakt
+.sp
+Fragen? Kontaktieren sie \fI\%Steffen.Exler@gmail.com\fP
+.INDENT 0.0
+.IP \(bu 2
+genindex
+.IP \(bu 2
+modindex
+.IP \(bu 2
+search
+.UNINDENT
+.SH AUTHOR
+Steffen Exler
+.SH COPYRIGHT
+2016, Steffen Exler
+.\" Generated by docutils manpage writer.
+.

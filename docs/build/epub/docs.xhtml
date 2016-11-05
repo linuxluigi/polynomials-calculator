@@ -1,0 +1,118 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Dokumentation</title>
+    
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.xhtml" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="help.xhtml" title="Hilfe"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="com/linuxluigi/polynomial/test/PolynomialTest.xhtml" title="PolynomialTest"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.xhtml">Polynomials Calculator 0.1.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="dokumentation">
+<h1>Dokumentation</h1>
+<dl class="docutils">
+<dt>Die Dokumentation ist mit <a class="reference external" href="http://www.sphinx-doc.org/en/1.4.8/">sphinx</a><span class="link-target"> [http://www.sphinx-doc.org/en/1.4.8/]</span>, <a class="reference external" href="https://bronto.github.io/javasphinx/">javasphinx</a><span class="link-target"> [https://bronto.github.io/javasphinx/]</span></dt>
+<dd>und <a class="reference external" href="https://en.wikipedia.org/wiki/Javadoc">Javadoc</a><span class="link-target"> [https://en.wikipedia.org/wiki/Javadoc]</span>  erstellt wordenden.</dd>
+</dl>
+<p>Gehostet wird die Dokumentation auf <a class="reference external" href="https://readthedocs.org/">readthedocs.org</a><span class="link-target"> [https://readthedocs.org/]</span> welches durch ein Github hook mit jeden Push automatisch aktualisiert wird.</p>
+<ul class="simple">
+<li><a class="reference external" href="https://readthedocs.org/projects/polynomials-calculator/">Online Dokumentation Link</a><span class="link-target"> [https://readthedocs.org/projects/polynomials-calculator/]</span></li>
+<li><a class="reference external" href="https://github.com/linuxluigi/polynomials-calculator/tree/master/docs">Github Docs Quell Datein</a><span class="link-target"> [https://github.com/linuxluigi/polynomials-calculator/tree/master/docs]</span></li>
+</ul>
+<div class="section" id="dokumentation-bearbeiten">
+<h2>Dokumentation bearbeiten</h2>
+<p>Die Dokumentation Quelldaten befinden sich in den Ordner <cite>/docs/source</cite> und sind in reStructuredText Format geschrieben.
+Nach dem bearbeiten der Quelldaten müssen diese noch in HTML konvertiert werden, dieses wird über das Shell Script
+<cite>/docs/javasphinx.sh</cite> erledigt.</p>
+<ul class="simple">
+<li><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">reStructuredText Schnellhilfe</a><span class="link-target"> [http://docutils.sourceforge.net/docs/user/rst/quickref.html]</span></li>
+</ul>
+</div>
+<div class="section" id="dokumentation-aktualisieren">
+<h2>Dokumentation aktualisieren</h2>
+<p>Es wurde für Ubuntu 12.04, 14.04 und 16.04 mit Python 3 ein Shell Script zur automatischen konvertierung von Javadoc und reStructuredText Datein
+zur HTML integrierd, auf welches <a class="reference external" href="https://readthedocs.org/">readthedocs.org</a><span class="link-target"> [https://readthedocs.org/]</span> zugreift sobald ein push auf Github gesendet wird.</p>
+<div class="section" id="abhanigkeiten-installieren">
+<h3>Abhänigkeiten installieren</h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get build-dep python-lxml
+</pre></div>
+</div>
+<p>Nur für Ubuntu 12.04 und 14.04</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install python-virtualenv
+</pre></div>
+</div>
+<p>Für Ubuntu 16.04</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install python3-venv
+</pre></div>
+</div>
+</div>
+<div class="section" id="virtualenv-anlegen-und-verwenden">
+<h3>Virtualenv anlegen und verwenden</h3>
+<p><strong>wichtig</strong> &gt;&gt; folgene 2 Befehle im Wurzelverzeichnis des Projektes ausführen!</p>
+<p>Virtualenv für Python 3 anlegen</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ virtualenv -p python3 env
+</pre></div>
+</div>
+<p>In virtuelle Umgebung einloggen</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ <span class="nb">source</span> env/bin/activate
+</pre></div>
+</div>
+</div>
+<div class="section" id="python-abhanigkeiten-installieren">
+<h3>Python abhänigkeiten installieren</h3>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ pip install -r docs/requirements.txt
+</pre></div>
+</div>
+</div>
+<div class="section" id="dokumentation-erzeugen">
+<h3>Dokumentation erzeugen</h3>
+<p>Im Unterverzeichnis /docs wechseln und das Script javaspinx.sh ausführen</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ ./javasphinx.sh
+</pre></div>
+</div>
+<p>Sobald das Script erfolgreich ausgeführt wurde sind in den Order <cite>/docs/build/</cite> die Aktuelle Dokumentation in verschiedenen Formaten zu finden.</p>
+</div>
+<div class="section" id="dokumentation-alternative-formate">
+<h3>Dokumentation alternative Formate</h3>
+<p>Es ist über die <cite>Makefile</cite> in <cite>/docs</cite> möglich die Dokumentation auch als PDF, epub, epub3, latex, man</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Steffen Exler.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8 erstellt.
+    </div>
+  </body>
+</html>

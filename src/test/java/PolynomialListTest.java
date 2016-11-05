@@ -1,5 +1,4 @@
 import org.junit.Test;
-
 import java.util.Random;
 
 import static org.junit.Assert.*;
@@ -402,40 +401,7 @@ public class PolynomialListTest {
                 -1
         );
 
-        assertEquals("f(x)=(-8)+2x+2x²", PolynomialList.get_Polynomial(PolynomialList.length() - 1).get_as_human_readable());
+        assertEquals("f(x)=(-4)+2x+2x²", PolynomialList.get_Polynomial(PolynomialList.length() - 1).get_as_human_readable());
         assertEquals(0, tmp, 0.005d);
-
-        // Rechung 4
-        tmp = PolynomialList.mathHorner(
-                PolynomialList.get_Polynomial(2),
-                1
-        );
-
-        assertEquals("f(x)=0", PolynomialList.get_Polynomial(PolynomialList.length() - 1).get_as_human_readable());
-
-        // Rechung 5
-        tmp = PolynomialList.mathHorner(
-                PolynomialList.get_Polynomial(3),
-                5
-        );
-
-        assertEquals("f(x)=0", PolynomialList.get_Polynomial(PolynomialList.length() - 1).get_as_human_readable());
-
-        // Rechung 6
-        tmp = PolynomialList.mathHorner(
-                PolynomialList.get_Polynomial(0),
-                5
-        );
-
-        assertEquals("f(x)=0", PolynomialList.get_Polynomial(PolynomialList.length() - 1).get_as_human_readable());
-
-        // Rechung 7
-        tmp = PolynomialList.mathHorner(
-                PolynomialList.get_Polynomial(1),
-                5
-        );
-
-        assertEquals("f(x)=0", PolynomialList.get_Polynomial(PolynomialList.length() - 1).get_as_human_readable());
     }
-
 }

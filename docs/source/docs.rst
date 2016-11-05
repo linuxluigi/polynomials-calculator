@@ -1,0 +1,88 @@
+Dokumentation
+=============
+
+Die Dokumentation ist mit `sphinx <http://www.sphinx-doc.org/en/1.4.8/>`_, `javasphinx <https://bronto.github.io/javasphinx/>`_
+ und `Javadoc <https://en.wikipedia.org/wiki/Javadoc>`_  erstellt wordenden.
+
+Gehostet wird die Dokumentation auf `readthedocs.org <https://readthedocs.org/>`_ welches durch ein Github hook mit jeden Push automatisch aktualisiert wird.
+
+- `Online Dokumentation Link <https://readthedocs.org/projects/polynomials-calculator/>`_
+- `Github Docs Quell Datein <https://github.com/linuxluigi/polynomials-calculator/tree/master/docs>`_
+
+Dokumentation bearbeiten
+------------------------
+
+Die Dokumentation Quelldaten befinden sich in den Ordner `/docs/source` und sind in reStructuredText Format geschrieben.
+Nach dem bearbeiten der Quelldaten müssen diese noch in HTML konvertiert werden, dieses wird über das Shell Script
+`/docs/javasphinx.sh` erledigt.
+
+- `reStructuredText Schnellhilfe <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+- `YouTube - Sphinx & Read the Docs <https://www.youtube.com/watch?v=oJsUvBQyHBs>`_
+- `socrates.io - reStructuredText WYSIWYG Editor <http://socrates.io/>`_
+
+Dokumentation aktualisieren
+---------------------------
+
+Es wurde für Ubuntu 12.04, 14.04 und 16.04 mit Python 3 ein Shell Script zur automatischen konvertierung von Javadoc und reStructuredText Datein
+zur HTML integrierd, auf welches `readthedocs.org <https://readthedocs.org/>`_ zugreift sobald ein push auf Github gesendet wird.
+
+Abhänigkeiten installieren
+^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+   $ sudo apt-get build-dep python-lxml
+
+Nur für Ubuntu 12.04 und 14.04
+
+.. code-block:: bash
+
+   $ sudo apt-get install python-virtualenv
+
+Für Ubuntu 16.04
+
+.. code-block:: bash
+
+   $ sudo apt-get install python3-venv
+
+Virtualenv anlegen und verwenden
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+**wichtig** >> folgene 2 Befehle im Wurzelverzeichnis des Projektes ausführen!
+
+Virtualenv für Python 3 anlegen
+
+.. code-block:: bash
+
+   $ virtualenv -p python3 env
+
+In virtuelle Umgebung einloggen
+
+.. code-block:: bash
+
+   $ source env/bin/activate
+
+
+Python abhänigkeiten installieren
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. code-block:: bash
+
+   $ pip install -r docs/requirements.txt
+
+Dokumentation erzeugen
+^^^^^^^^^^^^^^^^^^^^^^
+
+Im Unterverzeichnis /docs wechseln und das Script javaspinx.sh ausführen
+
+.. code-block:: bash
+
+   $ ./javasphinx.sh
+
+Sobald das Script erfolgreich ausgeführt wurde sind in den Order `/docs/build/` die Aktuelle Dokumentation in verschiedenen Formaten zu finden.
+
+Dokumentation alternative Formate
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Es ist über die `Makefile` in `/docs` möglich die Dokumentation auch als epub, epub3, latex, man
+

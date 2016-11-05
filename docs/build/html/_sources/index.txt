@@ -15,6 +15,7 @@ Inhalt:
    :maxdepth: 2
 
    packages
+   docs
    help
    license
 

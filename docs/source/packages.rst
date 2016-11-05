@@ -4,5 +4,6 @@ Polynomials Calculator
 .. toctree::
    :maxdepth: 2
 
-   com/linuxluigi/polynomials/package-index
+   com/linuxluigi/polynomial/package-index
+   com/linuxluigi/polynomial/test/package-index
 
