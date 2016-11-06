@@ -19,6 +19,7 @@ make epub
 make epub3
 make man
 make latex
+make latexpdf
 
 # remove packagename of each java file
 ls -f ../src/main/java/*.java | while read -r file; do

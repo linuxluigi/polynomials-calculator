@@ -1,23 +1,58 @@
 Polynomials Calculator Doc
 ==========================
 
-Kurzbeschreibung
-================
-Ein simples Programm zur Berechnung von Polynomen maximal 6. Grades.::
+Einleitung
+==========
 
-    print 'hello'
-    >> hello
+Über das Programm
+-----------------
+Das Programm "Polynomials Calculator" ist ein reines Konsolenprogramm, welches dazu dient Polynome
+bis zum n Grad zu Addieren, Subtrahieren, Multiplizieren und Dividieren. Die Polynome können von dem User
+über ein Wizard eingegeben, bearbeitet und gelöscht werden. Außerdem können die Polynome für eie spätere Verwendung
+in eine Json Datei gespeichert und über das Programm wieder ausgelesen werden.
 
-Inhalt:
-^^^^^^
+Abhänigkeiten
+-------------
+Das Projekt wurde als Maven Modul geschrieben und verwendet folgende Module.
+
+Maven Projekt Website: https://maven.apache.org/
+
+Google GSON
+^^^^^^^^^^^
+Gson ist eine Java Bibliothek die es ermöglicht Klassen und Variablen als Json Datei aus zu geben oder
+ein String als Klasse oder Variable zu konvertieren.
+
+|Name: google-gson
+|Hersteller: Google Inc.
+|Version: 2.7
+|Link: https://github.com/google/gson
+
+
+Bedienung
+=========
+
+.. toctree::
+   :maxdepth: 2
+
+   wizard
+
+Klassenbeschreibung
+===================
 
 .. toctree::
    :maxdepth: 2
 
    packages
+
+Sonstiges
+=========
+
+.. toctree::
+   :maxdepth: 2
+
+   license
    docs
    help
-   license
 
 
 Indices and tables

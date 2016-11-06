@@ -1,4 +1,3 @@
-
 /**
  * Some comment
  *
@@ -8,6 +7,8 @@
  */
 
 public class Main {
+    private static PolynomialList PolynomialList = new PolynomialList();
+
     /**
      * Die Main Klasse zum starten des Userinterface, fragen nach der Json Datei Pfad
      * und MainMenu in endlos Schleife starten äääöö
@@ -38,8 +39,6 @@ public class Main {
             MainMenu();
         }
     }
-
-    private static PolynomialList PolynomialList = new PolynomialList();
 
     /**
      * Erstellt das Hauptmenu
@@ -97,7 +96,7 @@ public class Main {
                 }
                 break;
             case 5:
-                // Polynom subtraieren
+                // Polynom subtrahieren
                 if (PolynomialList.length() < 1) {
                     System.out.println("Es muss mindestens 1 Polynom vorhanden sein, bitte erstell ein weiteres Polynom");
                 } else {
@@ -268,7 +267,7 @@ public class Main {
     }
 
     /**
-     * Menu zum addieren und subtraieren von 2 Polynomen
+     * Menu zum addieren und subtrahieren von 2 Polynomen
      *
      * @param operator gibt an ob eine Addition oder Subtraion vorgenommen werden soll
      *                 true == +; false == -

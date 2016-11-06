@@ -1,4 +1,5 @@
 import java.util.Scanner;
+
 /**
  * User Terminal Interface Ausgabe
  * Gibt ein Menu und sonstige nützliche

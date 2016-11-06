@@ -1,15 +1,14 @@
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 
 import java.io.*;
 import java.util.Random;
-
-import com.google.gson.Gson;
-import com.google.gson.GsonBuilder;
 
 /**
  * Ein Polynom Klasse Array welche mitunter folgende funktionen mitbringt:
  * <ul>
  * <li>Einzelne Polynome aus den Polynom[] ausgeben</li>
- * <li>Polynome miteinander multiplizieren, addieren und subtraieren</li>
+ * <li>Polynome miteinander multiplizieren, addieren und subtrahieren</li>
  * <li>Einzelne Polynome löschen, bearbeiten oder neu hinzufügen</li>
  * <li>Polynom[] bilden durch laden einer Json Datei</li>
  * <li>Die eigene Klasse als Json Datei speichern</li>
@@ -112,7 +111,7 @@ class PolynomialList {
 
         int counter = 0;
 
-        for (int i = 0; i < this.PolylList.length; i++) {
+        for (int i = 0; i < this.PolylList.length - 1; i++) {
             if (i != PolynomialNumber) {
                 newPolylList[counter] = this.PolylList[i];
                 counter++;
@@ -226,8 +225,8 @@ class PolynomialList {
 
         Polynomial newPolynomial = new Polynomial(Polynomial.length() - 1);
         newPolynomial.set(
-                newPolynomial.length()-1,
-                Polynomial.get(Polynomial.length()-1)
+                newPolynomial.length() - 1,
+                Polynomial.get(Polynomial.length() - 1)
         );
 
         double remainder = 0;
@@ -237,7 +236,7 @@ class PolynomialList {
             if (i > 1) {
                 newPolynomial.set(
                         i - 2,
-                        newPolynomial.get(i-1) * divisor + Polynomial.get(i-1)
+                        newPolynomial.get(i - 1) * divisor + Polynomial.get(i - 1)
                 );
             }
         }

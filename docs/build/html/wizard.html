@@ -1,0 +1,239 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Wizard Modus &mdash; Polynomials Calculator 0.1.0 Dokumentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Stichwortverzeichnis"
+              href="genindex.html"/>
+        <link rel="search" title="Suche" href="search.html"/>
+    <link rel="top" title="Polynomials Calculator 0.1.0 Dokumentation" href="index.html"/>
+        <link rel="next" title="Polynomials Calculator" href="packages.html"/>
+        <link rel="prev" title="Polynomials Calculator Doc" href="index.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> Polynomials Calculator
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Wizard Modus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#bedienung">Bedienung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#datei-laden-und-sichern">Datei Laden und Sichern</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="packages.html">Polynomials Calculator</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Lizenz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html#kontakt">Kontakt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Hilfe</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="index.html">Polynomials Calculator</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="index.html">Docs</a> &raquo;</li>
+      
+    <li>Wizard Modus</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="_sources/wizard.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="wizard-modus">
+<h1>Wizard Modus<a class="headerlink" href="#wizard-modus" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="bedienung">
+<h2>Bedienung<a class="headerlink" href="#bedienung" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Der Wizard Modus wird nur am Start des Programmes ausgeführt und dient zum Initialesieren
+des Polynoms Array, Json Datei zu bestimmen und bei bedarf Polynome aus dieser Datei zu laden
+und zur späteren Verwendung auf zu bereiten.</p>
+<p>Nach dem start wird als erstes der Name und die Version des Programmes angezegt.
+Anschließend wird abgefragt welche Json Datei zum sichern und laden der Polynome verwendet
+werden soll und anschließend ob diese Datei geladen werden wird.</p>
+<p>Die Aussagen die in den Eckigen Klammern stehen sind die Standartwerte, die verwendet werden sobald der
+User nur Enter drückt, ohne eine weitere Eingabe zu tätigen.</p>
+<img alt="_images/PolyCalc-Wizard-1.png" src="_images/PolyCalc-Wizard-1.png" />
+<p>Die eingaben in dem Bild wird mit grüner Schrift dargestellt. Die Eingabe bedeutet in diesem Beispiel das
+die Json Datei <cite>save.json</cite> verwendet werden soll um die Polynome zu sichern und mit dem folgenden <cite>Y</cite> lädt das
+Programm die Polynome die in <cite>save.json</cite> hinterlegt sind.</p>
+<p>In diesem Beispiel wäre es kein unterschied ob der User 2 mal einfach nur Enter gedrückt hatte oder eine
+vollstänge Eingabe getätigt hatte, da die Standart werde eingeben wurden.</p>
+</div>
+<div class="section" id="datei-laden-und-sichern">
+<h2>Datei Laden und Sichern<a class="headerlink" href="#datei-laden-und-sichern" title="Link zu dieser Überschrift">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="packages.html" class="btn btn-neutral float-right" title="Polynomials Calculator" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral" title="Polynomials Calculator Doc" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Steffen Exler.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'0.1.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+      <script type="text/javascript" src="_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -1,0 +1,74 @@
+\indexentry{Git|hyperpage}{1}
+\indexentry{Quellcode|hyperpage}{1}
+\indexentry{Online Dokumentation|hyperpage}{1}
+\indexentry{Abh\IeC {\"a}nigkeiten|hyperpage}{2}
+\indexentry{Google GSON|hyperpage}{2}
+\indexentry{JUnit|hyperpage}{2}
+\indexentry{Json Laden und Sichern|hyperpage}{4}
+\indexentry{Polynome anzeigen|hyperpage}{5}
+\indexentry{Polynom hinzuf\IeC {\"u}gen|hyperpage}{5}
+\indexentry{Polynom bearbeiten|hyperpage}{6}
+\indexentry{Polynom l\IeC {\"o}schen|hyperpage}{6}
+\indexentry{Polynom Addition|hyperpage}{6}
+\indexentry{Polynom Subtraktion|hyperpage}{6}
+\indexentry{Polynom Multiplikation|hyperpage}{6}
+\indexentry{Polynom ableiten|hyperpage}{7}
+\indexentry{Polynom Division|hyperpage}{7}
+\indexentry{Horner Schema|hyperpage}{7}
+\indexentry{Json laden|hyperpage}{8}
+\indexentry{Json sichern|hyperpage}{8}
+\indexentry{exit|hyperpage}{8}
+\indexentry{Polynom Addition|hyperpage}{8}
+\indexentry{com.linuxluigi.polynomial (package)|hyperpage}{9}
+\indexentry{Main (Java class)|hyperpage}{9}
+\indexentry{main(String{[}{]}) (Java method)|hyperpage}{9}
+\indexentry{Polynomial (Java class)|hyperpage}{9}
+\indexentry{Polynomial(double{[}{]}) (Java constructor)|hyperpage}{10}
+\indexentry{Polynomial(int) (Java constructor)|hyperpage}{10}
+\indexentry{Derivation() (Java method)|hyperpage}{10}
+\indexentry{get() (Java method)|hyperpage}{10}
+\indexentry{get(int) (Java method)|hyperpage}{10}
+\indexentry{get\_as\_human\_readable() (Java method)|hyperpage}{11}
+\indexentry{length() (Java method)|hyperpage}{11}
+\indexentry{set(double{[}{]}) (Java method)|hyperpage}{11}
+\indexentry{set(int, double) (Java method)|hyperpage}{11}
+\indexentry{PolynomialList (Java class)|hyperpage}{11}
+\indexentry{PolynomialList() (Java constructor)|hyperpage}{11}
+\indexentry{add(Polynomial) (Java method)|hyperpage}{12}
+\indexentry{delte(int) (Java method)|hyperpage}{12}
+\indexentry{get\_FileName() (Java method)|hyperpage}{12}
+\indexentry{get\_PolylList() (Java method)|hyperpage}{12}
+\indexentry{get\_Polynomial(int) (Java method)|hyperpage}{12}
+\indexentry{length() (Java method)|hyperpage}{12}
+\indexentry{load() (Java method)|hyperpage}{13}
+\indexentry{mathAddSub(Polynomial, Polynomial, boolean) (Java method)|hyperpage}{13}
+\indexentry{mathHorner(Polynomial, double) (Java method)|hyperpage}{13}
+\indexentry{mathMultiply(Polynomial, Polynomial) (Java method)|hyperpage}{13}
+\indexentry{randomPolynomial(int, boolean) (Java method)|hyperpage}{13}
+\indexentry{randomPolynomialArray(int, int, boolean) (Java method)|hyperpage}{14}
+\indexentry{save() (Java method)|hyperpage}{14}
+\indexentry{set(int, Polynomial) (Java method)|hyperpage}{14}
+\indexentry{set\_file(String) (Java method)|hyperpage}{14}
+\indexentry{TerminalInterface (Java class)|hyperpage}{14}
+\indexentry{BoarderText(String) (Java method)|hyperpage}{15}
+\indexentry{InputDouble(String) (Java method)|hyperpage}{15}
+\indexentry{InputInt(String) (Java method)|hyperpage}{15}
+\indexentry{InputString(String, String) (Java method)|hyperpage}{15}
+\indexentry{ShowMenu(String{[}{]}, boolean) (Java method)|hyperpage}{15}
+\indexentry{com.linuxluigi.polynomial.test (package)|hyperpage}{16}
+\indexentry{PolynomialListTest (Java class)|hyperpage}{16}
+\indexentry{add() (Java method)|hyperpage}{16}
+\indexentry{delte() (Java method)|hyperpage}{16}
+\indexentry{mathAddSub() (Java method)|hyperpage}{16}
+\indexentry{mathHorner() (Java method)|hyperpage}{16}
+\indexentry{mathMultiply() (Java method)|hyperpage}{17}
+\indexentry{PolynomialTest (Java class)|hyperpage}{17}
+\indexentry{derivation() (Java method)|hyperpage}{17}
+\indexentry{get() (Java method)|hyperpage}{17}
+\indexentry{get\_as\_human\_readable() (Java method)|hyperpage}{17}
+\indexentry{length() (Java method)|hyperpage}{17}
+\indexentry{set() (Java method)|hyperpage}{18}
+\indexentry{Lizenz|hyperpage}{19}
+\indexentry{Kontakt|hyperpage}{19}
+\indexentry{Sphinx|hyperpage}{19}
+\indexentry{Support|hyperpage}{21}

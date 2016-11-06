@@ -1,23 +1,40 @@
 Polynomials Calculator Doc
 ==========================
 
-Kurzbeschreibung
-================
-Ein simples Programm zur Berechnung von Polynomen maximal 6. Grades.::
+Einleitung
+==========
 
-    print 'hello'
-    >> hello
+.. toctree::
+   :maxdepth: 2
 
-Inhalt:
-^^^^^^
+   intro
+
+Bedienung
+=========
+
+.. toctree::
+   :maxdepth: 2
+
+   wizard
+   menu
+
+Klassenbeschreibung
+===================
 
 .. toctree::
    :maxdepth: 2
 
    packages
+
+Sonstiges
+=========
+
+.. toctree::
+   :maxdepth: 2
+
+   license
    docs
    help
-   license
 
 
 Indices and tables
@@ -26,3 +43,4 @@ Indices and tables
 * :ref:`genindex`
 * :ref:`modindex`
 * :ref:`search`
+

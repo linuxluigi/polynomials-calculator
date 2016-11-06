@@ -1,0 +1,97 @@
+\select@language {ngerman}
+\contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
+\contentsline {section}{\numberline {1.1}\IeC {\"U}ber das Programm}{1}{section.1.1}
+\contentsline {section}{\numberline {1.2}Abh\IeC {\"a}nigkeiten}{2}{section.1.2}
+\contentsline {subsection}{\numberline {1.2.1}Google GSON}{2}{subsection.1.2.1}
+\contentsline {subsection}{\numberline {1.2.2}JUnit}{2}{subsection.1.2.2}
+\contentsline {chapter}{\numberline {2}Bedienung}{3}{chapter.2}
+\contentsline {section}{\numberline {2.1}Wizard Modus}{3}{section.2.1}
+\contentsline {subsection}{\numberline {2.1.1}Bedienung}{3}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.2}Datei Laden und Sichern}{4}{subsection.2.1.2}
+\contentsline {section}{\numberline {2.2}Hauptmen\IeC {\"u}}{4}{section.2.2}
+\contentsline {subsection}{\numberline {2.2.1}Inhalt}{4}{subsection.2.2.1}
+\contentsline {subsection}{\numberline {2.2.2}Option 1: Alle Polynome anzeigen lassen}{5}{subsection.2.2.2}
+\contentsline {subsection}{\numberline {2.2.3}Option 2: Polynom hinzuf\IeC {\"u}gen}{5}{subsection.2.2.3}
+\contentsline {subsection}{\numberline {2.2.4}Option 3: Polynom bearbeiten}{6}{subsection.2.2.4}
+\contentsline {subsection}{\numberline {2.2.5}Option 3: Polynom l\IeC {\"o}schen}{6}{subsection.2.2.5}
+\contentsline {subsection}{\numberline {2.2.6}Option 5, 6 \& 8: Mathematische Operationen}{6}{subsection.2.2.6}
+\contentsline {subsection}{\numberline {2.2.7}Option 7: Polynom ableiten}{7}{subsection.2.2.7}
+\contentsline {subsection}{\numberline {2.2.8}Option 9: Polynom Division}{7}{subsection.2.2.8}
+\contentsline {subsection}{\numberline {2.2.9}Option 10: Json laden}{8}{subsection.2.2.9}
+\contentsline {subsection}{\numberline {2.2.10}Option 11: Json speichern}{8}{subsection.2.2.10}
+\contentsline {subsection}{\numberline {2.2.11}Option 12: Programm beenden}{8}{subsection.2.2.11}
+\contentsline {section}{\numberline {2.3}Beispiel}{8}{section.2.3}
+\contentsline {subsection}{\numberline {2.3.1}Polynom Addition}{8}{subsection.2.3.1}
+\contentsline {chapter}{\numberline {3}Klassenbeschreibung}{9}{chapter.3}
+\contentsline {section}{\numberline {3.1}Polynomials Calculator}{9}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}com.linuxluigi.polynomial}{9}{subsection.3.1.1}
+\contentsline {subsubsection}{Main}{9}{subsubsection*.3}
+\contentsline {paragraph}{Methods}{9}{paragraph*.5}
+\contentsline {subparagraph}{main}{9}{subparagraph*.6}
+\contentsline {subsubsection}{Polynomial}{9}{subsubsection*.8}
+\contentsline {paragraph}{Constructors}{10}{paragraph*.10}
+\contentsline {subparagraph}{Polynomial}{10}{subparagraph*.11}
+\contentsline {subparagraph}{Polynomial}{10}{subparagraph*.13}
+\contentsline {paragraph}{Methods}{10}{paragraph*.15}
+\contentsline {subparagraph}{Derivation}{10}{subparagraph*.16}
+\contentsline {subparagraph}{get}{10}{subparagraph*.18}
+\contentsline {subparagraph}{get}{10}{subparagraph*.20}
+\contentsline {subparagraph}{get\_as\_human\_readable}{11}{subparagraph*.22}
+\contentsline {subparagraph}{length}{11}{subparagraph*.24}
+\contentsline {subparagraph}{set}{11}{subparagraph*.26}
+\contentsline {subparagraph}{set}{11}{subparagraph*.28}
+\contentsline {subsubsection}{PolynomialList}{11}{subsubsection*.30}
+\contentsline {paragraph}{Constructors}{11}{paragraph*.32}
+\contentsline {subparagraph}{PolynomialList}{11}{subparagraph*.33}
+\contentsline {paragraph}{Methods}{12}{paragraph*.35}
+\contentsline {subparagraph}{add}{12}{subparagraph*.36}
+\contentsline {subparagraph}{delte}{12}{subparagraph*.38}
+\contentsline {subparagraph}{get\_FileName}{12}{subparagraph*.40}
+\contentsline {subparagraph}{get\_PolylList}{12}{subparagraph*.42}
+\contentsline {subparagraph}{get\_Polynomial}{12}{subparagraph*.44}
+\contentsline {subparagraph}{length}{12}{subparagraph*.46}
+\contentsline {subparagraph}{load}{13}{subparagraph*.48}
+\contentsline {subparagraph}{mathAddSub}{13}{subparagraph*.50}
+\contentsline {subparagraph}{mathHorner}{13}{subparagraph*.52}
+\contentsline {subparagraph}{mathMultiply}{13}{subparagraph*.54}
+\contentsline {subparagraph}{randomPolynomial}{13}{subparagraph*.56}
+\contentsline {subparagraph}{randomPolynomialArray}{14}{subparagraph*.58}
+\contentsline {subparagraph}{save}{14}{subparagraph*.60}
+\contentsline {subparagraph}{set}{14}{subparagraph*.62}
+\contentsline {subparagraph}{set\_file}{14}{subparagraph*.64}
+\contentsline {subsubsection}{TerminalInterface}{14}{subsubsection*.66}
+\contentsline {paragraph}{Methods}{15}{paragraph*.68}
+\contentsline {subparagraph}{BoarderText}{15}{subparagraph*.69}
+\contentsline {subparagraph}{InputDouble}{15}{subparagraph*.71}
+\contentsline {subparagraph}{InputInt}{15}{subparagraph*.73}
+\contentsline {subparagraph}{InputString}{15}{subparagraph*.75}
+\contentsline {subparagraph}{ShowMenu}{15}{subparagraph*.77}
+\contentsline {subsection}{\numberline {3.1.2}com.linuxluigi.polynomial.test}{16}{subsection.3.1.2}
+\contentsline {subsubsection}{PolynomialListTest}{16}{subsubsection*.79}
+\contentsline {paragraph}{Methods}{16}{paragraph*.81}
+\contentsline {subparagraph}{add}{16}{subparagraph*.82}
+\contentsline {subparagraph}{delte}{16}{subparagraph*.84}
+\contentsline {subparagraph}{mathAddSub}{16}{subparagraph*.86}
+\contentsline {subparagraph}{mathHorner}{16}{subparagraph*.88}
+\contentsline {subparagraph}{mathMultiply}{17}{subparagraph*.90}
+\contentsline {subsubsection}{PolynomialTest}{17}{subsubsection*.92}
+\contentsline {paragraph}{Methods}{17}{paragraph*.94}
+\contentsline {subparagraph}{derivation}{17}{subparagraph*.95}
+\contentsline {subparagraph}{get}{17}{subparagraph*.97}
+\contentsline {subparagraph}{get\_as\_human\_readable}{17}{subparagraph*.99}
+\contentsline {subparagraph}{length}{17}{subparagraph*.101}
+\contentsline {subparagraph}{set}{18}{subparagraph*.103}
+\contentsline {chapter}{\numberline {4}Sonstiges}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lizenz}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Kontakt}{19}{section.4.2}
+\contentsline {section}{\numberline {4.3}Dokumentation}{19}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Dokumentation bearbeiten}{20}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Dokumentation aktualisieren}{20}{subsection.4.3.2}
+\contentsline {subsubsection}{Abh\IeC {\"a}nigkeiten installieren}{20}{subsubsection*.105}
+\contentsline {subsubsection}{Virtualenv anlegen und verwenden}{20}{subsubsection*.106}
+\contentsline {subsubsection}{Python abh\IeC {\"a}nigkeiten installieren}{20}{subsubsection*.107}
+\contentsline {subsubsection}{Dokumentation erzeugen}{20}{subsubsection*.108}
+\contentsline {subsubsection}{Dokumentation alternative Formate}{21}{subsubsection*.109}
+\contentsline {section}{\numberline {4.4}Hilfe}{21}{section.4.4}
+\contentsline {chapter}{\numberline {5}Indices and tables}{23}{chapter.5}
+\contentsline {chapter}{Stichwortverzeichnis}{25}{section*.110}

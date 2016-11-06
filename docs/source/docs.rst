@@ -1,6 +1,6 @@
 Dokumentation
 =============
-
+.. index:: Sphinx
 Die Dokumentation ist mit `sphinx <http://www.sphinx-doc.org/en/1.4.8/>`_, `javasphinx <https://bronto.github.io/javasphinx/>`_
  und `Javadoc <https://en.wikipedia.org/wiki/Javadoc>`_  erstellt wordenden.
 
@@ -32,6 +32,7 @@ Abhänigkeiten installieren
 .. code-block:: bash
 
    $ sudo apt-get build-dep python-lxml
+   $ sudo apt-get install texlive-full
 
 Nur für Ubuntu 12.04 und 14.04
 
@@ -84,5 +85,11 @@ Sobald das Script erfolgreich ausgeführt wurde sind in den Order `/docs/build/`
 Dokumentation alternative Formate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Es ist über die `Makefile` in `/docs` möglich die Dokumentation auch als epub, epub3, latex, man
+Es ist über die `Makefile` in `/docs` wird die Dokumentation in mehreren Formaten ausgegeben:
+
+- EPUB --> /docs/build/epub/PolynomialsCalculator.epub
+- epub3 --> /docs/build/epub3/PolynomialsCalculator.epub
+- latex --> /docs/build/latex/
+- PDF --> /docs/build/latex/PolynomialsCalculator.pdf
+- man --> /docs/build/man/polynomialscalculator.1
 

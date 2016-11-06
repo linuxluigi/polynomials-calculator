@@ -1,8 +1,8 @@
-.. java:import:: java.util Random
-
 .. java:import:: com.google.gson Gson
 
 .. java:import:: com.google.gson GsonBuilder
+
+.. java:import:: java.util Random
 
 PolynomialList
 ==============
@@ -17,7 +17,7 @@ PolynomialList
    ..
 
    * Einzelne Polynome aus den Polynom[] ausgeben
-   * Polynome miteinander multiplizieren, addieren und subtraieren
+   * Polynome miteinander multiplizieren, addieren und subtrahieren
    * Einzelne Polynome löschen, bearbeiten oder neu hinzufügen
    * Polynom[] bilden durch laden einer Json Datei
    * Die eigene Klasse als Json Datei speichern

@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "POLYNOMIALSCALCULATOR" "1" "Nov. 05, 2016" "0.1.0" "Polynomials Calculator"
+.TH "POLYNOMIALSCALCULATOR" "1" "Nov. 06, 2016" "0.1.0" "Polynomials Calculator"
 .SH NAME
 polynomialscalculator \- Polynomials Calculator Documentation
 .
@@ -30,21 +30,65 @@ level margin: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .\" new: \\n[rst2man-indent\\n[rst2man-indent-level]]
 .in \\n[rst2man-indent\\n[rst2man-indent-level]]u
 ..
+.SH ÜBER DAS PROGRAMM
 .sp
-Ein simples Programm zur Berechnung von Polynomen maximal 6. Grades.:
-.INDENT 0.0
-.INDENT 3.5
+Das Programm "Polynomials Calculator" ist ein reines Konsolenprogramm, welches dazu dient Polynome
+bis zum n Grad zu Addieren, Subtrahieren, Multiplizieren und Dividieren. Die Polynome können von dem User
+über ein Wizard eingegeben, bearbeitet und gelöscht werden. Außerdem können die Polynome für eie spätere Verwendung
+in eine Json Datei gespeichert und über das Programm wieder ausgelesen werden.
+.SH ABHÄNIGKEITEN
 .sp
+Das Projekt wurde als Maven Modul geschrieben und verwendet folgende Module.
+.sp
+Maven Projekt Website: \fI\%https://maven.apache.org/\fP
+.SS Google GSON
+.sp
+Gson ist eine Java Bibliothek die es ermöglicht Klassen und Variablen als Json Datei aus zu geben oder
+ein String als Klasse oder Variable zu konvertieren.
+.sp
+
 .nf
-.ft C
-print \(aqhello\(aq
->> hello
-.ft P
+|
 .fi
-.UNINDENT
-.UNINDENT
-.SH INHALT:
-.SS Polynomials Calculator
+Name: google\-gson
+
+.nf
+|
+.fi
+Hersteller: Google Inc.
+
+.nf
+|
+.fi
+Version: 2.7
+
+.nf
+|
+.fi
+Link: \fI\%https://github.com/google/gson\fP
+.SH WIZARD MODUS
+.SS Bedienung
+.sp
+Der Wizard Modus wird nur am Start des Programmes ausgeführt und dient zum Initialesieren
+des Polynoms Array, Json Datei zu bestimmen und bei bedarf Polynome aus dieser Datei zu laden
+und zur späteren Verwendung auf zu bereiten.
+.sp
+Nach dem start wird als erstes der Name und die Version des Programmes angezegt.
+Anschließend wird abgefragt welche Json Datei zum sichern und laden der Polynome verwendet
+werden soll und anschließend ob diese Datei geladen werden wird.
+.sp
+Die Aussagen die in den Eckigen Klammern stehen sind die Standartwerte, die verwendet werden sobald der
+User nur Enter drückt, ohne eine weitere Eingabe zu tätigen.
+[Bild]
+.sp
+Die eingaben in dem Bild wird mit grüner Schrift dargestellt. Die Eingabe bedeutet in diesem Beispiel das
+die Json Datei \fIsave.json\fP verwendet werden soll um die Polynome zu sichern und mit dem folgenden \fIY\fP lädt das
+Programm die Polynome die in \fIsave.json\fP hinterlegt sind.
+.sp
+In diesem Beispiel wäre es kein unterschied ob der User 2 mal einfach nur Enter gedrückt hatte oder eine
+vollstänge Eingabe getätigt hatte, da die Standart werde eingeben wurden.
+.SS Datei Laden und Sichern
+.SH POLYNOMIALS CALCULATOR
 .SS com.linuxluigi.polynomial
 .SS Main
 .INDENT 0.0
@@ -232,7 +276,7 @@ Ein Polynom Klasse Array welche mitunter folgende funktionen mitbringt:
 .IP \(bu 2
 Einzelne Polynome aus den Polynom[] ausgeben
 .IP \(bu 2
-Polynome miteinander multiplizieren, addieren und subtraieren
+Polynome miteinander multiplizieren, addieren und subtrahieren
 .IP \(bu 2
 Einzelne Polynome löschen, bearbeiten oder neu hinzufügen
 .IP \(bu 2
@@ -707,7 +751,21 @@ Fügt in mehren Polynomen
 .UNINDENT
 .UNINDENT
 .UNINDENT
-.SS Dokumentation
+.SH LIZENZ
+.sp
+MIT License
+.sp
+Copyright (c) 2016 Steffen Exler
+.sp
+Hiermit wird unentgeltlich jeder Person, die eine Kopie der Software und der zugehörigen Dokumentationen (die "Software") erhält, die Erlaubnis erteilt, sie uneingeschränkt zu nutzen, inklusive und ohne Ausnahme mit dem Recht, sie zu verwenden, zu kopieren, zu verändern, zusammenzufügen, zu veröffentlichen, zu verbreiten, zu unterlizenzieren und/oder zu verkaufen, und Personen, denen diese Software überlassen wird, diese Rechte zu verschaffen, unter den folgenden Bedingungen:
+.sp
+Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind in allen Kopien oder Teilkopien der Software beizulegen.
+.sp
+DIE SOFTWARE WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTELLT, EINSCHLIEßLICH DER GARANTIE ZUR BENUTZUNG FÜR DEN VORGESEHENEN ODER EINEM BESTIMMTEN ZWECK SOWIE JEGLICHER RECHTSVERLETZUNG, JEDOCH NICHT DARAUF BESCHRÄNKT. IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHTINHABER FÜR JEGLICHEN SCHADEN ODER SONSTIGE ANSPRÜCHE HAFTBAR ZU MACHEN, OB INFOLGE DER ERFÜLLUNG EINES VERTRAGES, EINES DELIKTES ODER ANDERS IM ZUSAMMENHANG MIT DER SOFTWARE ODER SONSTIGER VERWENDUNG DER SOFTWARE ENTSTANDEN.
+.SH KONTAKT
+.sp
+Fragen? Kontaktieren sie \fI\%Steffen.Exler@gmail.com\fP
+.SH DOKUMENTATION
 .INDENT 0.0
 .TP
 .B Die Dokumentation ist mit \fI\%sphinx\fP, \fI\%javasphinx\fP
@@ -729,6 +787,10 @@ Nach dem bearbeiten der Quelldaten müssen diese noch in HTML konvertiert werden
 .INDENT 0.0
 .IP \(bu 2
 \fI\%reStructuredText Schnellhilfe\fP
+.IP \(bu 2
+\fI\%YouTube \- Sphinx & Read the Docs\fP
+.IP \(bu 2
+\fI\%socrates.io \- reStructuredText WYSIWYG Editor\fP
 .UNINDENT
 .SS Dokumentation aktualisieren
 .sp
@@ -741,6 +803,7 @@ zur HTML integrierd, auf welches \fI\%readthedocs.org\fP zugreift sobald ein pus
 .nf
 .ft C
 $ sudo apt\-get build\-dep python\-lxml
+$ sudo apt\-get install texlive\-full
 .ft P
 .fi
 .UNINDENT
@@ -824,24 +887,22 @@ $ ./javasphinx.sh
 Sobald das Script erfolgreich ausgeführt wurde sind in den Order \fI/docs/build/\fP die Aktuelle Dokumentation in verschiedenen Formaten zu finden.
 .SS Dokumentation alternative Formate
 .sp
-Es ist über die \fIMakefile\fP in \fI/docs\fP möglich die Dokumentation auch als PDF, epub, epub3, latex, man
-.SS Hilfe
+Es ist über die \fIMakefile\fP in \fI/docs\fP wird die Dokumentation in mehreren Formaten ausgegeben:
+.INDENT 0.0
+.IP \(bu 2
+EPUB \-\-> /docs/build/epub/PolynomialsCalculator.epub
+.IP \(bu 2
+epub3 \-\-> /docs/build/epub3/PolynomialsCalculator.epub
+.IP \(bu 2
+latex \-\-> /docs/build/latex/
+.IP \(bu 2
+PDF \-\-> /docs/build/latex/PolynomialsCalculator.pdf
+.IP \(bu 2
+man \-\-> /docs/build/man/polynomialscalculator.1
+.UNINDENT
+.SH HILFE
 .sp
 Wenn Sie hilfe brauchen email \fI\%Steffen.Exler@gmail.com\fP
-.SS Lizenz
-.sp
-MIT License
-.sp
-Copyright (c) 2016 Steffen Exler
-.sp
-Hiermit wird unentgeltlich jeder Person, die eine Kopie der Software und der zugehörigen Dokumentationen (die "Software") erhält, die Erlaubnis erteilt, sie uneingeschränkt zu nutzen, inklusive und ohne Ausnahme mit dem Recht, sie zu verwenden, zu kopieren, zu verändern, zusammenzufügen, zu veröffentlichen, zu verbreiten, zu unterlizenzieren und/oder zu verkaufen, und Personen, denen diese Software überlassen wird, diese Rechte zu verschaffen, unter den folgenden Bedingungen:
-.sp
-Der obige Urheberrechtsvermerk und dieser Erlaubnisvermerk sind in allen Kopien oder Teilkopien der Software beizulegen.
-.sp
-DIE SOFTWARE WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTELLT, EINSCHLIEßLICH DER GARANTIE ZUR BENUTZUNG FÜR DEN VORGESEHENEN ODER EINEM BESTIMMTEN ZWECK SOWIE JEGLICHER RECHTSVERLETZUNG, JEDOCH NICHT DARAUF BESCHRÄNKT. IN KEINEM FALL SIND DIE AUTOREN ODER COPYRIGHTINHABER FÜR JEGLICHEN SCHADEN ODER SONSTIGE ANSPRÜCHE HAFTBAR ZU MACHEN, OB INFOLGE DER ERFÜLLUNG EINES VERTRAGES, EINES DELIKTES ODER ANDERS IM ZUSAMMENHANG MIT DER SOFTWARE ODER SONSTIGER VERWENDUNG DER SOFTWARE ENTSTANDEN.
-.SS Kontakt
-.sp
-Fragen? Kontaktieren sie \fI\%Steffen.Exler@gmail.com\fP
 .INDENT 0.0
 .IP \(bu 2
 genindex

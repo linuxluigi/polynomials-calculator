@@ -17,6 +17,8 @@ Nach dem bearbeiten der Quelldaten müssen diese noch in HTML konvertiert werden
 `/docs/javasphinx.sh` erledigt.
 
 - `reStructuredText Schnellhilfe <http://docutils.sourceforge.net/docs/user/rst/quickref.html>`_
+- `YouTube - Sphinx & Read the Docs <https://www.youtube.com/watch?v=oJsUvBQyHBs>`_
+- `socrates.io - reStructuredText WYSIWYG Editor <http://socrates.io/>`_
 
 Dokumentation aktualisieren
 ---------------------------
@@ -30,6 +32,7 @@ Abhänigkeiten installieren
 .. code-block:: bash
 
    $ sudo apt-get build-dep python-lxml
+   $ sudo apt-get install texlive-full
 
 Nur für Ubuntu 12.04 und 14.04
 
@@ -82,5 +85,11 @@ Sobald das Script erfolgreich ausgeführt wurde sind in den Order `/docs/build/`
 Dokumentation alternative Formate
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-Es ist über die `Makefile` in `/docs` möglich die Dokumentation auch als PDF, epub, epub3, latex, man
+Es ist über die `Makefile` in `/docs` wird die Dokumentation in mehreren Formaten ausgegeben:
+
+- EPUB --> /docs/build/epub/PolynomialsCalculator.epub
+- epub3 --> /docs/build/epub3/PolynomialsCalculator.epub
+- latex --> /docs/build/latex/
+- PDF --> /docs/build/latex/PolynomialsCalculator.pdf
+- man --> /docs/build/man/polynomialscalculator.1
 

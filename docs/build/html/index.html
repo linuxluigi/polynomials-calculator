@@ -34,7 +34,7 @@
               href="genindex.html"/>
         <link rel="search" title="Suche" href="search.html"/>
     <link rel="top" title="Polynomials Calculator 0.1.0 Dokumentation" href="#"/>
-        <link rel="next" title="Polynomials Calculator" href="packages.html"/> 
+        <link rel="next" title="Wizard Modus" href="wizard.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -84,11 +84,16 @@
             
             
                 <ul>
+<li class="toctree-l1"><a class="reference internal" href="wizard.html">Wizard Modus</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">Polynomials Calculator</a></li>
-<li class="toctree-l1"><a class="reference internal" href="docs.html">Dokumentation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="help.html">Hilfe</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="license.html">Lizenz</a></li>
 <li class="toctree-l1"><a class="reference internal" href="license.html#kontakt">Kontakt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="docs.html">Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help.html">Hilfe</a></li>
 </ul>
 
             
@@ -136,15 +141,44 @@
   <div class="section" id="polynomials-calculator-doc">
 <h1>Polynomials Calculator Doc<a class="headerlink" href="#polynomials-calculator-doc" title="Link zu dieser Überschrift">¶</a></h1>
 </div>
-<div class="section" id="kurzbeschreibung">
-<h1>Kurzbeschreibung<a class="headerlink" href="#kurzbeschreibung" title="Link zu dieser Überschrift">¶</a></h1>
-<p>Ein simples Programm zur Berechnung von Polynomen maximal 6. Grades.:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="nb">print</span> <span class="s1">&#39;hello&#39;</span>
-<span class="o">&gt;&gt;</span> <span class="n">hello</span>
-</pre></div>
+<div class="section" id="einleitung">
+<h1>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="section" id="uber-das-programm">
+<h2>Über das Programm<a class="headerlink" href="#uber-das-programm" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das Programm &#8220;Polynomials Calculator&#8221; ist ein reines Konsolenprogramm, welches dazu dient Polynome
+bis zum n Grad zu Addieren, Subtrahieren, Multiplizieren und Dividieren. Die Polynome können von dem User
+über ein Wizard eingegeben, bearbeitet und gelöscht werden. Außerdem können die Polynome für eie spätere Verwendung
+in eine Json Datei gespeichert und über das Programm wieder ausgelesen werden.</p>
 </div>
-<div class="section" id="inhalt">
-<h2>Inhalt:<a class="headerlink" href="#inhalt" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="abhanigkeiten">
+<h2>Abhänigkeiten<a class="headerlink" href="#abhanigkeiten" title="Link zu dieser Überschrift">¶</a></h2>
+<p>Das Projekt wurde als Maven Modul geschrieben und verwendet folgende Module.</p>
+<p>Maven Projekt Website: <a class="reference external" href="https://maven.apache.org/">https://maven.apache.org/</a></p>
+<div class="section" id="google-gson">
+<h3>Google GSON<a class="headerlink" href="#google-gson" title="Link zu dieser Überschrift">¶</a></h3>
+<p>Gson ist eine Java Bibliothek die es ermöglicht Klassen und Variablen als Json Datei aus zu geben oder
+ein String als Klasse oder Variable zu konvertieren.</p>
+<p><a href="#id1"><span class="problematic" id="id2">|</span></a>Name: google-gson
+<a href="#id3"><span class="problematic" id="id4">|</span></a>Hersteller: Google Inc.
+<a href="#id5"><span class="problematic" id="id6">|</span></a>Version: 2.7
+<a href="#id7"><span class="problematic" id="id8">|</span></a>Link: <a class="reference external" href="https://github.com/google/gson">https://github.com/google/gson</a></p>
+</div>
+</div>
+</div>
+<div class="section" id="bedienung">
+<h1>Bedienung<a class="headerlink" href="#bedienung" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="wizard.html">Wizard Modus</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="wizard.html#bedienung">Bedienung</a></li>
+<li class="toctree-l2"><a class="reference internal" href="wizard.html#datei-laden-und-sichern">Datei Laden und Sichern</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="klassenbeschreibung">
+<h1>Klassenbeschreibung<a class="headerlink" href="#klassenbeschreibung" title="Link zu dieser Überschrift">¶</a></h1>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">Polynomials Calculator</a><ul>
@@ -152,16 +186,22 @@
 <li class="toctree-l2"><a class="reference internal" href="com/linuxluigi/polynomial/test/package-index.html">com.linuxluigi.polynomial.test</a></li>
 </ul>
 </li>
+</ul>
+</div>
+</div>
+<div class="section" id="sonstiges">
+<h1>Sonstiges<a class="headerlink" href="#sonstiges" title="Link zu dieser Überschrift">¶</a></h1>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="license.html">Lizenz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="license.html#kontakt">Kontakt</a></li>
 <li class="toctree-l1"><a class="reference internal" href="docs.html">Dokumentation</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="docs.html#dokumentation-bearbeiten">Dokumentation bearbeiten</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docs.html#dokumentation-aktualisieren">Dokumentation aktualisieren</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="help.html">Hilfe</a></li>
-<li class="toctree-l1"><a class="reference internal" href="license.html">Lizenz</a></li>
-<li class="toctree-l1"><a class="reference internal" href="license.html#kontakt">Kontakt</a></li>
 </ul>
-</div>
 </div>
 </div>
 <div class="section" id="indices-and-tables">
@@ -180,7 +220,7 @@
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="packages.html" class="btn btn-neutral float-right" title="Polynomials Calculator" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="wizard.html" class="btn btn-neutral float-right" title="Wizard Modus" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>

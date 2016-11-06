@@ -50,6 +50,8 @@ Nach dem bearbeiten der Quelldaten müssen diese noch in HTML konvertiert werden
 <cite>/docs/javasphinx.sh</cite> erledigt.</p>
 <ul class="simple">
 <li><a class="reference external" href="http://docutils.sourceforge.net/docs/user/rst/quickref.html">reStructuredText Schnellhilfe</a><span class="link-target"> [http://docutils.sourceforge.net/docs/user/rst/quickref.html]</span></li>
+<li><a class="reference external" href="https://www.youtube.com/watch?v=oJsUvBQyHBs">YouTube - Sphinx &amp; Read the Docs</a><span class="link-target"> [https://www.youtube.com/watch?v=oJsUvBQyHBs]</span></li>
+<li><a class="reference external" href="http://socrates.io/">socrates.io - reStructuredText WYSIWYG Editor</a><span class="link-target"> [http://socrates.io/]</span></li>
 </ul>
 </div>
 <div class="section" id="dokumentation-aktualisieren">
@@ -59,6 +61,7 @@ zur HTML integrierd, auf welches <a class="reference external" href="https://rea
 <div class="section" id="abhanigkeiten-installieren">
 <h3>Abhänigkeiten installieren</h3>
 <div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get build-dep python-lxml
+$ sudo apt-get install texlive-full
 </pre></div>
 </div>
 <p>Nur für Ubuntu 12.04 und 14.04</p>
@@ -98,7 +101,14 @@ zur HTML integrierd, auf welches <a class="reference external" href="https://rea
 </div>
 <div class="section" id="dokumentation-alternative-formate">
 <h3>Dokumentation alternative Formate</h3>
-<p>Es ist über die <cite>Makefile</cite> in <cite>/docs</cite> möglich die Dokumentation auch als PDF, epub, epub3, latex, man</p>
+<p>Es ist über die <cite>Makefile</cite> in <cite>/docs</cite> wird die Dokumentation in mehreren Formaten ausgegeben:</p>
+<ul class="simple">
+<li>EPUB &#8211;&gt; /docs/build/epub/PolynomialsCalculator.epub</li>
+<li>epub3 &#8211;&gt; /docs/build/epub3/PolynomialsCalculator.epub</li>
+<li>latex &#8211;&gt; /docs/build/latex/</li>
+<li>PDF &#8211;&gt; /docs/build/latex/PolynomialsCalculator.pdf</li>
+<li>man &#8211;&gt; /docs/build/man/polynomialscalculator.1</li>
+</ul>
 </div>
 </div>
 </div>
