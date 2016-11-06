@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Polynomials Calculator Doc &mdash; Polynomials Calculator 0.1.0 Dokumentation</title>
+  <title>Polynomials Calculator Doc &mdash; Polynomials Calculator 1.0.0 Dokumentation</title>
   
 
   
@@ -33,8 +33,8 @@
         <link rel="index" title="Stichwortverzeichnis"
               href="genindex.html"/>
         <link rel="search" title="Suche" href="search.html"/>
-    <link rel="top" title="Polynomials Calculator 0.1.0 Dokumentation" href="#"/>
-        <link rel="next" title="Wizard Modus" href="wizard.html"/> 
+    <link rel="top" title="Polynomials Calculator 1.0.0 Dokumentation" href="#"/>
+        <link rel="next" title="Über das Programm" href="intro.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -62,7 +62,7 @@
             
             
               <div class="version">
-                0.1.0
+                1.0
               </div>
             
           
@@ -84,7 +84,12 @@
             
             
                 <ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Über das Programm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#abhanigkeiten">Abhänigkeiten</a></li>
+</ul>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="wizard.html">Wizard Modus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="menu.html">Hauptmenü</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">Polynomials Calculator</a></li>
@@ -143,26 +148,15 @@
 </div>
 <div class="section" id="einleitung">
 <h1>Einleitung<a class="headerlink" href="#einleitung" title="Link zu dieser Überschrift">¶</a></h1>
-<div class="section" id="uber-das-programm">
-<h2>Über das Programm<a class="headerlink" href="#uber-das-programm" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Das Programm &#8220;Polynomials Calculator&#8221; ist ein reines Konsolenprogramm, welches dazu dient Polynome
-bis zum n Grad zu Addieren, Subtrahieren, Multiplizieren und Dividieren. Die Polynome können von dem User
-über ein Wizard eingegeben, bearbeitet und gelöscht werden. Außerdem können die Polynome für eie spätere Verwendung
-in eine Json Datei gespeichert und über das Programm wieder ausgelesen werden.</p>
-</div>
-<div class="section" id="abhanigkeiten">
-<h2>Abhänigkeiten<a class="headerlink" href="#abhanigkeiten" title="Link zu dieser Überschrift">¶</a></h2>
-<p>Das Projekt wurde als Maven Modul geschrieben und verwendet folgende Module.</p>
-<p>Maven Projekt Website: <a class="reference external" href="https://maven.apache.org/">https://maven.apache.org/</a></p>
-<div class="section" id="google-gson">
-<h3>Google GSON<a class="headerlink" href="#google-gson" title="Link zu dieser Überschrift">¶</a></h3>
-<p>Gson ist eine Java Bibliothek die es ermöglicht Klassen und Variablen als Json Datei aus zu geben oder
-ein String als Klasse oder Variable zu konvertieren.</p>
-<p><a href="#id1"><span class="problematic" id="id2">|</span></a>Name: google-gson
-<a href="#id3"><span class="problematic" id="id4">|</span></a>Hersteller: Google Inc.
-<a href="#id5"><span class="problematic" id="id6">|</span></a>Version: 2.7
-<a href="#id7"><span class="problematic" id="id8">|</span></a>Link: <a class="reference external" href="https://github.com/google/gson">https://github.com/google/gson</a></p>
-</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Über das Programm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#abhanigkeiten">Abhänigkeiten</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#google-gson">Google GSON</a></li>
+<li class="toctree-l2"><a class="reference internal" href="intro.html#junit">JUnit</a></li>
+</ul>
+</li>
+</ul>
 </div>
 </div>
 <div class="section" id="bedienung">
@@ -172,6 +166,20 @@ ein String als Klasse oder Variable zu konvertieren.</p>
 <li class="toctree-l1"><a class="reference internal" href="wizard.html">Wizard Modus</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="wizard.html#bedienung">Bedienung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="wizard.html#datei-laden-und-sichern">Datei Laden und Sichern</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="menu.html">Hauptmenü</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#inhalt">Inhalt</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-1-alle-polynome-anzeigen-lassen">Option 1: Alle Polynome anzeigen lassen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-2-polynom-hinzufugen">Option 2: Polynom hinzufügen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-3-polynom-bearbeiten">Option 3: Polynom bearbeiten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-3-polynom-loschen">Option 3: Polynom löschen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-5-6-8-mathematische-operationen">Option 5, 6 &amp; 8: Mathematische Operationen</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-7-polynom-ableiten">Option 7: Polynom ableiten</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-9-polynom-division">Option 9: Polynom Division</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-10-json-laden">Option 10: Json laden</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-11-json-speichern">Option 11: Json speichern</a></li>
+<li class="toctree-l2"><a class="reference internal" href="menu.html#option-12-programm-beenden">Option 12: Programm beenden</a></li>
 </ul>
 </li>
 </ul>
@@ -220,7 +228,7 @@ ein String als Klasse oder Variable zu konvertieren.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="wizard.html" class="btn btn-neutral float-right" title="Wizard Modus" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="intro.html" class="btn btn-neutral float-right" title="Über das Programm" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
     </div>
@@ -252,7 +260,7 @@ ein String als Klasse oder Variable zu konvertieren.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.1.0',
+            VERSION:'1.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

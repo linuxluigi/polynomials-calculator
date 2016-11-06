@@ -1,6 +1,6 @@
 Lizenz
 ======
-
+.. index:: Lizenz
 MIT License
 
 Copyright (c) 2016 Steffen Exler
@@ -13,4 +13,5 @@ DIE SOFTWARE WIRD OHNE JEDE AUSDRÜCKLICHE ODER IMPLIZIERTE GARANTIE BEREITGESTE
 
 Kontakt
 =======
+.. index:: Kontakt
 Fragen? Kontaktieren sie Steffen.Exler@gmail.com

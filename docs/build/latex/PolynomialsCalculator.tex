@@ -459,15 +459,8 @@ Beenden das Programm mit einer freundlichen Verabschiedung.
 \noindent{\hspace*{\fill}\sphinxincludegraphics[width=0.750\linewidth]{{PolyCalc-Menu-13}.png}\hspace*{\fill}}
 
 
-\section{Beispiel}
-\label{example::doc}\label{example:beispiel}
-
-\subsection{Polynom Addition}
-\label{example:polynom-addition}
-\index{Polynom Addition}
-
 \chapter{Klassenbeschreibung}
-\label{index:klassenbeschreibung}\label{index:index-0}
+\label{index:klassenbeschreibung}
 
 \section{Polynomials Calculator}
 \label{packages:polynomials-calculator}\label{packages::doc}
@@ -1064,133 +1057,6 @@ Setzt den Namen und Pfad der Json Datei
 \textbf{\texttt{FileName}} -- Datei Namen und Pfad der neuen Json Datei
 
 \end{itemize}
-
-\end{description}\end{quote}
-
-\end{fulllineitems}
-
-
-
-\subsubsection{TerminalInterface}
-\label{com/linuxluigi/polynomial/TerminalInterface:terminalinterface}\label{com/linuxluigi/polynomial/TerminalInterface::doc}\index{TerminalInterface (Java class)}
-
-\begin{fulllineitems}
-\phantomsection\label{com/linuxluigi/polynomial/TerminalInterface:com.linuxluigi.polynomial.TerminalInterface}\pysigline{ class \sphinxbfcode{TerminalInterface}}
-User Terminal Interface Ausgabe Gibt ein Menu und sonstige nützliche Userinterface features aus Created by Steffen Exler on 18.10.16.
-
-\end{fulllineitems}
-
-
-
-\paragraph{Methods}
-\label{com/linuxluigi/polynomial/TerminalInterface:methods}
-
-\subparagraph{BoarderText}
-\label{com/linuxluigi/polynomial/TerminalInterface:boardertext}\index{BoarderText(String) (Java method)}
-
-\begin{fulllineitems}
-\phantomsection\label{com/linuxluigi/polynomial/TerminalInterface:com.linuxluigi.polynomial.TerminalInterface.BoarderText(String)}\pysiglinewithargsret{ void \sphinxbfcode{BoarderText}}{\href{http://docs.oracle.com/javase/8/docs/api/java/lang/String.html}{String}\emph{ Text}}{}
-Gibt den String Text in ein Rahm aus
-\begin{quote}\begin{description}
-\item[{Parameter}] \leavevmode\begin{itemize}
-\item {} 
-\textbf{\texttt{Text}} -- String der im Rahmen angezeigt werden soll
-
-\end{itemize}
-
-\end{description}\end{quote}
-
-\end{fulllineitems}
-
-
-
-\subparagraph{InputDouble}
-\label{com/linuxluigi/polynomial/TerminalInterface:inputdouble}\index{InputDouble(String) (Java method)}
-
-\begin{fulllineitems}
-\phantomsection\label{com/linuxluigi/polynomial/TerminalInterface:com.linuxluigi.polynomial.TerminalInterface.InputDouble(String)}\pysiglinewithargsret{ double \sphinxbfcode{InputDouble}}{\href{http://docs.oracle.com/javase/8/docs/api/java/lang/String.html}{String}\emph{ TextError}}{}
-Ließt eine User Terminal eingabe und überprüft ob es sich um ein double handelt und gibt diesen zurück
-\begin{quote}\begin{description}
-\item[{Parameter}] \leavevmode\begin{itemize}
-\item {} 
-\textbf{\texttt{TextError}} -- Text der bei Falscher eingabe wiederholt wird
-
-\end{itemize}
-
-\item[{Rückgabe}] \leavevmode
-User eingabe als Double
-
-\end{description}\end{quote}
-
-\end{fulllineitems}
-
-
-
-\subparagraph{InputInt}
-\label{com/linuxluigi/polynomial/TerminalInterface:inputint}\index{InputInt(String) (Java method)}
-
-\begin{fulllineitems}
-\phantomsection\label{com/linuxluigi/polynomial/TerminalInterface:com.linuxluigi.polynomial.TerminalInterface.InputInt(String)}\pysiglinewithargsret{ int \sphinxbfcode{InputInt}}{\href{http://docs.oracle.com/javase/8/docs/api/java/lang/String.html}{String}\emph{ TextError}}{}
-Ließt eine User Terminal eingabe und überprüft ob es sich um ein Int handelt und gibt diesen zurück
-\begin{quote}\begin{description}
-\item[{Parameter}] \leavevmode\begin{itemize}
-\item {} 
-\textbf{\texttt{TextError}} -- Text der bei Falscher eingabe wiederholt wird
-
-\end{itemize}
-
-\item[{Rückgabe}] \leavevmode
-User eingabe als Int
-
-\end{description}\end{quote}
-
-\end{fulllineitems}
-
-
-
-\subparagraph{InputString}
-\label{com/linuxluigi/polynomial/TerminalInterface:inputstring}\index{InputString(String, String) (Java method)}
-
-\begin{fulllineitems}
-\phantomsection\label{com/linuxluigi/polynomial/TerminalInterface:com.linuxluigi.polynomial.TerminalInterface.InputString(String, String)}\pysiglinewithargsret{ \href{http://docs.oracle.com/javase/8/docs/api/java/lang/String.html}{String} \sphinxbfcode{InputString}}{\href{http://docs.oracle.com/javase/8/docs/api/java/lang/String.html}{String}\emph{ TextError}, \href{http://docs.oracle.com/javase/8/docs/api/java/lang/String.html}{String}\emph{ Default}}{}
-Ließt eine User Terminal eingabe und ueberprueft ob es sich um ein String handelt und gibt diesen zurück
-\begin{quote}\begin{description}
-\item[{Parameter}] \leavevmode\begin{itemize}
-\item {} 
-\textbf{\texttt{TextError}} -- Text der bei Falscher eingabe wiederholt wird
-
-\item {} 
-\textbf{\texttt{Default}} -- Return Wert wenn User keine eingabe tätigt
-
-\end{itemize}
-
-\item[{Rückgabe}] \leavevmode
-User eingabe als String
-
-\end{description}\end{quote}
-
-\end{fulllineitems}
-
-
-
-\subparagraph{ShowMenu}
-\label{com/linuxluigi/polynomial/TerminalInterface:showmenu}\index{ShowMenu(String{[}{]}, boolean) (Java method)}
-
-\begin{fulllineitems}
-\phantomsection\label{com/linuxluigi/polynomial/TerminalInterface:com.linuxluigi.polynomial.TerminalInterface.ShowMenu(String__, boolean)}\pysiglinewithargsret{ int \sphinxbfcode{ShowMenu}}{\href{http://docs.oracle.com/javase/8/docs/api/java/lang/String.html}{String}{[}{]}\emph{ MenuList}, boolean\emph{ Back}}{}
-Erstellt ein User Terminal Menu, dieser kann mit der Int eingabe auswählen welchen Menupunkt er auswählen möchte. Das Menu wird mithilfe eines String{[}{]} gebildet und gibt die Usereingabe zurück.
-\begin{quote}\begin{description}
-\item[{Parameter}] \leavevmode\begin{itemize}
-\item {} 
-\textbf{\texttt{MenuList}} -- Eine Liste mit allen Antwortmöglichkeiten
-
-\item {} 
-\textbf{\texttt{Back}} -- True == fügt ein Menupunkt ein, um ins Vorherige Menu zurück zu kommen
-
-\end{itemize}
-
-\item[{Rückgabe}] \leavevmode
-User Antwort als Int Wert. Der Wert ist die Nummer im MenuList{[}{]}. Beispiel: Bei MenuList{[}''Ich'', ``Du'', ``Er''{]} gibt der User 2 an und meint damit ``Du'' und 1 wird auch als Int zurück gegeben.
 
 \end{description}\end{quote}
 

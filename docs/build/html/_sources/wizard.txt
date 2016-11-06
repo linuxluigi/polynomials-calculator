@@ -28,4 +28,20 @@ vollstänge Eingabe getätigt hatte, da die Standart werde eingeben wurden.
 Datei Laden und Sichern
 ^^^^^^^^^^^^^^^^^^^^^^^
 
+.. index:: Json Laden und Sichern
 
+Bei dem Laden von der Json Datei, wird überprüft ob die Datei vorliegt, falls nicht wird sie neu erzeugt und
+es wird ein Leeres Polynom Array zurückgeben. Falls die Datei exiestiert wird versucht den Inhalt, sobald
+einer vorhanden ist, als Polynom Array zu konvertieren.
+
+Ein Json Beispiel für 5 Polynome.
+
+.. code-block:: json
+
+    [
+      {"polylist":[44.3,122345.0,-5.654,54.0,416.0,45.0]},
+      {"polylist":[5.0,-16.0,0.0,-9.0,10.0,4.0]},
+      {"polylist":[0.0,6.0,2.0]},
+      {"polylist":[0.0,6.0,2.0,3.0]},
+      {"polylist":[123.324,123.0,56.0,-5612.42332,654.234,5.0]}
+    ]

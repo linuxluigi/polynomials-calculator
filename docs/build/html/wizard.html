@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Wizard Modus &mdash; Polynomials Calculator 0.1.0 Dokumentation</title>
+  <title>Wizard Modus &mdash; Polynomials Calculator 1.0.0 Dokumentation</title>
   
 
   
@@ -33,9 +33,9 @@
         <link rel="index" title="Stichwortverzeichnis"
               href="genindex.html"/>
         <link rel="search" title="Suche" href="search.html"/>
-    <link rel="top" title="Polynomials Calculator 0.1.0 Dokumentation" href="index.html"/>
-        <link rel="next" title="Polynomials Calculator" href="packages.html"/>
-        <link rel="prev" title="Polynomials Calculator Doc" href="index.html"/> 
+    <link rel="top" title="Polynomials Calculator 1.0.0 Dokumentation" href="index.html"/>
+        <link rel="next" title="Hauptmenü" href="menu.html"/>
+        <link rel="prev" title="Über das Programm" href="intro.html"/> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
@@ -63,7 +63,7 @@
             
             
               <div class="version">
-                0.1.0
+                1.0
               </div>
             
           
@@ -84,12 +84,17 @@
           
             
             
-                <ul class="current">
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Über das Programm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="intro.html#abhanigkeiten">Abhänigkeiten</a></li>
+</ul>
+<ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Wizard Modus</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#bedienung">Bedienung</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#datei-laden-und-sichern">Datei Laden und Sichern</a></li>
 </ul>
 </li>
+<li class="toctree-l1"><a class="reference internal" href="menu.html">Hauptmenü</a></li>
 </ul>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="packages.html">Polynomials Calculator</a></li>
@@ -164,6 +169,19 @@ vollstänge Eingabe getätigt hatte, da die Standart werde eingeben wurden.</p>
 </div>
 <div class="section" id="datei-laden-und-sichern">
 <h2>Datei Laden und Sichern<a class="headerlink" href="#datei-laden-und-sichern" title="Link zu dieser Überschrift">¶</a></h2>
+<p id="index-0">Bei dem Laden von der Json Datei, wird überprüft ob die Datei vorliegt, falls nicht wird sie neu erzeugt und
+es wird ein Leeres Polynom Array zurückgeben. Falls die Datei exiestiert wird versucht den Inhalt, sobald
+einer vorhanden ist, als Polynom Array zu konvertieren.</p>
+<p>Ein Json Beispiel für 5 Polynome.</p>
+<div class="highlight-json"><div class="highlight"><pre><span></span><span class="p">[</span>
+  <span class="p">{</span><span class="nt">&quot;polylist&quot;</span><span class="p">:[</span><span class="mf">44.3</span><span class="p">,</span><span class="mf">122345.0</span><span class="p">,</span><span class="mf">-5.654</span><span class="p">,</span><span class="mf">54.0</span><span class="p">,</span><span class="mf">416.0</span><span class="p">,</span><span class="mf">45.0</span><span class="p">]},</span>
+  <span class="p">{</span><span class="nt">&quot;polylist&quot;</span><span class="p">:[</span><span class="mf">5.0</span><span class="p">,</span><span class="mf">-16.0</span><span class="p">,</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">-9.0</span><span class="p">,</span><span class="mf">10.0</span><span class="p">,</span><span class="mf">4.0</span><span class="p">]},</span>
+  <span class="p">{</span><span class="nt">&quot;polylist&quot;</span><span class="p">:[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">6.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">]},</span>
+  <span class="p">{</span><span class="nt">&quot;polylist&quot;</span><span class="p">:[</span><span class="mf">0.0</span><span class="p">,</span><span class="mf">6.0</span><span class="p">,</span><span class="mf">2.0</span><span class="p">,</span><span class="mf">3.0</span><span class="p">]},</span>
+  <span class="p">{</span><span class="nt">&quot;polylist&quot;</span><span class="p">:[</span><span class="mf">123.324</span><span class="p">,</span><span class="mf">123.0</span><span class="p">,</span><span class="mf">56.0</span><span class="p">,</span><span class="mf">-5612.42332</span><span class="p">,</span><span class="mf">654.234</span><span class="p">,</span><span class="mf">5.0</span><span class="p">]}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
 </div>
 </div>
 
@@ -174,10 +192,10 @@ vollstänge Eingabe getätigt hatte, da die Standart werde eingeben wurden.</p>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="packages.html" class="btn btn-neutral float-right" title="Polynomials Calculator" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="menu.html" class="btn btn-neutral float-right" title="Hauptmenü" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="index.html" class="btn btn-neutral" title="Polynomials Calculator Doc" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="intro.html" class="btn btn-neutral" title="Über das Programm" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   
@@ -208,7 +226,7 @@ vollstänge Eingabe getätigt hatte, da die Standart werde eingeben wurden.</p>
     <script type="text/javascript">
         var DOCUMENTATION_OPTIONS = {
             URL_ROOT:'./',
-            VERSION:'0.1.0',
+            VERSION:'1.0.0',
             COLLAPSE_INDEX:false,
             FILE_SUFFIX:'.html',
             HAS_SOURCE:  true

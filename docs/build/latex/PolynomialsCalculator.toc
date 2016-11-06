@@ -20,8 +20,6 @@
 \contentsline {subsection}{\numberline {2.2.9}Option 10: Json laden}{8}{subsection.2.2.9}
 \contentsline {subsection}{\numberline {2.2.10}Option 11: Json speichern}{8}{subsection.2.2.10}
 \contentsline {subsection}{\numberline {2.2.11}Option 12: Programm beenden}{8}{subsection.2.2.11}
-\contentsline {section}{\numberline {2.3}Beispiel}{8}{section.2.3}
-\contentsline {subsection}{\numberline {2.3.1}Polynom Addition}{8}{subsection.2.3.1}
 \contentsline {chapter}{\numberline {3}Klassenbeschreibung}{9}{chapter.3}
 \contentsline {section}{\numberline {3.1}Polynomials Calculator}{9}{section.3.1}
 \contentsline {subsection}{\numberline {3.1.1}com.linuxluigi.polynomial}{9}{subsection.3.1.1}
@@ -59,39 +57,32 @@
 \contentsline {subparagraph}{save}{14}{subparagraph*.60}
 \contentsline {subparagraph}{set}{14}{subparagraph*.62}
 \contentsline {subparagraph}{set\_file}{14}{subparagraph*.64}
-\contentsline {subsubsection}{TerminalInterface}{14}{subsubsection*.66}
+\contentsline {subsection}{\numberline {3.1.2}com.linuxluigi.polynomial.test}{14}{subsection.3.1.2}
+\contentsline {subsubsection}{PolynomialListTest}{14}{subsubsection*.66}
 \contentsline {paragraph}{Methods}{15}{paragraph*.68}
-\contentsline {subparagraph}{BoarderText}{15}{subparagraph*.69}
-\contentsline {subparagraph}{InputDouble}{15}{subparagraph*.71}
-\contentsline {subparagraph}{InputInt}{15}{subparagraph*.73}
-\contentsline {subparagraph}{InputString}{15}{subparagraph*.75}
-\contentsline {subparagraph}{ShowMenu}{15}{subparagraph*.77}
-\contentsline {subsection}{\numberline {3.1.2}com.linuxluigi.polynomial.test}{16}{subsection.3.1.2}
-\contentsline {subsubsection}{PolynomialListTest}{16}{subsubsection*.79}
+\contentsline {subparagraph}{add}{15}{subparagraph*.69}
+\contentsline {subparagraph}{delte}{15}{subparagraph*.71}
+\contentsline {subparagraph}{mathAddSub}{15}{subparagraph*.73}
+\contentsline {subparagraph}{mathHorner}{15}{subparagraph*.75}
+\contentsline {subparagraph}{mathMultiply}{15}{subparagraph*.77}
+\contentsline {subsubsection}{PolynomialTest}{15}{subsubsection*.79}
 \contentsline {paragraph}{Methods}{16}{paragraph*.81}
-\contentsline {subparagraph}{add}{16}{subparagraph*.82}
-\contentsline {subparagraph}{delte}{16}{subparagraph*.84}
-\contentsline {subparagraph}{mathAddSub}{16}{subparagraph*.86}
-\contentsline {subparagraph}{mathHorner}{16}{subparagraph*.88}
-\contentsline {subparagraph}{mathMultiply}{17}{subparagraph*.90}
-\contentsline {subsubsection}{PolynomialTest}{17}{subsubsection*.92}
-\contentsline {paragraph}{Methods}{17}{paragraph*.94}
-\contentsline {subparagraph}{derivation}{17}{subparagraph*.95}
-\contentsline {subparagraph}{get}{17}{subparagraph*.97}
-\contentsline {subparagraph}{get\_as\_human\_readable}{17}{subparagraph*.99}
-\contentsline {subparagraph}{length}{17}{subparagraph*.101}
-\contentsline {subparagraph}{set}{18}{subparagraph*.103}
-\contentsline {chapter}{\numberline {4}Sonstiges}{19}{chapter.4}
-\contentsline {section}{\numberline {4.1}Lizenz}{19}{section.4.1}
-\contentsline {section}{\numberline {4.2}Kontakt}{19}{section.4.2}
-\contentsline {section}{\numberline {4.3}Dokumentation}{19}{section.4.3}
-\contentsline {subsection}{\numberline {4.3.1}Dokumentation bearbeiten}{20}{subsection.4.3.1}
-\contentsline {subsection}{\numberline {4.3.2}Dokumentation aktualisieren}{20}{subsection.4.3.2}
-\contentsline {subsubsection}{Abh\IeC {\"a}nigkeiten installieren}{20}{subsubsection*.105}
-\contentsline {subsubsection}{Virtualenv anlegen und verwenden}{20}{subsubsection*.106}
-\contentsline {subsubsection}{Python abh\IeC {\"a}nigkeiten installieren}{20}{subsubsection*.107}
-\contentsline {subsubsection}{Dokumentation erzeugen}{20}{subsubsection*.108}
-\contentsline {subsubsection}{Dokumentation alternative Formate}{21}{subsubsection*.109}
-\contentsline {section}{\numberline {4.4}Hilfe}{21}{section.4.4}
-\contentsline {chapter}{\numberline {5}Indices and tables}{23}{chapter.5}
-\contentsline {chapter}{Stichwortverzeichnis}{25}{section*.110}
+\contentsline {subparagraph}{derivation}{16}{subparagraph*.82}
+\contentsline {subparagraph}{get}{16}{subparagraph*.84}
+\contentsline {subparagraph}{get\_as\_human\_readable}{16}{subparagraph*.86}
+\contentsline {subparagraph}{length}{16}{subparagraph*.88}
+\contentsline {subparagraph}{set}{16}{subparagraph*.90}
+\contentsline {chapter}{\numberline {4}Sonstiges}{17}{chapter.4}
+\contentsline {section}{\numberline {4.1}Lizenz}{17}{section.4.1}
+\contentsline {section}{\numberline {4.2}Kontakt}{17}{section.4.2}
+\contentsline {section}{\numberline {4.3}Dokumentation}{17}{section.4.3}
+\contentsline {subsection}{\numberline {4.3.1}Dokumentation bearbeiten}{18}{subsection.4.3.1}
+\contentsline {subsection}{\numberline {4.3.2}Dokumentation aktualisieren}{18}{subsection.4.3.2}
+\contentsline {subsubsection}{Abh\IeC {\"a}nigkeiten installieren}{18}{subsubsection*.92}
+\contentsline {subsubsection}{Virtualenv anlegen und verwenden}{18}{subsubsection*.93}
+\contentsline {subsubsection}{Python abh\IeC {\"a}nigkeiten installieren}{18}{subsubsection*.94}
+\contentsline {subsubsection}{Dokumentation erzeugen}{18}{subsubsection*.95}
+\contentsline {subsubsection}{Dokumentation alternative Formate}{19}{subsubsection*.96}
+\contentsline {section}{\numberline {4.4}Hilfe}{19}{section.4.4}
+\contentsline {chapter}{\numberline {5}Indices and tables}{21}{chapter.5}
+\contentsline {chapter}{Stichwortverzeichnis}{23}{section*.97}

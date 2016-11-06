@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="de">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Hauptmenü</title>
+    
+    <link rel="stylesheet" href="_static/epub.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" /> 
+  </head>
+  <body role="document">
+
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="genindex.xhtml" title="Stichwortverzeichnis"
+             accesskey="I">Index</a></li>
+        <li class="right" >
+          <a href="packages.xhtml" title="Polynomials Calculator"
+             accesskey="N">weiter</a> |</li>
+        <li class="right" >
+          <a href="wizard.xhtml" title="Wizard Modus"
+             accesskey="P">zurück</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.xhtml">Polynomials Calculator 1.0.0 Dokumentation</a> &#187;</li> 
+      </ul>
+    </div>
+
+    <div class="document">
+      <div class="documentwrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="hauptmenu">
+<h1>Hauptmenü</h1>
+<div class="section" id="inhalt">
+<h2>Inhalt</h2>
+<p>Das Hauptmenu besitzt 12 Optionen mit folgendem Inhalten.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="87%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Option</th>
+<th class="head">Inhalt</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>Alle Polynome anzeigen die im Polynomarray hinterlegt sind.</td>
+</tr>
+<tr class="row-odd"><td>2  -  4</td>
+<td>Polynome hinzufügen, bearbeiten oder löschen.</td>
+</tr>
+<tr class="row-even"><td>5  -  9</td>
+<td>Rechenoperationen mit Polynomen ausführen</td>
+</tr>
+<tr class="row-odd"><td>10 - 11</td>
+<td>Json Datei Laden und Sichern</td>
+</tr>
+<tr class="row-even"><td>12</td>
+<td>Programm schließen</td>
+</tr>
+</tbody>
+</table>
+<div class="line-block">
+<div class="line"><br /></div>
+</div>
+<img alt="_images/PolyCalc-Menu-1.png" src="_images/PolyCalc-Menu-1.png" />
+</div>
+<div class="section" id="option-1-alle-polynome-anzeigen-lassen">
+<h2>Option 1: Alle Polynome anzeigen lassen</h2>
+<p>Zeigt alle Polynome die dem Programm aktuell zu verfügung stehen. Die Polynome
+werden untereinander aufgelistet und leicht lesbar Dargestellt. Die Zahl in der Eckigen Klammer [N]
+dient der Übersicht, wieviele Polynome zu verfügung stehen.</p>
+<img alt="_images/PolyCalc-Menu-2.png" src="_images/PolyCalc-Menu-2.png" />
+</div>
+<div class="section" id="option-2-polynom-hinzufugen">
+<h2>Option 2: Polynom hinzufügen</h2>
+<p>Als erstes wird aufgefordert die Länge des Polynomes ein zu geben. Die Länge heist in diesen Fall wie viele
+Elemente das Polynom besitzt. Elemente mit den Wert 0 werden mitgezählt!</p>
+<div class="line-block">
+<div class="line">Länge = Größter Exponent + 1</div>
+</div>
+<div class="line-block">
+<div class="line">Beispiel:</div>
+</div>
+<ul class="simple">
+<li><cite>f(x)=5+(-16x)+(-9x³)+10x⁴+4x⁵</cite> besitzt eine Länge von 6</li>
+<li><cite>f(x)=123.324+123x+56x²+(-5612.423x³)+654.234x⁴+5x⁵</cite> besitzt eine Länge von 6</li>
+<li><cite>f(x)=+6x+2x²+3x³</cite> besitzt eine Länge von 4</li>
+</ul>
+<p>Nach der Eingabe der Länge wird aufgefordert jedes Element ein Wert aus dem Wertebereich der Reelen Zahlen
+ein zu geben. Das Kommer für Reele Zahlen muss mit ein Punkt eingeben werden, ansonsten wird aufgeforert
+das Element erneut ein zu geben.</p>
+<img alt="_images/PolyCalc-Menu-3.png" class="align-center" src="_images/PolyCalc-Menu-3.png" style="width: 75%;" />
+</div>
+<div class="section" id="option-3-polynom-bearbeiten">
+<h2>Option 3: Polynom bearbeiten</h2>
+<p>Um ein Polynom zu bearbeiten muss mindestens ein Polynom schon vorhanden sein. Sobald mindestens ein
+Polynom vorhanden ist, erscheint die <cite>Polynom Liste</cite>, die Zahl in der Eckigen Klammer [] vor jedes
+Polynom ist der Wert der eingeben werden muss, um dieses Polynom zu bearbeiten.</p>
+<p>Nachdem das Polynom ausgewählt wurde, wird aufgefordert jedes Element ein neuen Wert zu zu weisen,
+der Wert in der Eckigen Klammer nach <cite>Element n []</cite> ist der aktuelle Wert des Element und durch drücken
+der Enter Taste ohne weitere Werte ein zu geben bleibt der alte Wert unverändert.</p>
+<p>Zum schluss wird das bearbeitete Polynom angezeigt.</p>
+<img alt="_images/PolyCalc-Menu-4.png" class="align-center" src="_images/PolyCalc-Menu-4.png" style="width: 75%;" />
+</div>
+<div class="section" id="option-3-polynom-loschen">
+<h2>Option 3: Polynom löschen</h2>
+<p>Sobald Polynom löschen ausgewählt wurde, erscheint die <cite>Polynom Liste</cite> woraus entschieden werden muss
+welches Polynom gelöscht werden soll. Wenn die Zahl des Polynomes eingeben wurde, wird gefragt ob das
+Polynom wirklich gelöscht werden soll, nur wenn &#8216;y&#8217; oder &#8216;Y&#8217; eingeben wurde, wird das Polynom wirlich
+gelöscht.</p>
+<img alt="_images/PolyCalc-Menu-5.png" class="align-center" src="_images/PolyCalc-Menu-5.png" style="width: 75%;" />
+</div>
+<div class="section" id="option-5-6-8-mathematische-operationen">
+<h2>Option 5, 6 &amp; 8: Mathematische Operationen</h2>
+<span class="target" id="index-4"></span><span class="target" id="index-5"></span><p>Das Eingabemuster bei Addition, Subtraktion und Multiplikation ist das gleiche.</p>
+<p>Es erscheint die <cite>Polynom Liste</cite> wo ausgewählt werden muss welches Polynom an erster Stelle Addiert,
+Subtrahiert oder multipliziert werden soll und danach erscheint wieder die <cite>Polynom Liste</cite> wo ausgewählt
+welches Polynom an zweiter stelle der Optertion stehen soll.</p>
+<p>Nach erfolgreicher eingabe wird die Mathematische Operation ausgeführt und das so neu erstandene Polynom
+wird angezeigt und in der Polynom Liste automatisch gesichert.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="33%" />
+<col width="33%" />
+<col width="33%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Addtion</th>
+<th class="head">Subtraktion</th>
+<th class="head">Multiplikation</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><img alt="_images/PolyCalc-Menu-6.png" class="first last" src="_images/PolyCalc-Menu-6.png" />
+</td>
+<td><img alt="_images/PolyCalc-Menu-7.png" class="first last" src="_images/PolyCalc-Menu-7.png" />
+</td>
+<td><img alt="_images/PolyCalc-Menu-8.png" class="first last" src="_images/PolyCalc-Menu-8.png" />
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="section" id="option-7-polynom-ableiten">
+<h2>Option 7: Polynom ableiten</h2>
+<div class="line-block">
+<div class="line">In der erscheinenden <cite>Polynom Liste</cite> das gewünschte Polynom auswählen und es erscheint das abgeleitete Polynom.</div>
+</div>
+<img alt="_images/PolyCalc-Menu-9.png" class="align-center" src="_images/PolyCalc-Menu-9.png" style="width: 75%;" />
+</div>
+<div class="section" id="option-9-polynom-division">
+<h2>Option 9: Polynom Division</h2>
+<span class="target" id="index-8"></span><p id="index-9">Die Polynom Division wird mit dem Hornerschema ausgeführt. Wie auch in anderen Polynom Mathematik Operationen muss
+zuerst aus der <cite>Polynom Liste</cite> das gewünschte Polynom ausgewählt werden und danach den Divisor.</p>
+<p>Es wird nun das neue geteilelte Polynom ausgegeben und der Rest von der Division.</p>
+<img alt="_images/PolyCalc-Menu-10.png" class="align-center" src="_images/PolyCalc-Menu-10.png" style="width: 75%;" />
+</div>
+<div class="section" id="option-10-json-laden">
+<h2>Option 10: Json laden</h2>
+<p id="index-10">Lädt die Polynome aus der Json Datei (festgelegt in Wizard am start des Programmes).</p>
+<img alt="_images/PolyCalc-Menu-11.png" class="align-center" src="_images/PolyCalc-Menu-11.png" style="width: 75%;" />
+</div>
+<div class="section" id="option-11-json-speichern">
+<h2>Option 11: Json speichern</h2>
+<p id="index-11">Sichert alle Polynome in die Json Datei, falls die Datei schon exiestiert wird sie mit den neuen Werten überschrieben.</p>
+<img alt="_images/PolyCalc-Menu-12.png" class="align-center" src="_images/PolyCalc-Menu-12.png" style="width: 75%;" />
+</div>
+<div class="section" id="option-12-programm-beenden">
+<h2>Option 12: Programm beenden</h2>
+<p id="index-12">Beenden das Programm mit einer freundlichen Verabschiedung.</p>
+<img alt="_images/PolyCalc-Menu-13.png" class="align-center" src="_images/PolyCalc-Menu-13.png" style="width: 75%;" />
+</div>
+</div>
+
+
+          </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+
+    <div class="footer" role="contentinfo">
+        &#169; Copyright 2016, Steffen Exler.
+      Mit <a href="http://sphinx-doc.org/">Sphinx</a> 1.4.8 erstellt.
+    </div>
+  </body>
+</html>

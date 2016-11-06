@@ -18,7 +18,6 @@
 \indexentry{Json laden|hyperpage}{8}
 \indexentry{Json sichern|hyperpage}{8}
 \indexentry{exit|hyperpage}{8}
-\indexentry{Polynom Addition|hyperpage}{8}
 \indexentry{com.linuxluigi.polynomial (package)|hyperpage}{9}
 \indexentry{Main (Java class)|hyperpage}{9}
 \indexentry{main(String{[}{]}) (Java method)|hyperpage}{9}
@@ -49,26 +48,20 @@
 \indexentry{save() (Java method)|hyperpage}{14}
 \indexentry{set(int, Polynomial) (Java method)|hyperpage}{14}
 \indexentry{set\_file(String) (Java method)|hyperpage}{14}
-\indexentry{TerminalInterface (Java class)|hyperpage}{14}
-\indexentry{BoarderText(String) (Java method)|hyperpage}{15}
-\indexentry{InputDouble(String) (Java method)|hyperpage}{15}
-\indexentry{InputInt(String) (Java method)|hyperpage}{15}
-\indexentry{InputString(String, String) (Java method)|hyperpage}{15}
-\indexentry{ShowMenu(String{[}{]}, boolean) (Java method)|hyperpage}{15}
-\indexentry{com.linuxluigi.polynomial.test (package)|hyperpage}{16}
-\indexentry{PolynomialListTest (Java class)|hyperpage}{16}
-\indexentry{add() (Java method)|hyperpage}{16}
-\indexentry{delte() (Java method)|hyperpage}{16}
-\indexentry{mathAddSub() (Java method)|hyperpage}{16}
-\indexentry{mathHorner() (Java method)|hyperpage}{16}
-\indexentry{mathMultiply() (Java method)|hyperpage}{17}
-\indexentry{PolynomialTest (Java class)|hyperpage}{17}
-\indexentry{derivation() (Java method)|hyperpage}{17}
-\indexentry{get() (Java method)|hyperpage}{17}
-\indexentry{get\_as\_human\_readable() (Java method)|hyperpage}{17}
-\indexentry{length() (Java method)|hyperpage}{17}
-\indexentry{set() (Java method)|hyperpage}{18}
-\indexentry{Lizenz|hyperpage}{19}
-\indexentry{Kontakt|hyperpage}{19}
-\indexentry{Sphinx|hyperpage}{19}
-\indexentry{Support|hyperpage}{21}
+\indexentry{com.linuxluigi.polynomial.test (package)|hyperpage}{14}
+\indexentry{PolynomialListTest (Java class)|hyperpage}{14}
+\indexentry{add() (Java method)|hyperpage}{15}
+\indexentry{delte() (Java method)|hyperpage}{15}
+\indexentry{mathAddSub() (Java method)|hyperpage}{15}
+\indexentry{mathHorner() (Java method)|hyperpage}{15}
+\indexentry{mathMultiply() (Java method)|hyperpage}{15}
+\indexentry{PolynomialTest (Java class)|hyperpage}{15}
+\indexentry{derivation() (Java method)|hyperpage}{16}
+\indexentry{get() (Java method)|hyperpage}{16}
+\indexentry{get\_as\_human\_readable() (Java method)|hyperpage}{16}
+\indexentry{length() (Java method)|hyperpage}{16}
+\indexentry{set() (Java method)|hyperpage}{16}
+\indexentry{Lizenz|hyperpage}{17}
+\indexentry{Kontakt|hyperpage}{17}
+\indexentry{Sphinx|hyperpage}{17}
+\indexentry{Support|hyperpage}{19}
