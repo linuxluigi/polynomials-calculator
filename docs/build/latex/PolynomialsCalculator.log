@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.10)  10 NOV 2016 12:16
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.11.10)  10 NOV 2016 12:38
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1136,7 +1136,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 243.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 243.
-<PolyCalc-Wizard-1.png, id=142, 622.325pt x 223.83624pt>
+<PolyCalc-Wizard-1.png, id=143, 622.325pt x 223.83624pt>
 File: PolyCalc-Wizard-1.png Graphic file (type png)
 
 <use PolyCalc-Wizard-1.png>
@@ -1161,7 +1161,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 289.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 289.
- <PolyCalc-Menu-1.png, id=150, 771.88374pt x 346.29375pt>
+ <PolyCalc-Menu-1.png, id=151, 771.88374pt x 346.29375pt>
 File: PolyCalc-Menu-1.png Graphic file (type png)
 
 <use PolyCalc-Menu-1.png>
@@ -1179,7 +1179,7 @@ Package babel Info: Redefining ngerman shorthand "|
 (babel)             in language  on input line 344.
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 344.
- [6 <./PolyCalc-Menu-1.png>] <PolyCalc-Menu-2.png, id=160, 691.58376pt x 167.62
+ [6 <./PolyCalc-Menu-1.png>] <PolyCalc-Menu-2.png, id=161, 691.58376pt x 167.62
 625pt>
 File: PolyCalc-Menu-2.png Graphic file (type png)
 
@@ -1191,7 +1191,7 @@ File: PolyCalc-Menu-2.png Graphic file (type png)
 Package pdftex.def Info: PolyCalc-Menu-2.png used on input line 345.
 (pdftex.def)             Requested size: 469.755pt x 113.86156pt.
 
-<PolyCalc-Menu-3.png, id=161, 819.06pt x 403.5075pt>
+<PolyCalc-Menu-3.png, id=162, 819.06pt x 403.5075pt>
 File: PolyCalc-Menu-3.png Graphic file (type png)
  <use PolyCalc-Menu-3.png>
 Package pdftex.def Info: PolyCalc-Menu-3.png used on input line 377.
@@ -1206,14 +1206,14 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 386.
 
 [7 <./PolyCalc-Menu-2.png> <./PolyCalc-Menu-3.png>]
-<PolyCalc-Menu-4.png, id=171, 864.22874pt x 484.81125pt>
+<PolyCalc-Menu-4.png, id=172, 864.22874pt x 484.81125pt>
 File: PolyCalc-Menu-4.png Graphic file (type png)
 
 <use PolyCalc-Menu-4.png>
 Package pdftex.def Info: PolyCalc-Menu-4.png used on input line 393.
 (pdftex.def)             Requested size: 352.31625pt x 197.64206pt.
 
-<PolyCalc-Menu-5.png, id=172, 864.22874pt x 410.53375pt>
+<PolyCalc-Menu-5.png, id=173, 864.22874pt x 410.53375pt>
 File: PolyCalc-Menu-5.png Graphic file (type png)
 
 <use PolyCalc-Menu-5.png>
@@ -1228,7 +1228,7 @@ Package babel Info: Redefining ngerman shorthand "|
 Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 417.
  [8 <./PolyCalc-Menu-4.png> <./PolyCalc-Menu-5.png>]
-<PolyCalc-Menu-6.png, id=182, 864.22874pt x 573.14125pt>
+<PolyCalc-Menu-6.png, id=183, 864.22874pt x 573.14125pt>
 File: PolyCalc-Menu-6.png Graphic file (type png)
 
 <use PolyCalc-Menu-6.png>
@@ -1239,7 +1239,7 @@ File: PolyCalc-Menu-6.png Graphic file (type png)
 Package pdftex.def Info: PolyCalc-Menu-6.png used on input line 437.
 (pdftex.def)             Requested size: 469.755pt x 311.52934pt.
 
-<PolyCalc-Menu-7.png, id=183, 864.22874pt x 604.2575pt>
+<PolyCalc-Menu-7.png, id=184, 864.22874pt x 604.2575pt>
 File: PolyCalc-Menu-7.png Graphic file (type png)
 
 <use PolyCalc-Menu-7.png>
@@ -1250,7 +1250,7 @@ File: PolyCalc-Menu-7.png Graphic file (type png)
 Package pdftex.def Info: PolyCalc-Menu-7.png used on input line 437.
 (pdftex.def)             Requested size: 469.755pt x 328.4425pt.
 
-<PolyCalc-Menu-8.png, id=184, 864.22874pt x 499.8675pt>
+<PolyCalc-Menu-8.png, id=185, 864.22874pt x 499.8675pt>
 File: PolyCalc-Menu-8.png Graphic file (type png)
 
 <use PolyCalc-Menu-8.png>
@@ -1287,14 +1287,14 @@ File: PolyCalc-Menu-8.png Graphic file (type png)
 Package pdftex.def Info: PolyCalc-Menu-8.png used on input line 437.
 (pdftex.def)             Requested size: 144.01012pt x 83.2907pt.
 
-<PolyCalc-Menu-9.png, id=185, 864.22874pt x 328.22626pt>
+<PolyCalc-Menu-9.png, id=186, 864.22874pt x 328.22626pt>
 File: PolyCalc-Menu-9.png Graphic file (type png)
 
 <use PolyCalc-Menu-9.png>
 Package pdftex.def Info: PolyCalc-Menu-9.png used on input line 448.
 (pdftex.def)             Requested size: 352.31625pt x 133.80736pt.
 
-<PolyCalc-Menu-10.png, id=186, 864.22874pt x 276.03125pt>
+<PolyCalc-Menu-10.png, id=187, 864.22874pt x 276.03125pt>
 File: PolyCalc-Menu-10.png Graphic file (type png)
 
 <use PolyCalc-Menu-10.png>
@@ -1310,21 +1310,21 @@ Package babel Info: Redefining ngerman shorthand "~
 (babel)             in language  on input line 468.
  [9 <./PolyCalc-Menu-6.png> <./PolyCalc-Menu-7.png> <./PolyCalc-Menu-8.png> <./
 PolyCalc-Menu-9.png> <./PolyCalc-Menu-10.png>]
-<PolyCalc-Menu-11.png, id=199, 864.22874pt x 94.3525pt>
+<PolyCalc-Menu-11.png, id=200, 864.22874pt x 94.3525pt>
 File: PolyCalc-Menu-11.png Graphic file (type png)
 
 <use PolyCalc-Menu-11.png>
 Package pdftex.def Info: PolyCalc-Menu-11.png used on input line 468.
 (pdftex.def)             Requested size: 352.31625pt x 38.4645pt.
 
-<PolyCalc-Menu-12.png, id=200, 864.22874pt x 108.405pt>
+<PolyCalc-Menu-12.png, id=201, 864.22874pt x 108.405pt>
 File: PolyCalc-Menu-12.png Graphic file (type png)
 
 <use PolyCalc-Menu-12.png>
 Package pdftex.def Info: PolyCalc-Menu-12.png used on input line 476.
 (pdftex.def)             Requested size: 352.31625pt x 44.19325pt.
 
-<PolyCalc-Menu-13.png, id=201, 864.22874pt x 468.75125pt>
+<PolyCalc-Menu-13.png, id=202, 864.22874pt x 468.75125pt>
 File: PolyCalc-Menu-13.png Graphic file (type png)
 
 <use PolyCalc-Menu-13.png>
@@ -1582,9 +1582,9 @@ uhvbo8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/helvetic/uhvr8a.pfb>
 </usr/share/texlive/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></usr/share/tex
 live/texmf-dist/fonts/type1/urw/times/utmr8a.pfb></usr/share/texlive/texmf-dist
 /fonts/type1/urw/times/utmri8a.pfb>
-Output written on PolynomialsCalculator.pdf (32 pages, 421123 bytes).
+Output written on PolynomialsCalculator.pdf (32 pages, 327694 bytes).
 PDF statistics:
- 599 PDF objects out of 1000 (max. 8388607)
+ 600 PDF objects out of 1000 (max. 8388607)
  503 compressed objects within 6 object streams
  176 named destinations out of 1000 (max. 500000)
  234 words of extra memory for PDF output out of 10000 (max. 10000000)
