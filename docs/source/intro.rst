@@ -13,6 +13,8 @@ In Menü kann der User Polynome hinzufügen, bearbeiten und löschen aber auch M
 Addieren, Subtrahieren, Multiplizieren und Dividieren ausführen sowie die Polynome als Json sichern
 oder neu von der Json einlesen.
 
+Das Projekt wurde mit JUnit 4 tests getestete und die test Klassen befinden sich bei den Quellcode dabei.
+
 - Quellcode: https://github.com/linuxluigi/polynomials-calculator
 - Online Dokumentation: http://polynomials-calculator.readthedocs.io/de/latest/
 .. index:: Git
@@ -21,10 +23,33 @@ oder neu von der Json einlesen.
 
 .. image:: img/PolyCalc-Intro-1.png
 
+Kompilieren
+-----------
+.. index:: Kompilieren
+.. index:: Build
+.. index:: Build Artifacts
+.. index:: Maven
+
+Das Projekt wurde via Maven 2 konstruiert und kann mit ein Konsolen Befehl in einer Jar Datei Kompiliert werden, dafür
+muss aber zuerst Maven 2 installiert werden, unter Ubuntu / Debian muss folgendes eingeben werden.
+
+.. code-block:: bash
+
+   $ sudo apt-get install maven2
+
+Jetzt wurde Maven 2 installiert und nun kann das Projekt die abhänigkeiten installiert werden, test ausgeführt und
+zur einer ausführbaren Jar ausgeben.
+
+.. code-block:: bash
+
+   $ mvn clean install
+
+.. image:: img/PolyCalc-Compile-1.png
+
 Abhänigkeiten
 -------------
 .. index:: Abhänigkeiten
-Das Projekt wurde als Maven Modul geschrieben und verwendet folgende Module.
+Das Projekt wurde als Maven 2 Modul geschrieben und verwendet folgende Maven Module.
 
 Maven Projekt Website: https://maven.apache.org/
 

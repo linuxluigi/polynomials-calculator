@@ -1,0 +1,349 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>PolynomialListTest &mdash; Polynomials Calculator 1.0.0 Dokumentation</title>
+  
+
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Stichwortverzeichnis"
+              href="../../../genindex.html"/>
+        <link rel="search" title="Suche" href="../../../search.html"/>
+    <link rel="top" title="Polynomials Calculator 1.0.0 Dokumentation" href="../../../index.html"/>
+        <link rel="up" title="com.linuxluigi.polynomial" href="package-index.html"/>
+        <link rel="next" title="PolynomialTest" href="PolynomialTest.html"/>
+        <link rel="prev" title="PolynomialList" href="PolynomialList.html"/> 
+
+  
+  <script src="../../../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../../../index.html" class="icon icon-home"> Polynomials Calculator
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                1.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+                <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html">Über das Programm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html#kompilieren">Kompilieren</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../intro.html#abhanigkeiten">Abhänigkeiten</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../wizard.html">Wizard Modus</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../menu.html">Hauptmenü</a></li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="reference internal" href="../../../packages.html">Polynomials Calculator</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="package-index.html">com.linuxluigi.polynomial</a><ul class="current">
+<li class="toctree-l3"><a class="reference internal" href="Main.html">Main</a></li>
+<li class="toctree-l3"><a class="reference internal" href="Polynomial.html">Polynomial</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PolynomialList.html">PolynomialList</a></li>
+<li class="toctree-l3 current"><a class="current reference internal" href="#">PolynomialListTest</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#methods">Methods</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="PolynomialTest.html">PolynomialTest</a></li>
+<li class="toctree-l3"><a class="reference internal" href="TerminalInterface.html">TerminalInterface</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html">Lizenz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../license.html#kontakt">Kontakt</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../docs.html">Dokumentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../../help.html">Hilfe</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+        <a href="../../../index.html">Polynomials Calculator</a>
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+ 
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../../index.html">Docs</a> &raquo;</li>
+      
+          <li><a href="../../../packages.html">Polynomials Calculator</a> &raquo;</li>
+      
+          <li><a href="package-index.html">com.linuxluigi.polynomial</a> &raquo;</li>
+      
+    <li>PolynomialListTest</li>
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../../_sources/com/linuxluigi/polynomial/PolynomialListTest.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="polynomiallisttest">
+<h1>PolynomialListTest<a class="headerlink" href="#polynomiallisttest" title="Link zu dieser Überschrift">¶</a></h1>
+<dl class="type">
+<dt id="com.linuxluigi.polynomial.PolynomialListTest">
+public class <code class="descname">PolynomialListTest</code><a class="headerlink" href="#com.linuxluigi.polynomial.PolynomialListTest" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Created by Steffen Exler on 03.11.16.</p>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods<a class="headerlink" href="#methods" title="Link zu dieser Überschrift">¶</a></h2>
+<div class="section" id="add">
+<h3>add<a class="headerlink" href="#add" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.PolynomialListTest.add()">
+public void <code class="descname">add</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomial.PolynomialListTest.add()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erstellt ein PolynomialList Objekt und füllt es mit zufallswerten und überprüft ob die Ausgabe mit der Eingabe übereinstimmt, außerdem werden noch Vordefinierte double[] Werte als Polynom erstellt, PolynomialList angehängt und überprüft ob hier auch die Eingabe und Ausgabe übereinstimmt.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Wirft:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html" title="java.lang.Exception"><strong>Exception</strong></a> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="delte">
+<h3>delte<a class="headerlink" href="#delte" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.PolynomialListTest.delte()">
+public void <code class="descname">delte</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomial.PolynomialListTest.delte()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Erzeugt ein zufälliges PolynomialList und löscht zufällig einzelne Werte heraus Test dann ob die länge von PolynomialList -1 ist und überprüft ob das Polynom wirklich aus PolynomialList gelöscht wurde</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Wirft:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html" title="java.lang.Exception"><strong>Exception</strong></a> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="mathaddsub">
+<h3>mathAddSub<a class="headerlink" href="#mathaddsub" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.PolynomialListTest.mathAddSub()">
+public void <code class="descname">mathAddSub</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomial.PolynomialListTest.mathAddSub()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test Addition und Subtraktion von Polynome mit zufallszahlen und fest Vordefinierten Zahlen</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Wirft:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html" title="java.lang.Exception"><strong>Exception</strong></a> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="mathhorner">
+<h3>mathHorner<a class="headerlink" href="#mathhorner" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.PolynomialListTest.mathHorner()">
+public void <code class="descname">mathHorner</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomial.PolynomialListTest.mathHorner()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test Hornerschema nach festen Werten</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Wirft:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html" title="java.lang.Exception"><strong>Exception</strong></a> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="mathmultiply">
+<h3>mathMultiply<a class="headerlink" href="#mathmultiply" title="Link zu dieser Überschrift">¶</a></h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.PolynomialListTest.mathMultiply()">
+public void <code class="descname">mathMultiply</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#com.linuxluigi.polynomial.PolynomialListTest.mathMultiply()" title="Link zu dieser Definition">¶</a></dt>
+<dd><p>Test Multiplikation von Polynome mit zufallszahlen und fest Vordefinierten Zahlen</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Wirft:</th><td class="field-body"><ul class="first last simple">
+<li><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/Exception.html" title="java.lang.Exception"><strong>Exception</strong></a> &#8211; </li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="PolynomialTest.html" class="btn btn-neutral float-right" title="PolynomialTest" accesskey="n">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="PolynomialList.html" class="btn btn-neutral" title="PolynomialList" accesskey="p"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2016, Steffen Exler.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../../../',
+            VERSION:'1.0.0',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true
+        };
+    </script>
+      <script type="text/javascript" src="../../../_static/jquery.js"></script>
+      <script type="text/javascript" src="../../../_static/underscore.js"></script>
+      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+      <script type="text/javascript" src="../../../_static/translations.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

@@ -5,7 +5,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>&lt;no title&gt;</title>
+    <title>TerminalInterface</title>
     
     <link rel="stylesheet" href="../../../_static/epub.css" type="text/css" />
     <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" /> 
@@ -19,10 +19,10 @@
           <a href="../../../genindex.xhtml" title="Stichwortverzeichnis"
              accesskey="I">Index</a></li>
         <li class="right" >
-          <a href="test/package-index.xhtml" title="com.linuxluigi.polynomial.test"
+          <a href="../../../license.xhtml" title="Lizenz"
              accesskey="N">weiter</a> |</li>
         <li class="right" >
-          <a href="PolynomialList.xhtml" title="PolynomialList"
+          <a href="PolynomialTest.xhtml" title="PolynomialTest"
              accesskey="P">zurück</a> |</li>
         <li class="nav-item nav-item-0"><a href="../../../index.xhtml">Polynomials Calculator 1.0.0 Dokumentation</a> &#187;</li>
           <li class="nav-item nav-item-1"><a href="../../../packages.xhtml" >Polynomials Calculator</a> &#187;</li>
@@ -34,7 +34,133 @@
       <div class="documentwrapper">
           <div class="body" role="main">
             
-  
+  <div class="section" id="terminalinterface">
+<h1>TerminalInterface</h1>
+<dl class="type">
+<dt id="com.linuxluigi.polynomial.TerminalInterface">
+ class <code class="descname">TerminalInterface</code></dt>
+<dd><p>User Terminal Interface Ausgabe Gibt ein Menu und sonstige nützliche Userinterface features aus Created by Steffen Exler on 18.10.16.</p>
+</dd></dl>
+
+<div class="section" id="methods">
+<h2>Methods</h2>
+<div class="section" id="boardertext">
+<h3>BoarderText</h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.TerminalInterface.BoarderText(String)">
+ void <code class="descname">BoarderText</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a><span class="link-target"> [http://docs.oracle.com/javase/6/docs/api/java/lang/String.html]</span><em> Text</em><span class="sig-paren">)</span></dt>
+<dd><p>Gibt den String Text in ein Rahm aus</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first last simple">
+<li><strong>Text</strong> &#8211; String der im Rahmen angezeigt werden soll</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="inputdouble">
+<h3>InputDouble</h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.TerminalInterface.InputDouble(String)">
+ double <code class="descname">InputDouble</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a><span class="link-target"> [http://docs.oracle.com/javase/6/docs/api/java/lang/String.html]</span><em> TextError</em><span class="sig-paren">)</span></dt>
+<dd><p>Ließt eine User Terminal eingabe und überprüft ob es sich um ein double handelt und gibt diesen zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>TextError</strong> &#8211; Text der bei Falscher eingabe wiederholt wird</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">User eingabe als Double</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="inputint">
+<h3>InputInt</h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.TerminalInterface.InputInt(String)">
+ int <code class="descname">InputInt</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a><span class="link-target"> [http://docs.oracle.com/javase/6/docs/api/java/lang/String.html]</span><em> TextError</em><span class="sig-paren">)</span></dt>
+<dd><p>Ließt eine User Terminal eingabe und überprüft ob es sich um ein Int handelt und gibt diesen zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>TextError</strong> &#8211; Text der bei Falscher eingabe wiederholt wird</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">User eingabe als Int</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="inputstring">
+<h3>InputString</h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.TerminalInterface.InputString(String, String)">
+ <a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a><span class="link-target"> [http://docs.oracle.com/javase/6/docs/api/java/lang/String.html]</span> <code class="descname">InputString</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a><span class="link-target"> [http://docs.oracle.com/javase/6/docs/api/java/lang/String.html]</span><em> TextError</em>, <a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a><span class="link-target"> [http://docs.oracle.com/javase/6/docs/api/java/lang/String.html]</span><em> Default</em><span class="sig-paren">)</span></dt>
+<dd><p>Ließt eine User Terminal eingabe und ueberprueft ob es sich um ein String handelt und gibt diesen zurück</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>TextError</strong> &#8211; Text der bei Falscher eingabe wiederholt wird</li>
+<li><strong>Default</strong> &#8211; Return Wert wenn User keine eingabe tätigt</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">User eingabe als String</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="showmenu">
+<h3>ShowMenu</h3>
+<dl class="method">
+<dt id="com.linuxluigi.polynomial.TerminalInterface.ShowMenu(String[], boolean)">
+ int <code class="descname">ShowMenu</code><span class="sig-paren">(</span><a class="reference external" href="http://docs.oracle.com/javase/6/docs/api/java/lang/String.html" title="java.lang.String">String</a><span class="link-target"> [http://docs.oracle.com/javase/6/docs/api/java/lang/String.html]</span>[]<em> MenuList</em>, boolean<em> Back</em><span class="sig-paren">)</span></dt>
+<dd><p>Erstellt ein User Terminal Menu, dieser kann mit der Int eingabe auswählen welchen Menupunkt er auswählen möchte. Das Menu wird mithilfe eines String[] gebildet und gibt die Usereingabe zurück.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameter:</th><td class="field-body"><ul class="first simple">
+<li><strong>MenuList</strong> &#8211; Eine Liste mit allen Antwortmöglichkeiten</li>
+<li><strong>Back</strong> &#8211; True == fügt ein Menupunkt ein, um ins Vorherige Menu zurück zu kommen</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Rückgabe:</th><td class="field-body"><p class="first last">User Antwort als Int Wert. Der Wert ist die Nummer im MenuList[]. Beispiel: Bei MenuList[&#8220;Ich&#8221;, &#8220;Du&#8221;, &#8220;Er&#8221;] gibt der User 2 an und meint damit &#8220;Du&#8221; und 1 wird auch als Int zurück gegeben.</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+</div>
+
 
           </div>
       </div>

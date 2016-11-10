@@ -1,6 +1,6 @@
 .\" Man page generated from reStructuredText.
 .
-.TH "POLYNOMIALSCALCULATOR" "1" "Nov. 06, 2016" "1.0" "Polynomials Calculator"
+.TH "POLYNOMIALSCALCULATOR" "1" "Nov. 10, 2016" "1.0" "Polynomials Calculator"
 .SH NAME
 polynomialscalculator \- Polynomials Calculator Dokumentation
 .
@@ -44,6 +44,8 @@ wird das Menü gestartet, welche sich so lange wiederholt bis der User das Progr
 In Menü kann der User Polynome hinzufügen, bearbeiten und löschen aber auch Mathematische Operationen
 Addieren, Subtrahieren, Multiplizieren und Dividieren ausführen sowie die Polynome als Json sichern
 oder neu von der Json einlesen.
+.sp
+Das Projekt wurde mit JUnit 4 tests getestete und die test Klassen befinden sich bei den Quellcode dabei.
 .INDENT 0.0
 .IP \(bu 2
 Quellcode: \fI\%https://github.com/linuxluigi/polynomials\-calculator\fP
@@ -51,9 +53,37 @@ Quellcode: \fI\%https://github.com/linuxluigi/polynomials\-calculator\fP
 Online Dokumentation: \fI\%http://polynomials\-calculator.readthedocs.io/de/latest/\fP
 .UNINDENT
 [Bild]
+.SH KOMPILIEREN
+.sp
+Das Projekt wurde via Maven 2 konstruiert und kann mit ein Konsolen Befehl in einer Jar Datei Kompiliert werden, dafür
+muss aber zuerst Maven 2 installiert werden, unter Ubuntu / Debian muss folgendes eingeben werden.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ sudo apt\-get install maven2
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+.sp
+Jetzt wurde Maven 2 installiert und nun kann das Projekt die abhänigkeiten installiert werden, test ausgeführt und
+zur einer ausführbaren Jar ausgeben.
+.INDENT 0.0
+.INDENT 3.5
+.sp
+.nf
+.ft C
+$ mvn clean install
+.ft P
+.fi
+.UNINDENT
+.UNINDENT
+[Bild]
 .SH ABHÄNIGKEITEN
 .sp
-Das Projekt wurde als Maven Modul geschrieben und verwendet folgende Module.
+Das Projekt wurde als Maven 2 Modul geschrieben und verwendet folgende Maven Module.
 .sp
 Maven Projekt Website: \fI\%https://maven.apache.org/\fP
 .SS Google GSON
@@ -283,7 +313,7 @@ Beenden das Programm mit einer freundlichen Verabschiedung.
 .INDENT 0.0
 .TP
 .B public class Main
-Some comment
+Main Klasse, die das Terminal und PolynomialList initialesiert, außerdem staratet es den Wizard Modus der den User fragt ob die Json Datei geladen werden soll und deren Pfad definiert. Anschließend wird das Usermenu gestartet welches in Endloschleife arbeitet bis der User das Programm über das Menu beendet.
 .INDENT 7.0
 .TP
 .B Author
@@ -701,7 +731,6 @@ Setzt den Namen und Pfad der Json Datei
 .UNINDENT
 .UNINDENT
 .UNINDENT
-.SS com.linuxluigi.polynomial.test
 .SS PolynomialListTest
 .INDENT 0.0
 .TP
@@ -845,6 +874,99 @@ Fügt in mehren Polynomen
 .IP \(bu 2
 \fI\%Exception\fP \-\- 
 .UNINDENT
+.UNINDENT
+.UNINDENT
+.SS TerminalInterface
+.INDENT 0.0
+.TP
+.B  class TerminalInterface
+User Terminal Interface Ausgabe Gibt ein Menu und sonstige nützliche Userinterface features aus Created by Steffen Exler on 18.10.16.
+.UNINDENT
+.SS Methods
+.SS BoarderText
+.INDENT 0.0
+.TP
+.B  void BoarderText(\fI\%String\fP\fI Text\fP)
+Gibt den String Text in ein Rahm aus
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBText\fP \-\- String der im Rahmen angezeigt werden soll
+.UNINDENT
+.UNINDENT
+.UNINDENT
+.SS InputDouble
+.INDENT 0.0
+.TP
+.B  double InputDouble(\fI\%String\fP\fI TextError\fP)
+Ließt eine User Terminal eingabe und überprüft ob es sich um ein double handelt und gibt diesen zurück
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBTextError\fP \-\- Text der bei Falscher eingabe wiederholt wird
+.UNINDENT
+.TP
+.B Rückgabe
+User eingabe als Double
+.UNINDENT
+.UNINDENT
+.SS InputInt
+.INDENT 0.0
+.TP
+.B  int InputInt(\fI\%String\fP\fI TextError\fP)
+Ließt eine User Terminal eingabe und überprüft ob es sich um ein Int handelt und gibt diesen zurück
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBTextError\fP \-\- Text der bei Falscher eingabe wiederholt wird
+.UNINDENT
+.TP
+.B Rückgabe
+User eingabe als Int
+.UNINDENT
+.UNINDENT
+.SS InputString
+.INDENT 0.0
+.TP
+.B  \fI\%String\fP InputString(\fI\%String\fP\fI TextError\fP, \fI\%String\fP\fI Default\fP)
+Ließt eine User Terminal eingabe und ueberprueft ob es sich um ein String handelt und gibt diesen zurück
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBTextError\fP \-\- Text der bei Falscher eingabe wiederholt wird
+.IP \(bu 2
+\fBDefault\fP \-\- Return Wert wenn User keine eingabe tätigt
+.UNINDENT
+.TP
+.B Rückgabe
+User eingabe als String
+.UNINDENT
+.UNINDENT
+.SS ShowMenu
+.INDENT 0.0
+.TP
+.B  int ShowMenu(\fI\%String\fP[]\fI MenuList\fP, boolean\fI Back\fP)
+Erstellt ein User Terminal Menu, dieser kann mit der Int eingabe auswählen welchen Menupunkt er auswählen möchte. Das Menu wird mithilfe eines String[] gebildet und gibt die Usereingabe zurück.
+.INDENT 7.0
+.TP
+.B Parameter
+.INDENT 7.0
+.IP \(bu 2
+\fBMenuList\fP \-\- Eine Liste mit allen Antwortmöglichkeiten
+.IP \(bu 2
+\fBBack\fP \-\- True == fügt ein Menupunkt ein, um ins Vorherige Menu zurück zu kommen
+.UNINDENT
+.TP
+.B Rückgabe
+User Antwort als Int Wert. Der Wert ist die Nummer im MenuList[]. Beispiel: Bei MenuList["Ich", "Du", "Er"] gibt der User 2 an und meint damit "Du" und 1 wird auch als Int zurück gegeben.
 .UNINDENT
 .UNINDENT
 .SH LIZENZ

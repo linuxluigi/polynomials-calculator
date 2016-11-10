@@ -3,67 +3,80 @@
 
   \bigletter A
   \item Abh\IeC {\"a}nigkeiten, \hyperpage{2}
-  \item add() (Java method), \hyperpage{15}
-  \item add(Polynomial) (Java method), \hyperpage{12}
+  \item add() (Java method), \hyperpage{17}
+  \item add(Polynomial) (Java method), \hyperpage{14}
+
+  \indexspace
+  \bigletter B
+  \item BoarderText(String) (Java method), \hyperpage{19}
+  \item Build, \hyperpage{2}
+  \item Build Artifacts, \hyperpage{2}
 
   \indexspace
   \bigletter C
-  \item com.linuxluigi.polynomial (package), \hyperpage{9}
-  \item com.linuxluigi.polynomial.test (package), \hyperpage{14}
+  \item com.linuxluigi.polynomial (package), \hyperpage{11}
 
   \indexspace
   \bigletter D
-  \item delte() (Java method), \hyperpage{15}
-  \item delte(int) (Java method), \hyperpage{12}
-  \item Derivation() (Java method), \hyperpage{10}
-  \item derivation() (Java method), \hyperpage{16}
+  \item delte() (Java method), \hyperpage{17}
+  \item delte(int) (Java method), \hyperpage{14}
+  \item Derivation() (Java method), \hyperpage{12}
+  \item derivation() (Java method), \hyperpage{18}
 
   \indexspace
   \bigletter E
-  \item exit, \hyperpage{8}
+  \item exit, \hyperpage{10}
 
   \indexspace
   \bigletter G
-  \item get() (Java method), \hyperpage{10}, \hyperpage{16}
-  \item get(int) (Java method), \hyperpage{10}
-  \item get\_as\_human\_readable() (Java method), \hyperpage{11}, \hyperpage{16}
-  \item get\_FileName() (Java method), \hyperpage{12}
-  \item get\_PolylList() (Java method), \hyperpage{12}
-  \item get\_Polynomial(int) (Java method), \hyperpage{12}
+  \item get() (Java method), \hyperpage{12}, \hyperpage{18}
+  \item get(int) (Java method), \hyperpage{12}
+  \item get\_as\_human\_readable() (Java method), \hyperpage{13}, \hyperpage{18}
+  \item get\_FileName() (Java method), \hyperpage{14}
+  \item get\_PolylList() (Java method), \hyperpage{14}
+  \item get\_Polynomial(int) (Java method), \hyperpage{14}
   \item Git, \hyperpage{1}
   \item Google GSON, \hyperpage{2}
 
   \indexspace
   \bigletter H
-  \item Horner Schema, \hyperpage{7}
+  \item Horner Schema, \hyperpage{9}
+
+  \indexspace
+  \bigletter I
+  \item InputDouble(String) (Java method), \hyperpage{19}
+  \item InputInt(String) (Java method), \hyperpage{19}
+  \item InputString(String, String) (Java method), \hyperpage{19}
 
   \indexspace
   \bigletter J
-  \item Json laden, \hyperpage{8}
-  \item Json Laden und Sichern, \hyperpage{4}
-  \item Json sichern, \hyperpage{8}
-  \item JUnit, \hyperpage{2}
+  \item Json laden, \hyperpage{10}
+  \item Json Laden und Sichern, \hyperpage{6}
+  \item Json sichern, \hyperpage{10}
+  \item JUnit, \hyperpage{3}
 
   \indexspace
   \bigletter K
-  \item Kontakt, \hyperpage{17}
+  \item Kompilieren, \hyperpage{2}
+  \item Kontakt, \hyperpage{21}
 
   \indexspace
   \bigletter L
-  \item length() (Java method), \hyperpage{11, 12}, \hyperpage{16}
-  \item Lizenz, \hyperpage{17}
-  \item load() (Java method), \hyperpage{13}
+  \item length() (Java method), \hyperpage{13}, \hyperpage{15}, \hyperpage{18}
+  \item Lizenz, \hyperpage{21}
+  \item load() (Java method), \hyperpage{15}
 
   \indexspace
   \bigletter M
-  \item Main (Java class), \hyperpage{9}
-  \item main(String{[}{]}) (Java method), \hyperpage{9}
-  \item mathAddSub() (Java method), \hyperpage{15}
-  \item mathAddSub(Polynomial, Polynomial, boolean) (Java method), \hyperpage{13}
-  \item mathHorner() (Java method), \hyperpage{15}
-  \item mathHorner(Polynomial, double) (Java method), \hyperpage{13}
-  \item mathMultiply() (Java method), \hyperpage{15}
-  \item mathMultiply(Polynomial, Polynomial) (Java method), \hyperpage{13}
+  \item Main (Java class), \hyperpage{11}
+  \item main(String{[}{]}) (Java method), \hyperpage{11}
+  \item mathAddSub() (Java method), \hyperpage{17}
+  \item mathAddSub(Polynomial, Polynomial, boolean) (Java method), \hyperpage{15}
+  \item mathHorner() (Java method), \hyperpage{17}
+  \item mathHorner(Polynomial, double) (Java method), \hyperpage{15}
+  \item mathMultiply() (Java method), \hyperpage{17}
+  \item mathMultiply(Polynomial, Polynomial) (Java method), \hyperpage{15}
+  \item Maven, \hyperpage{2}
 
   \indexspace
   \bigletter O
@@ -71,22 +84,22 @@
 
   \indexspace
   \bigletter P
-  \item Polynom ableiten, \hyperpage{7}
-  \item Polynom Addition, \hyperpage{6}
-  \item Polynom bearbeiten, \hyperpage{6}
-  \item Polynom Division, \hyperpage{7}
-  \item Polynom hinzuf\IeC {\"u}gen, \hyperpage{5}
-  \item Polynom l\IeC {\"o}schen, \hyperpage{6}
-  \item Polynom Multiplikation, \hyperpage{6}
-  \item Polynom Subtraktion, \hyperpage{6}
-  \item Polynome anzeigen, \hyperpage{5}
-  \item Polynomial (Java class), \hyperpage{9}
-  \item Polynomial(double{[}{]}) (Java constructor), \hyperpage{10}
-  \item Polynomial(int) (Java constructor), \hyperpage{10}
-  \item PolynomialList (Java class), \hyperpage{11}
-  \item PolynomialList() (Java constructor), \hyperpage{11}
-  \item PolynomialListTest (Java class), \hyperpage{14}
-  \item PolynomialTest (Java class), \hyperpage{15}
+  \item Polynom ableiten, \hyperpage{9}
+  \item Polynom Addition, \hyperpage{8}
+  \item Polynom bearbeiten, \hyperpage{8}
+  \item Polynom Division, \hyperpage{9}
+  \item Polynom hinzuf\IeC {\"u}gen, \hyperpage{7}
+  \item Polynom l\IeC {\"o}schen, \hyperpage{8}
+  \item Polynom Multiplikation, \hyperpage{8}
+  \item Polynom Subtraktion, \hyperpage{8}
+  \item Polynome anzeigen, \hyperpage{7}
+  \item Polynomial (Java class), \hyperpage{11}
+  \item Polynomial(double{[}{]}) (Java constructor), \hyperpage{12}
+  \item Polynomial(int) (Java constructor), \hyperpage{12}
+  \item PolynomialList (Java class), \hyperpage{13}
+  \item PolynomialList() (Java constructor), \hyperpage{14}
+  \item PolynomialListTest (Java class), \hyperpage{17}
+  \item PolynomialTest (Java class), \hyperpage{18}
 
   \indexspace
   \bigletter Q
@@ -94,18 +107,23 @@
 
   \indexspace
   \bigletter R
-  \item randomPolynomial(int, boolean) (Java method), \hyperpage{13}
-  \item randomPolynomialArray(int, int, boolean) (Java method), \hyperpage{14}
+  \item randomPolynomial(int, boolean) (Java method), \hyperpage{16}
+  \item randomPolynomialArray(int, int, boolean) (Java method), \hyperpage{16}
 
   \indexspace
   \bigletter S
-  \item save() (Java method), \hyperpage{14}
-  \item set() (Java method), \hyperpage{16}
-  \item set(double{[}{]}) (Java method), \hyperpage{11}
-  \item set(int, double) (Java method), \hyperpage{11}
-  \item set(int, Polynomial) (Java method), \hyperpage{14}
-  \item set\_file(String) (Java method), \hyperpage{14}
-  \item Sphinx, \hyperpage{17}
-  \item Support, \hyperpage{19}
+  \item save() (Java method), \hyperpage{16}
+  \item set() (Java method), \hyperpage{18}
+  \item set(double{[}{]}) (Java method), \hyperpage{13}
+  \item set(int, double) (Java method), \hyperpage{13}
+  \item set(int, Polynomial) (Java method), \hyperpage{16}
+  \item set\_file(String) (Java method), \hyperpage{16}
+  \item ShowMenu(String{[}{]}, boolean) (Java method), \hyperpage{20}
+  \item Sphinx, \hyperpage{21}
+  \item Support, \hyperpage{23}
+
+  \indexspace
+  \bigletter T
+  \item TerminalInterface (Java class), \hyperpage{19}
 
 \end{theindex}

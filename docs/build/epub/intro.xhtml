@@ -44,15 +44,30 @@ wird das Menü gestartet, welche sich so lange wiederholt bis der User das Progr
 <p>In Menü kann der User Polynome hinzufügen, bearbeiten und löschen aber auch Mathematische Operationen
 Addieren, Subtrahieren, Multiplizieren und Dividieren ausführen sowie die Polynome als Json sichern
 oder neu von der Json einlesen.</p>
+<p>Das Projekt wurde mit JUnit 4 tests getestete und die test Klassen befinden sich bei den Quellcode dabei.</p>
 <ul class="simple">
 <li>Quellcode: <a class="reference external" href="https://github.com/linuxluigi/polynomials-calculator">https://github.com/linuxluigi/polynomials-calculator</a></li>
 <li>Online Dokumentation: <a class="reference external" href="http://polynomials-calculator.readthedocs.io/de/latest/">http://polynomials-calculator.readthedocs.io/de/latest/</a></li>
 </ul>
 <span class="target" id="index-0"></span><span class="target" id="index-1"></span><img alt="_images/PolyCalc-Intro-1.png" id="index-2" src="_images/PolyCalc-Intro-1.png" />
 </div>
+<div class="section" id="kompilieren">
+<h1>Kompilieren</h1>
+<span class="target" id="index-3"></span><span class="target" id="index-4"></span><span class="target" id="index-5"></span><p id="index-6">Das Projekt wurde via Maven 2 konstruiert und kann mit ein Konsolen Befehl in einer Jar Datei Kompiliert werden, dafür
+muss aber zuerst Maven 2 installiert werden, unter Ubuntu / Debian muss folgendes eingeben werden.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ sudo apt-get install maven2
+</pre></div>
+</div>
+<p>Jetzt wurde Maven 2 installiert und nun kann das Projekt die abhänigkeiten installiert werden, test ausgeführt und
+zur einer ausführbaren Jar ausgeben.</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>$ mvn clean install
+</pre></div>
+</div>
+<img alt="_images/PolyCalc-Compile-1.png" src="_images/PolyCalc-Compile-1.png" />
+</div>
 <div class="section" id="abhanigkeiten">
 <h1>Abhänigkeiten</h1>
-<p>Das Projekt wurde als Maven Modul geschrieben und verwendet folgende Module.</p>
+<p>Das Projekt wurde als Maven 2 Modul geschrieben und verwendet folgende Maven Module.</p>
 <p>Maven Projekt Website: <a class="reference external" href="https://maven.apache.org/">https://maven.apache.org/</a></p>
 <div class="section" id="google-gson">
 <h2>Google GSON</h2>

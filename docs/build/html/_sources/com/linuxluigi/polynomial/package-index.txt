@@ -9,5 +9,7 @@ com.linuxluigi.polynomial
    Main
    Polynomial
    PolynomialList
+   PolynomialListTest
+   PolynomialTest
    TerminalInterface
 

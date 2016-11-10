@@ -24,261 +24,261 @@
     </navPoint>
     <navPoint id="navPoint3" playOrder="3">
       <navLabel>
+        <text>Kompilieren</text>
+      </navLabel>
+      <content src="intro.xhtml#kompilieren" />
+    </navPoint>
+    <navPoint id="navPoint4" playOrder="4">
+      <navLabel>
         <text>Abhänigkeiten</text>
       </navLabel>
       <content src="intro.xhtml#abhanigkeiten" />
-      <navPoint id="navPoint4" playOrder="3">
+      <navPoint id="navPoint5" playOrder="4">
         <navLabel>
           <text>Abhänigkeiten</text>
         </navLabel>
         <content src="intro.xhtml#abhanigkeiten" />
       </navPoint>
-      <navPoint id="navPoint5" playOrder="4">
+      <navPoint id="navPoint6" playOrder="5">
         <navLabel>
           <text>Google GSON</text>
         </navLabel>
         <content src="intro.xhtml#google-gson" />
       </navPoint>
-      <navPoint id="navPoint6" playOrder="5">
+      <navPoint id="navPoint7" playOrder="6">
         <navLabel>
           <text>JUnit</text>
         </navLabel>
         <content src="intro.xhtml#junit" />
       </navPoint>
     </navPoint>
-    <navPoint id="navPoint7" playOrder="6">
+    <navPoint id="navPoint8" playOrder="7">
       <navLabel>
         <text>Wizard Modus</text>
       </navLabel>
       <content src="wizard.xhtml" />
-      <navPoint id="navPoint8" playOrder="6">
+      <navPoint id="navPoint9" playOrder="7">
         <navLabel>
           <text>Wizard Modus</text>
         </navLabel>
         <content src="wizard.xhtml" />
       </navPoint>
-      <navPoint id="navPoint9" playOrder="7">
+      <navPoint id="navPoint10" playOrder="8">
         <navLabel>
           <text>Bedienung</text>
         </navLabel>
         <content src="wizard.xhtml#bedienung" />
       </navPoint>
-      <navPoint id="navPoint10" playOrder="8">
+      <navPoint id="navPoint11" playOrder="9">
         <navLabel>
           <text>Datei Laden und Sichern</text>
         </navLabel>
         <content src="wizard.xhtml#datei-laden-und-sichern" />
       </navPoint>
     </navPoint>
-    <navPoint id="navPoint11" playOrder="9">
+    <navPoint id="navPoint12" playOrder="10">
       <navLabel>
         <text>Hauptmenü</text>
       </navLabel>
       <content src="menu.xhtml" />
-      <navPoint id="navPoint12" playOrder="9">
+      <navPoint id="navPoint13" playOrder="10">
         <navLabel>
           <text>Hauptmenü</text>
         </navLabel>
         <content src="menu.xhtml" />
       </navPoint>
-      <navPoint id="navPoint13" playOrder="10">
+      <navPoint id="navPoint14" playOrder="11">
         <navLabel>
           <text>Inhalt</text>
         </navLabel>
         <content src="menu.xhtml#inhalt" />
       </navPoint>
-      <navPoint id="navPoint14" playOrder="11">
+      <navPoint id="navPoint15" playOrder="12">
         <navLabel>
           <text>Option 1: Alle Polynome anzeigen lassen</text>
         </navLabel>
         <content src="menu.xhtml#option-1-alle-polynome-anzeigen-lassen" />
       </navPoint>
-      <navPoint id="navPoint15" playOrder="12">
+      <navPoint id="navPoint16" playOrder="13">
         <navLabel>
           <text>Option 2: Polynom hinzufügen</text>
         </navLabel>
         <content src="menu.xhtml#option-2-polynom-hinzufugen" />
       </navPoint>
-      <navPoint id="navPoint16" playOrder="13">
+      <navPoint id="navPoint17" playOrder="14">
         <navLabel>
           <text>Option 3: Polynom bearbeiten</text>
         </navLabel>
         <content src="menu.xhtml#option-3-polynom-bearbeiten" />
       </navPoint>
-      <navPoint id="navPoint17" playOrder="14">
+      <navPoint id="navPoint18" playOrder="15">
         <navLabel>
           <text>Option 3: Polynom löschen</text>
         </navLabel>
         <content src="menu.xhtml#option-3-polynom-loschen" />
       </navPoint>
-      <navPoint id="navPoint18" playOrder="15">
+      <navPoint id="navPoint19" playOrder="16">
         <navLabel>
           <text>Option 5, 6 &amp; 8: Mathematische Operationen</text>
         </navLabel>
         <content src="menu.xhtml#option-5-6-8-mathematische-operationen" />
       </navPoint>
-      <navPoint id="navPoint19" playOrder="16">
+      <navPoint id="navPoint20" playOrder="17">
         <navLabel>
           <text>Option 7: Polynom ableiten</text>
         </navLabel>
         <content src="menu.xhtml#option-7-polynom-ableiten" />
       </navPoint>
-      <navPoint id="navPoint20" playOrder="17">
+      <navPoint id="navPoint21" playOrder="18">
         <navLabel>
           <text>Option 9: Polynom Division</text>
         </navLabel>
         <content src="menu.xhtml#option-9-polynom-division" />
       </navPoint>
-      <navPoint id="navPoint21" playOrder="18">
+      <navPoint id="navPoint22" playOrder="19">
         <navLabel>
           <text>Option 10: Json laden</text>
         </navLabel>
         <content src="menu.xhtml#option-10-json-laden" />
       </navPoint>
-      <navPoint id="navPoint22" playOrder="19">
+      <navPoint id="navPoint23" playOrder="20">
         <navLabel>
           <text>Option 11: Json speichern</text>
         </navLabel>
         <content src="menu.xhtml#option-11-json-speichern" />
       </navPoint>
-      <navPoint id="navPoint23" playOrder="20">
+      <navPoint id="navPoint24" playOrder="21">
         <navLabel>
           <text>Option 12: Programm beenden</text>
         </navLabel>
         <content src="menu.xhtml#option-12-programm-beenden" />
       </navPoint>
     </navPoint>
-    <navPoint id="navPoint24" playOrder="21">
+    <navPoint id="navPoint25" playOrder="22">
       <navLabel>
         <text>Polynomials Calculator</text>
       </navLabel>
       <content src="packages.xhtml" />
-      <navPoint id="navPoint25" playOrder="21">
+      <navPoint id="navPoint26" playOrder="22">
         <navLabel>
           <text>Polynomials Calculator</text>
         </navLabel>
         <content src="packages.xhtml" />
       </navPoint>
-      <navPoint id="navPoint26" playOrder="22">
+      <navPoint id="navPoint27" playOrder="23">
         <navLabel>
           <text>com.linuxluigi.polynomial</text>
         </navLabel>
         <content src="com/linuxluigi/polynomial/package-index.xhtml" />
-        <navPoint id="navPoint27" playOrder="22">
+        <navPoint id="navPoint28" playOrder="23">
           <navLabel>
             <text>com.linuxluigi.polynomial</text>
           </navLabel>
           <content src="com/linuxluigi/polynomial/package-index.xhtml" />
         </navPoint>
-        <navPoint id="navPoint28" playOrder="23">
+        <navPoint id="navPoint29" playOrder="24">
           <navLabel>
             <text>Main</text>
           </navLabel>
           <content src="com/linuxluigi/polynomial/Main.xhtml" />
         </navPoint>
-        <navPoint id="navPoint29" playOrder="24">
+        <navPoint id="navPoint30" playOrder="25">
           <navLabel>
             <text>Polynomial</text>
           </navLabel>
           <content src="com/linuxluigi/polynomial/Polynomial.xhtml" />
         </navPoint>
-        <navPoint id="navPoint30" playOrder="25">
+        <navPoint id="navPoint31" playOrder="26">
           <navLabel>
             <text>PolynomialList</text>
           </navLabel>
           <content src="com/linuxluigi/polynomial/PolynomialList.xhtml" />
         </navPoint>
-      </navPoint>
-      <navPoint id="navPoint31" playOrder="26">
-        <navLabel>
-          <text>com.linuxluigi.polynomial.test</text>
-        </navLabel>
-        <content src="com/linuxluigi/polynomial/test/package-index.xhtml" />
-        <navPoint id="navPoint32" playOrder="26">
-          <navLabel>
-            <text>com.linuxluigi.polynomial.test</text>
-          </navLabel>
-          <content src="com/linuxluigi/polynomial/test/package-index.xhtml" />
-        </navPoint>
-        <navPoint id="navPoint33" playOrder="27">
+        <navPoint id="navPoint32" playOrder="27">
           <navLabel>
             <text>PolynomialListTest</text>
           </navLabel>
-          <content src="com/linuxluigi/polynomial/test/PolynomialListTest.xhtml" />
+          <content src="com/linuxluigi/polynomial/PolynomialListTest.xhtml" />
         </navPoint>
-        <navPoint id="navPoint34" playOrder="28">
+        <navPoint id="navPoint33" playOrder="28">
           <navLabel>
             <text>PolynomialTest</text>
           </navLabel>
-          <content src="com/linuxluigi/polynomial/test/PolynomialTest.xhtml" />
+          <content src="com/linuxluigi/polynomial/PolynomialTest.xhtml" />
+        </navPoint>
+        <navPoint id="navPoint34" playOrder="29">
+          <navLabel>
+            <text>TerminalInterface</text>
+          </navLabel>
+          <content src="com/linuxluigi/polynomial/TerminalInterface.xhtml" />
         </navPoint>
       </navPoint>
     </navPoint>
-    <navPoint id="navPoint35" playOrder="29">
+    <navPoint id="navPoint35" playOrder="30">
       <navLabel>
         <text>Lizenz</text>
       </navLabel>
       <content src="license.xhtml" />
     </navPoint>
-    <navPoint id="navPoint36" playOrder="30">
+    <navPoint id="navPoint36" playOrder="31">
       <navLabel>
         <text>Kontakt</text>
       </navLabel>
       <content src="license.xhtml#kontakt" />
     </navPoint>
-    <navPoint id="navPoint37" playOrder="31">
+    <navPoint id="navPoint37" playOrder="32">
       <navLabel>
         <text>Dokumentation</text>
       </navLabel>
       <content src="docs.xhtml" />
-      <navPoint id="navPoint38" playOrder="31">
+      <navPoint id="navPoint38" playOrder="32">
         <navLabel>
           <text>Dokumentation</text>
         </navLabel>
         <content src="docs.xhtml" />
       </navPoint>
-      <navPoint id="navPoint39" playOrder="32">
+      <navPoint id="navPoint39" playOrder="33">
         <navLabel>
           <text>Dokumentation bearbeiten</text>
         </navLabel>
         <content src="docs.xhtml#dokumentation-bearbeiten" />
       </navPoint>
-      <navPoint id="navPoint40" playOrder="33">
+      <navPoint id="navPoint40" playOrder="34">
         <navLabel>
           <text>Dokumentation aktualisieren</text>
         </navLabel>
         <content src="docs.xhtml#dokumentation-aktualisieren" />
-        <navPoint id="navPoint41" playOrder="33">
+        <navPoint id="navPoint41" playOrder="34">
           <navLabel>
             <text>Dokumentation aktualisieren</text>
           </navLabel>
           <content src="docs.xhtml#dokumentation-aktualisieren" />
         </navPoint>
-        <navPoint id="navPoint42" playOrder="34">
+        <navPoint id="navPoint42" playOrder="35">
           <navLabel>
             <text>Abhänigkeiten installieren</text>
           </navLabel>
           <content src="docs.xhtml#abhanigkeiten-installieren" />
         </navPoint>
-        <navPoint id="navPoint43" playOrder="35">
+        <navPoint id="navPoint43" playOrder="36">
           <navLabel>
             <text>Virtualenv anlegen und verwenden</text>
           </navLabel>
           <content src="docs.xhtml#virtualenv-anlegen-und-verwenden" />
         </navPoint>
-        <navPoint id="navPoint44" playOrder="36">
+        <navPoint id="navPoint44" playOrder="37">
           <navLabel>
             <text>Python abhänigkeiten installieren</text>
           </navLabel>
           <content src="docs.xhtml#python-abhanigkeiten-installieren" />
         </navPoint>
-        <navPoint id="navPoint45" playOrder="37">
+        <navPoint id="navPoint45" playOrder="38">
           <navLabel>
             <text>Dokumentation erzeugen</text>
           </navLabel>
           <content src="docs.xhtml#dokumentation-erzeugen" />
         </navPoint>
-        <navPoint id="navPoint46" playOrder="38">
+        <navPoint id="navPoint46" playOrder="39">
           <navLabel>
             <text>Dokumentation alternative Formate</text>
           </navLabel>
@@ -286,7 +286,7 @@
         </navPoint>
       </navPoint>
     </navPoint>
-    <navPoint id="navPoint47" playOrder="39">
+    <navPoint id="navPoint47" playOrder="40">
       <navLabel>
         <text>Hilfe</text>
       </navLabel>

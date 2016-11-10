@@ -12,6 +12,12 @@ In Menü kann der User Polynome hinzufügen, bearbeiten und löschen aber auch M
 Addieren, Subtrahieren, Multiplizieren und Dividieren ausführen sowie die Polynome als Json sichern
 oder neu von der Json einlesen.
 
+# Kompilieren
+
+Im Rootverzeichnis des Projektes im Terminal wechseln und ```mvn clean install``` eingeben.
+Damit werden alle Maven 2 abhänigkeiten automatisch heruntergeladen, tests ausgeführt und wenn die Test fehlerfrei
+verlaufen wird die unter `/target/polynomials-calculator-1.0.jar` ausgegeben.
+
 # Dokumentation
 
 http://polynomials-calculator.readthedocs.io/de/latest/
