@@ -231,7 +231,7 @@ public class PolynomialListTest {
     public void mathMultiply() throws Exception {
         // Zufällige Werte Testen
         PolynomialList PolynomialList = new PolynomialList();
-        Polynomial[] PolynomialArray = PolynomialList.randomPolynomialArray(10000, 1000, true);
+        Polynomial[] PolynomialArray = PolynomialList.randomPolynomialArray(1000, 100, true);
 
         for (int i = 0; i < PolynomialArray.length; i++) {
             PolynomialList.add(PolynomialArray[i]);
@@ -290,7 +290,7 @@ public class PolynomialListTest {
                 PolynomialList.get_Polynomial(0)
         );
 
-        assertEquals("f(x)=+36x²+540x³+2817x⁴+5940x⁵+4356x⁶", tmp.get_as_human_readable());
+        assertEquals("f(x)=4356+5940x+2817x²+540x³+36x⁴", tmp.get_as_human_readable());
 
         // Rechung 2
         tmp = PolynomialList.mathMultiply(
@@ -298,7 +298,7 @@ public class PolynomialListTest {
                 PolynomialList.get_Polynomial(1)
         );
 
-        assertEquals("f(x)=+3410.640x+5218075.800x²+38985173.040x³+57147312x⁴+45798x⁵+3561x⁶+(-198x⁷)", tmp.get_as_human_readable());
+        assertEquals("f(x)=(-198)+3561x+45798x²+57147312x³+38985173.040x⁴+5218075.800x⁵+3410.640x⁶", tmp.get_as_human_readable());
 
         // Rechung 3
         tmp = PolynomialList.mathMultiply(
@@ -338,7 +338,7 @@ public class PolynomialListTest {
                 PolynomialList.get_Polynomial(1)
         );
 
-        assertEquals("f(x)=+3410.640x+5218075.800x²+38985173.040x³+57147312x⁴+45798x⁵+3561x⁶+(-198x⁷)", tmp.get_as_human_readable());
+        assertEquals("f(x)=(-198)+3561x+45798x²+57147312x³+38985173.040x⁴+5218075.800x⁵+3410.640x⁶", tmp.get_as_human_readable());
     }
 
     /**
