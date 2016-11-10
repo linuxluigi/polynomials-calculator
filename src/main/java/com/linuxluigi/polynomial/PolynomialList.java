@@ -196,9 +196,10 @@ class PolynomialList {
 
         for (int i = 0; i < Polynomial_1.length(); i++) {
             for (int j = 0; j < Polynomial_2.length(); j++) {
+                int tmp = newPolynomial.length() - i - j -1;
                 newPolynomial.set(
-                        i + j,
-                        (Polynomial_1.get(i) * Polynomial_2.get(j)) + newPolynomial.get(i + j)
+                        tmp,
+                        (Polynomial_1.get(i) * Polynomial_2.get(j)) + newPolynomial.get(tmp)
                 );
             }
         }
