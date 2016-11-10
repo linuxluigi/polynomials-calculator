@@ -25,7 +25,7 @@ public class Main {
      */
     public static void main(String[] args) {
         TerminalInterface Interface = new TerminalInterface();
-        Interface.BoarderText("Polynom Rechner 0.1.0");
+        Interface.BoarderText("Polynom Rechner 1.0.0");
         System.out.println("Operationen mit Polynomen &  Speichern der Polynome in einer JSON Datei");
 
         // Json angeben
