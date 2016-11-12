@@ -46,3 +46,6 @@ save.json
 # env
 /env
 /venv
+
+# Build files
+/target
