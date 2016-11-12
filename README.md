@@ -18,6 +18,11 @@ Im Rootverzeichnis des Projektes im Terminal wechseln und ```mvn clean install``
 Damit werden alle Maven 2 abhänigkeiten automatisch heruntergeladen, tests ausgeführt und wenn die Test fehlerfrei
 verlaufen wird die unter `/target/polynomials-calculator-1.0.jar` ausgegeben.
 
+Zum ausführen:
+```bash
+java -jar target/polynomials-calculator-1.0.jar
+```
+
 # Dokumentation
 
 http://polynomials-calculator.readthedocs.io/de/latest/
